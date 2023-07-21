@@ -2,9 +2,54 @@
   "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "description": "typicode",
-      "price": 3.99
+      "title": "Donut framboise",
+      "nbrPerson": 4,
+      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "price": 499,
+      "allergenFree": [],
+      "ingredients": [],
+      "extras": [],
+      "quantity": 1,
+      "isCustomizable": true,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "Mochi framboise",
+      "nbrPerson": 4,
+      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "price": 499,
+      "allergenFree": [],
+      "ingredients": [],
+      "extras": [],
+      "quantity": 1,
+      "isCustomizable": true,
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "Mochi Fraise",
+      "nbrPerson": 4,
+      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "price": 499,
+      "allergenFree": [
+        { "id": 1, "name": "sans gluten", "icon": "sans gluten"},
+        { "id": 1, "name": "bloup", "icon": "gloup"},
+        { "id": 1, "name": "lorem", "icon": "ipsum"}
+      ],
+      "ingredients": [],
+      "extras": [],
+      "quantity": 1,
+      "isCustomizable": true,
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "title": "Coca cola",
+      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "price": 299,
+      "quantity": 1,
+      "categoryId": 4
     }
   ],
   

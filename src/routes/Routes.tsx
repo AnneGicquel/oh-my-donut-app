@@ -2,6 +2,7 @@ import { RouteObject } from "react-router-dom";
 import NotFound from "../pages/notFound/NotFound";
 import Home from "../pages/home/Home";
 import Products from "../pages/products/Products";
+import ProductProvider from "../contexts/ProductContext";
 
 const ROUTES: RouteObject[] = [
   {
@@ -11,7 +12,7 @@ const ROUTES: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <Products />,
+        element: <ProductProvider><Products /></ProductProvider>
       },
     ],
   },
