@@ -1,6 +1,6 @@
 export type StayOrGoType = "Emporter" | "Sur place";
 
-export interface Category {
+export interface CategoryI {
   id: number;
   title: string;
 }
@@ -69,7 +69,7 @@ export interface CustomerInformationI {
   phone: string;
 }
 
-export interface Commande {
+export interface CommandeI {
   id: string;
 
   cart: CartI;

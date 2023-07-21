@@ -1,22 +1,17 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { EffectCallback, FC, useEffect } from "react";
+import { useCategoryContext } from "../../../contexts/CategoryContext";
 
+const Navbar: FC = () => {
+  const { categories, getCategories } = useCategoryContext();
 
-const Navbar = () => {
+  useEffect( () => {
+    getCategories();
+  }, []);
 
-    const [categories, setCategories] = useState([])
-
-useEffect(() => {
-    axios.get('http://localhost:3000/categories')
-  .then(res => {
-    console.log(res.data);
-  });
-}, []);
-
-return (
+  return (
     <ul>
-        <li>Home</li>
+      { categories.map(category => <li key={category.id}>{category.title}</li>)}
     </ul>
-)
-}
+  );
+};
 export default Navbar;
