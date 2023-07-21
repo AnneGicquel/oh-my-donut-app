@@ -8,7 +8,7 @@ interface ProductProps {
 }
 
 const Button = ({ product, quantity, title }: ProductProps) => (
-  <button onClick={() => {}}>{title.toUpperCase()}</button>
+  <button className="button-add-cart" onClick={() => {}}>{title.toUpperCase()}</button>
 );
 
 export default Button;

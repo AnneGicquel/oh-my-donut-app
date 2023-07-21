@@ -9,7 +9,7 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className="navbar-container">
       { categories.map(category => <li key={category.id}>{category.title}</li>)}
     </ul>
   );
