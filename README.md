@@ -1,4 +1,4 @@
-![Long Logo Screenshot](https://github.com/AnneGicquel/oh-my-donut-app/assets/42805876/5d6c73d2-2d26-4fe4-a0ca-232633796069)
+![Long Logo Screenshot](https://github.com/AnneGicquel/oh-my-donut-app/assets/42805876/e1d71ea0-cfd7-46d9-8839-26d039dcc41a)
 
 # Pour Commit :
 
@@ -17,7 +17,29 @@
 &nbsp;
 
 
-&nbsp;
+![Long Logo](https://github.com/AnneGicquel/oh-my-donut-app/assets/42805876/6fdf3761-3a1c-4785-9af8-cab7199b5051)
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| BabyPink | ![#FECBD7](https://via.placeholder.com/10/FECBD7?text=+) #FECBD7 |
+| Lemon | ![#FFE865](https://via.placeholder.com/10/FFE865?text=+) #FFE865 |
+| Cyan | ![#0CC0DF](https://via.placeholder.com/10/0CC0DF?text=+) #0CC0DF |
+| FrenchRose | ![#FD6797](https://via.placeholder.com/10/FD6797?text=+) #FD6797 |
+| Black | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000 |
+| White | ![#FFFFFF](https://via.placeholder.com/10/FFFFFFa?text=+) #FFFFFF |
+
+## Font Reference
+
+| Font-family             | link                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Varela Round  | https://fonts.google.com/specimen/Varela+Round |
+| Lilita One | https://fonts.google.com/specimen/Lilita+One |
+
+
+
+&nbsp; 
 
 
 
