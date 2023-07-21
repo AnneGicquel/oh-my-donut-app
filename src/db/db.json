@@ -6,6 +6,10 @@
       "nbrPerson": 4,
       "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
       "price": 499,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
+        "alt": "Mochi framboise image"
+      },
       "allergenFree": [],
       "ingredients": [],
       "extras": [],
@@ -19,6 +23,10 @@
       "nbrPerson": 4,
       "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
       "price": 499,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
+        "alt": "Mochi framboise image"
+      },
       "allergenFree": [],
       "ingredients": [],
       "extras": [],
@@ -32,10 +40,14 @@
       "nbrPerson": 4,
       "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
       "price": 499,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
+        "alt": "Mochi framboise image"
+      },
       "allergenFree": [
         { "id": 1, "name": "sans gluten", "icon": "sans gluten"},
-        { "id": 1, "name": "bloup", "icon": "gloup"},
-        { "id": 1, "name": "lorem", "icon": "ipsum"}
+        { "id": 2, "name": "bloup", "icon": "gloup"},
+        { "id": 3, "name": "lorem", "icon": "ipsum"}
       ],
       "ingredients": [],
       "extras": [],
@@ -48,6 +60,10 @@
       "title": "Coca cola",
       "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
       "price": 299,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
+        "alt": "Mochi framboise image"
+      },
       "quantity": 1,
       "categoryId": 4
     }

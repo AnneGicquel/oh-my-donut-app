@@ -5,6 +5,11 @@ export interface CategoryI {
   title: string;
 }
 
+interface ImageI {
+  src: string;
+  alt: string;
+}
+
 export interface ProductI {
   id: number;
 
@@ -15,6 +20,8 @@ export interface ProductI {
   description: string;
 
   price: number;
+
+  imageUrl: ImageI;
 
   allergenFree: AllergenI[];
 

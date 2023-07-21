@@ -3,6 +3,7 @@ import CategoryProvider from "../../contexts/CategoryContext";
 import { useProductContext } from "../../contexts/ProductContext";
 import Navbar from "../partials/navbar/Navbar";
 import Card from "../../components/card/Card";
+import './Products.css'
 
 const Products = () => {
   const { products, getProducts } = useProductContext();
@@ -12,15 +13,14 @@ const Products = () => {
   }, []);
 
   return (
-    <main style={{ display: "flex", justifyContent: "space-between" }}>
+    <main className="product-main d-flex">
       <CategoryProvider>
         <Navbar />
       </CategoryProvider>
 
-      <section style={{ width: "70%" }}>
-        {JSON.stringify(products)}
+      <section className="section-container d-flex">
         {products.map((product) => {
-          return <Card item={product} />;
+          return <Card key={product.id} item={product} />;
         })}
       </section>
     </main>

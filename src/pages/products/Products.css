@@ -1,0 +1,75 @@
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-main {
+    width: 100vw;
+}
+
+.section-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+}
+
+.card-container {
+    width: 380px;
+    height: 470px;
+    border-radius: 25px;
+    background: rgba(12, 192, 223, 0.40);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    width: 255px;
+    height: 255px;
+}
+
+/* NAVBAR CSS */
+
+.navbar-container {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-container li {
+    border-bottom: 1px solid #000000;
+    background-color: rgba(253, 103, 151, 0.2);
+    list-style-type: none;
+    font-size: 40px;
+    font-weight: bold;
+    width: 455px;
+    height: 85px;
+    padding-left: 37px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* CARD CSS */
+.card-text {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-text p {
+   font-size: 10px;
+}
+
+.allergen-container {
+    flex-direction: row;
+}
+
+/* BUTTON CSS */
+
+.button-add-cart {
+    width: 180px;
+    height: 40px;
+    background: #000;
+    color: #ffffff;
+    border: none;
+}
