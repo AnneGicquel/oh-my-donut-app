@@ -11,27 +11,27 @@
   "categories": [
     {
       "id": 1,
-      "name": "Donut"
+      "title": "Donut"
     },
     {
       "id": 2,
-      "name": "Mochi"
+      "title": "Mochi"
     },
     {
       "id": 3,
-      "name": "Allergen Free"
+      "title": "Allergen Free"
     },
     {
       "id": 4,
-      "name": "Boissons"
+      "title": "Boissons"
     },
     {
       "id": 5,
-      "name": "Tower"
+      "title": "Tower"
     },
     {
-      "id": 16,
-      "name": "Nos Douceurs"
+      "id": 6,
+      "title": "Nos Douceurs"
     }
   ],
 
