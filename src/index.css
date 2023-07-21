@@ -1,9 +1,59 @@
-body {
+/* IMPORT VARELA ROUND */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* font-family: 'Varela Round', sans-serif;*/
+
+/* IMPORT LILITA ONE */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+/* font-family: 'Lilita One', cursive; */
+
+/* VARIABLES */
+:root {
+  /* color */
+  --babyPink: #FECBD7;
+  --lemon: #FFE865;
+  --lightLemon:rgba(255, 232, 101, 0.8);
+  --extraLightLemon: rgba(255, 232, 101, 0.5);
+  --cyan: #22C0DF;
+  --lightCyan: rgba(12, 192, 223, 0.4);
+  --extraLightCyan:rgba(12, 192, 223, 0.2);
+  --frenchRose: #FD6797;
+  --lightFrenchRose:rgba(253, 103, 151, 0.2);
+  --black: #000000;
+  --white: #FFFFFF;
+  /* font */
+  --varelaRound: 'Varela Round', sans-serif;
+  --lilitaOne: 'Lilita One', cursive;
+}
+
+/* NORMALIZE */
+* {
+  /* basic */
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* retire la bordure */
+button {
+  all: unset;
+}
+
+body {
+  
+  /* je garde ces deux lignes ⬇️ ⬇️ */
+
+  /* applique aux navigateurs WebKit tels que 
+  Google Chrome et Safari. Réduit les effets 
+  de bord rugueux ou pixélisés des caractères ⬇️ */
   -webkit-font-smoothing: antialiased;
+  /* indique à Firefox d'appliquer un anti-aliasing 
+  en niveaux de gris à la police de caractères, ce 
+  qui peut rendre le texte plus lisse et moins 
+  pixélisé sur les appareils macOS ⬇️ */
   -moz-osx-font-smoothing: grayscale;
 }
 
