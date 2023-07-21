@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "description": "typicode",
+      "price": 3.99
+    }
+  ],
+  
+  "categories": [
+    {
+      "id": 1,
+      "name": "Donut"
+    },
+    {
+      "id": 2,
+      "name": "Mochi"
+    },
+    {
+      "id": 3,
+      "name": "Allergen Free"
+    },
+    {
+      "id": 4,
+      "name": "Boissons"
+    },
+    {
+      "id": 5,
+      "name": "Tower"
+    },
+    {
+      "id": 16,
+      "name": "Nos Douceurs"
+    }
+  ],
+
+  "ingredients": [
+    {
+      "name": "typicode"
+    }
+  ],
+
+  "cart": { },
+
+  "command": {}
+
+}
