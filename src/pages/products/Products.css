@@ -7,6 +7,15 @@
     width: 100vw;
 }
 
+.product-main h1 {
+    margin: 100px 0;
+    font-family: var(--lilitaOne);
+    text-align: center;
+    font-family: Lilita One;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
 .section-container {
     flex-wrap: wrap;
     justify-content: center;
