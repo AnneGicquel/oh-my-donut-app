@@ -20,7 +20,25 @@
     z-index: -1;
 }
 
-.header-basket {
+.header-icons-container {
+    width: 93vw;
     position: absolute;
+    display: flex;
+    top: 35px;
+    right: 55px;
+    left: 55px;
+    height: 50px;
+}
+
+.header-basket, .header-burger {
     width: 50px;
+}
+
+.header-basket {
+    position: inherit;
+    right: 0;
+}
+
+.header-burger {
+    display: none;
 }
