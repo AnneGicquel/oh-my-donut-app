@@ -1,0 +1,33 @@
+.footer {
+    background-image: url("/public/assets/images/oh-my-donut-images/WAVES/footer-wave svg.svg");
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.footer-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 350px;
+}
+
+.footer-container .reset-cart{
+    align-self: flex-start;
+    width: 35px;
+    height: 35px;
+    margin: 0 0 30px 50px;
+    padding: 23px;
+    background-color: var(--cyan);
+}
+
+.footer-logo {
+    width: 106px;
+    align-self: center;
+}
