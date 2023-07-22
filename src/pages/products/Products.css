@@ -4,7 +4,7 @@
 }
 
 .product-main {
-    width: 100vw;
+    min-width: 95vw;
 }
 
 .product-main h1 {
@@ -36,29 +36,6 @@
 .card-img {
     width: 255px;
     height: 255px;
-}
-
-/* NAVBAR CSS */
-
-.navbar-container {
-    padding: 0;
-    margin: 0;
-}
-
-.navbar-container li {
-    border-bottom: 1px solid var(--black);
-    background-color: var(--lightFrenchRose);
-    font-family: var(--lilitaOne);
-    list-style-type: none;
-    font-size: 40px;
-    font-weight: bold;
-    width: 455px;
-    height: 85px;
-    padding-left: 37px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: bolder;
 }
 
 /* CARD CSS */

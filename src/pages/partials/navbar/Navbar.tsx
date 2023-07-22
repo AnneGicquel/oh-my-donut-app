@@ -1,5 +1,6 @@
-import { EffectCallback, FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useCategoryContext } from "../../../contexts/CategoryContext";
+import './Navbar.css'
 
 const Navbar: FC = () => {
   const { categories, getCategories } = useCategoryContext();
