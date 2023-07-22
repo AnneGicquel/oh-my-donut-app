@@ -10,7 +10,7 @@ const Navbar: FC = () => {
 
   return (
     <ul className="navbar-container">
-      { categories.map(category => <li key={category.id}>{category.title}</li>)}
+      { categories.map(category => <li key={category.id}>{category.title.toUpperCase()}</li>)}
     </ul>
   );
 };

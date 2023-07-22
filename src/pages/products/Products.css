@@ -18,11 +18,11 @@
     width: 380px;
     height: 470px;
     border-radius: 25px;
-    background: rgba(12, 192, 223, 0.40);
+    background: var(--lightCyan);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
+
 
 .card-img {
     width: 255px;
@@ -37,8 +37,9 @@
 }
 
 .navbar-container li {
-    border-bottom: 1px solid #000000;
-    background-color: rgba(253, 103, 151, 0.2);
+    border-bottom: 1px solid var(--black);
+    background-color: var(--lightFrenchRose);
+    font-family: var(--lilitaOne);
     list-style-type: none;
     font-size: 40px;
     font-weight: bold;
@@ -48,6 +49,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-weight: bolder;
 }
 
 /* CARD CSS */
@@ -56,12 +58,35 @@
     align-items: center;
 }
 
+.card-text h4 {
+    font-size: 16px;
+    font-family: var(--lilitaOne);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.card-text .price {
+    margin: 0;
+}
+
 .card-text p {
    font-size: 10px;
+   font-family: var(--varelaRound);
+   
 }
 
 .allergen-container {
     flex-direction: row;
+    width: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.allergen-container img {
+    width: 25px;
+    height: 25px;
+    margin: 10px 0;
 }
 
 /* BUTTON CSS */
@@ -69,7 +94,10 @@
 .button-add-cart {
     width: 180px;
     height: 40px;
-    background: #000;
-    color: #ffffff;
+    font-family: var(--varelaRound);
+    background: var(--black);
+    color: var(--white);
+    font-size: 13px;
+    text-align: center;
     border: none;
 }

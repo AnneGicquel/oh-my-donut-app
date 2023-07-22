@@ -1,13 +1,13 @@
 @import "normalize.css/normalize.css";
 
-body {
 /* IMPORT VARELA ROUND */
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 /* font-family: 'Varela Round', sans-serif;*/
 
 /* IMPORT LILITA ONE */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 /* font-family: 'Lilita One', cursive; */
+
 
 /* VARIABLES */
 :root {
@@ -28,7 +28,7 @@ body {
   --lilitaOne: 'Lilita One', cursive;
 }
 
-/* NORMALIZE => instead of basic a global normalize.css added, loot at the top of this file, you will see @import 'normalize.css'
+/* NORMALIZE => instead of basic a global normalize.css added, look at the top of this file, you will see @import 'normalize.css'
 * {
    basic 
   padding: 0;

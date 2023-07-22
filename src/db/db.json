@@ -10,7 +10,11 @@
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
         "alt": "Mochi framboise image"
       },
-      "allergenFree": [],
+      "allergenFree": [
+        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
+        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
+        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"}
+      ],
       "ingredients": [],
       "extras": [],
       "quantity": 1,
@@ -27,7 +31,11 @@
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
         "alt": "Mochi framboise image"
       },
-      "allergenFree": [],
+      "allergenFree": [
+        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
+        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
+        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"}
+      ],
       "ingredients": [],
       "extras": [],
       "quantity": 1,
@@ -45,9 +53,9 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "sans gluten"},
-        { "id": 2, "name": "bloup", "icon": "gloup"},
-        { "id": 3, "name": "lorem", "icon": "ipsum"}
+        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
+        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
+        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"}
       ],
       "ingredients": [],
       "extras": [],
