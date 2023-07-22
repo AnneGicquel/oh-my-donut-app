@@ -15,7 +15,7 @@ const Card = (props: CardPropsI) => {
           {title.toUpperCase()} - {nbrPerson} PERSONNES
         </h4>
         <p>{ description }</p>
-        <h4>{price} €</h4>
+        <h4 className="price">{price} €</h4>
 
         <div className="allergen-container d-flex">
             {allergenFree?.map((aller) => (
