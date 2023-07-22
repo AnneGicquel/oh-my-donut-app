@@ -80,15 +80,31 @@
   "categories": [
     {
       "id": 1,
-      "title": "Donut"
+      "title": "Donut",
+      "subMenu": [
+        { "id": 1, "title": "Donut à l'unité" },
+        { "id": 2, "title": "Coffret de Donuts"}
+      ],
+      "isVisible": false 
     },
     {
       "id": 2,
-      "title": "Mochi"
+      "title": "Mochi",
+      "subMenu": [
+        { "id": 1, "title": "Mochi à l'unité" },
+        { "id": 2, "title": "Coffret de Mochi" }
+      ],
+      "isVisible": false 
     },
     {
       "id": 3,
-      "title": "Allergen Free"
+      "title": "Allergen Free",
+      "subMenu": [
+        { "id": 1, "title": "Sans gluten" },
+        { "id": 2, "title": "Union" },
+        { "id": 3, "title": "Fête" }
+      ],
+      "isVisible": false 
     },
     {
       "id": 4,
@@ -96,11 +112,18 @@
     },
     {
       "id": 5,
-      "title": "Tower"
+      "title": "Tower",
+      "subMenu": [
+        { "id": 1, "title": "Anniversaire" },
+        { "id": 2, "title": "Union" },
+        { "id": 3, "title": "Fête" }
+      ],
+      "isVisible": false 
     },
     {
       "id": 6,
-      "title": "Nos Douceurs"
+      "title": "Nos Douceurs",
+      "isVisible": false 
     }
   ],
 
