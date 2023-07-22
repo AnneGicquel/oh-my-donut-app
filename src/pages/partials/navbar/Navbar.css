@@ -11,11 +11,21 @@
     font-family: var(--lilitaOne);
     list-style-type: none;
     font-size: 40px;
-    font-weight: bold;
     width: 418px;
     height: 85px;
     padding-left: 37px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    line-height: 90px;
+    cursor: pointer;
+}
+
+.subMenu-child{
+    background-color: rgba(253, 103, 151, 0.13) !important;
+}
+
+.subMenu {
+    display: none;
+}
+
+.isVisible {
+    display: initial;
 }

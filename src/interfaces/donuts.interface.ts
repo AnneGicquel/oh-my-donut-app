@@ -1,8 +1,15 @@
 export type StayOrGoType = "Emporter" | "Sur place";
 
+export interface SubMenu {
+  id: number;
+  title: string;
+}
+
 export interface CategoryI {
   id: number;
   title: string;
+  subMenu?: SubMenu[];
+  isVisible?: boolean;
 }
 
 interface ImageI {
