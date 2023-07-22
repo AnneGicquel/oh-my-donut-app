@@ -8,8 +8,9 @@ export interface SubMenu {
 export interface CategoryI {
   id: number;
   title: string;
-  subMenu?: SubMenu[];
+  subCategories?: SubMenu[];
   isVisible?: boolean;
+  isDefault?: boolean;
 }
 
 interface ImageI {

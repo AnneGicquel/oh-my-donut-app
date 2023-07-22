@@ -19,10 +19,11 @@
 }
 
 .subMenu-child{
-    background-color: rgba(253, 103, 151, 0.13) !important;
+    background-color: var(--white) !important;
 }
 
 .subMenu {
+    padding: 0;
     display: none;
 }
 
