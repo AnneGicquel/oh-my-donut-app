@@ -17,7 +17,7 @@
 }
 
 .section-container {
-    max-height: 100vh;
+    min-height: 100vh !important;
     flex-wrap: wrap;
     justify-content: center;
     gap: 75px;

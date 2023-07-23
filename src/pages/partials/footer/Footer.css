@@ -1,12 +1,13 @@
 .footer {
     background-image: url("/public/assets/images/oh-my-donut-images/WAVES/footer-wave svg.svg");
-    height: 600px;
+    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: end;
+    margin-top: 150px;
 }
 
 .footer-container {
@@ -15,7 +16,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-self: flex-end;
-    height: 350px;
+    height: 300px;
 }
 
 .footer-container .reset-cart{

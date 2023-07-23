@@ -19,11 +19,13 @@
       "extras": [],
       "quantity": 1,
       "isCustomizable": true,
-      "categoryId": 1
+      "categoryId": 1,
+      "subCategory": 2
+
     },
     {
       "id": 2,
-      "title": "Mochi framboise",
+      "title": "Donut Fraise",
       "nbrPerson": 4,
       "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
       "price": 499,
@@ -40,11 +42,12 @@
       "extras": [],
       "quantity": 1,
       "isCustomizable": true,
-      "categoryId": 2
+      "categoryId": 1,
+      "subCategory": 1
     },
     {
       "id": 3,
-      "title": "Mochi Fraise",
+      "title": "Donut Pistache",
       "nbrPerson": 4,
       "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
       "price": 499,
@@ -61,7 +64,8 @@
       "extras": [],
       "quantity": 1,
       "isCustomizable": true,
-      "categoryId": 2
+      "categoryId": 1,
+      "subCategory": 1
     },
     {
       "id": 4,
@@ -74,14 +78,17 @@
       },
       "quantity": 1,
       "categoryId": 4
+
     }
   ],
+
+
   
   "categories": [
     {
       "id": 1,
       "title": "Donut",
-      "subMenu": [
+      "subCategories": [
         { "id": 1, "title": "Donut à l'unité" },
         { "id": 2, "title": "Coffret de Donuts"}
       ],
@@ -90,19 +97,19 @@
     {
       "id": 2,
       "title": "Mochi",
-      "subMenu": [
-        { "id": 1, "title": "Mochi à l'unité" },
-        { "id": 2, "title": "Coffret de Mochi" }
+      "subCategories": [
+        { "id": 3, "title": "Mochi à l'unité" },
+        { "id": 4, "title": "Coffret de Mochi" }
       ],
       "isVisible": false 
     },
     {
       "id": 3,
       "title": "Allergen Free",
-      "subMenu": [
-        { "id": 1, "title": "Sans gluten" },
-        { "id": 2, "title": "Union" },
-        { "id": 3, "title": "Fête" }
+      "subCategories": [
+        { "id": 5, "title": "Sans gluten" },
+        { "id": 6, "title": "Union" },
+        { "id": 7, "title": "Fête" }
       ],
       "isVisible": false 
     },
@@ -113,16 +120,17 @@
     {
       "id": 5,
       "title": "Tower",
-      "subMenu": [
-        { "id": 1, "title": "Anniversaire" },
-        { "id": 2, "title": "Union" },
-        { "id": 3, "title": "Fête" }
+      "subCategories": [
+        { "id": 8, "title": "Anniversaire" },
+        { "id": 9, "title": "Union" },
+        { "id": 10, "title": "Fête" }
       ],
       "isVisible": false 
     },
     {
       "id": 6,
       "title": "Nos Douceurs",
+      "isDefault": true,
       "isVisible": false 
     }
   ],

@@ -1,15 +1,17 @@
 import { ProductI } from "../interfaces/donuts.interface";
 import { useContext, useState, createContext } from "react";
-import { getAllProducts } from "../services/product.services";
+import { getAllProducts, getProductsByCategories } from "../services/product.services";
 
 interface ProductDataI {
     products: ProductI[];
     getProducts: () => void;
+    getByCategories: (categoryId?: number, subCategory?: number) => void;
 }
 
 const defaultProduct: ProductDataI = {
     products: [],
-    getProducts: () => {}
+    getProducts: () => {},
+    getByCategories: () => {}
 }
 
 const ProductContext = createContext<ProductDataI>(defaultProduct);
@@ -26,9 +28,15 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
         return await getAllProducts().then(product => setProducts([...product.data]))
     }
 
+    const getByCategories = async (categoryId?: number, subCategory?: number) => {
+        console.log(categoryId, subCategory);
+        return await getProductsByCategories(categoryId, subCategory).then(pCategory => setProducts([...pCategory.data]));
+    }
+
     const allProducts: ProductDataI = {
         products: [...products],
         getProducts,
+        getByCategories,
     }
     
     return <ProductContext.Provider value={allProducts}>
