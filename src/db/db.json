@@ -11,9 +11,9 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
-        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
-        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"}
+        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"},
+        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"},
+        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"}
       ],
       "ingredients": [],
       "extras": [],
@@ -34,9 +34,9 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
-        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
-        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"}
+        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"},
+        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"},
+        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"}
       ],
       "ingredients": [],
       "extras": [],
@@ -56,9 +56,9 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
-        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"},
-        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ICONS/clock.png"}
+        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"},
+        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"},
+        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"}
       ],
       "ingredients": [],
       "extras": [],

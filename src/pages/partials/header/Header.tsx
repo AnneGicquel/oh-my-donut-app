@@ -1,6 +1,6 @@
 import './Header.css';
 
-const Header = () => {
+const Header = () => { // Make this reusable component
     return (
         <header className='header'>
             <div className='header-icons-container'>
