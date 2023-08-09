@@ -1,4 +1,4 @@
-import { ProductI } from "../../interfaces/donuts.interface";
+import { ProductI } from "../../../interfaces/donuts.interface";
 
 interface ProductProps {
   title: string;
