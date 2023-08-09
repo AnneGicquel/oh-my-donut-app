@@ -1,5 +1,5 @@
 /*** IMPORT ***/
-import style from './ReusableCheckbox.module.css';
+import style from './reusableCheckbox.module.css';
 import { useState } from 'react'; 
 
 /****** PROPS ******/
