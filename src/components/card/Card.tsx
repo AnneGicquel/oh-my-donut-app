@@ -1,3 +1,4 @@
+import ReusableCheckbox from "components/common/button/ReusableCheckbox/ReusableCheckbox";
 import { AllergenI, ProductI } from "../../interfaces/donuts.interface";
 import Button from "../common/button/Button";
 
@@ -7,6 +8,7 @@ interface CardPropsI {
 const Card = (props: CardPropsI) => {
   const { item } = props;
   const { title, nbrPerson, price, description, imageUrl, allergenFree } = item;
+  const test = () => console.log ('TESTTT') //
   return (
     <section className="card-container d-flex">
       <img className="card-img" src={imageUrl.src} alt={imageUrl.alt} />
@@ -24,6 +26,7 @@ const Card = (props: CardPropsI) => {
         </div>
       </div>
       <Button title="Ajouter au panier" />
+      <ReusableCheckbox label="Bougie" callback={test} /> #
     </section>
   );
 };
