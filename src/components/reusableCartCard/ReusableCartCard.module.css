@@ -1,0 +1,31 @@
+cartCardContainer {
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+cartCardFlex {
+    display: flex;
+}
+
+cartCardInfoProduct {
+    display: flex;
+    flex-direction: column;
+}
+
+cartCardQuantityPrice {
+    display: flex;
+    align-items: center;
+}
+
+cartCardButtons {
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-family: 'Varela Round', sans-serif;
+}
+
+p{
+    font-family: 'Lilita One', cursive;
+}
