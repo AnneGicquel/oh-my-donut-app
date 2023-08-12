@@ -1,0 +1,13 @@
+
+/* BUTTON CSS */
+
+.button-add-cart {
+    width: 180px;
+    height: 40px;
+    font-family: var(--varelaRound);
+    background: var(--black);
+    color: var(--white);
+    font-size: 13px;
+    text-align: center;
+    border: none;
+}

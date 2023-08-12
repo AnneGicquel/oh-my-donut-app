@@ -3,6 +3,7 @@ import NotFound from "../pages/notFound/NotFound";
 import Home from "../pages/home/Home";
 import Products from "../pages/products/Products";
 import ProductProvider from "../contexts/ProductContext";
+import CartPage from "pages/cart/Cart";
 
 const ROUTES: RouteObject[] = [
   {
@@ -13,6 +14,10 @@ const ROUTES: RouteObject[] = [
       {
         index: true,
         element: <ProductProvider><Products /></ProductProvider>
+      },
+      {
+        path: "/cart",
+        element: <CartPage />
       },
     ],
   },
