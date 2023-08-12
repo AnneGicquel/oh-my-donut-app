@@ -26,6 +26,7 @@
     margin: 0 0 30px 50px;
     padding: 23px;
     background-color: var(--cyan);
+    cursor: pointer;
 }
 
 .footer-logo {
