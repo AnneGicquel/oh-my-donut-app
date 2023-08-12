@@ -11,15 +11,34 @@
 .header-image {
     position: relative;
     top: -20px;
-    width: 80vw;
+    width: 90vw;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     /* padding: 0 100px; */
-    background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs.jpg");
+    background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg");
     z-index: -1;
 }
 
-.header-basket {
+.header-icons-container {
+    width: 93vw;
     position: absolute;
+    display: flex;
+    top: 35px;
+    right: 55px;
+    left: 55px;
+    height: 50px;
+}
+
+.header-basket, .header-burger {
+    width: 50px;
+}
+
+.header-basket {
+    position: inherit;
+    right: 0;
+}
+
+.header-burger {
+    display: none;
 }

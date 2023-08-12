@@ -13,16 +13,20 @@ const Products = () => {
   }, []);
 
   return (
-    <main className="product-main d-flex">
-      <CategoryProvider>
-        <Navbar />
-      </CategoryProvider>
+    <main className="product-main">
+      <h1>Toutes Nos Douceurs</h1>
+      <div className="product-container d-flex">
+        <CategoryProvider>
+          <Navbar />
+        </CategoryProvider>
 
-      <section className="section-container d-flex">
-        {products.map((product) => {
-          return <Card key={product.id} item={product} />;
-        })}
-      </section>
+        <section className="section-container d-flex">
+          {products.map((product) => {
+            return <Card key={product.id} item={product} />;
+          })}
+        </section>
+
+      </div>
     </main>
   );
 };

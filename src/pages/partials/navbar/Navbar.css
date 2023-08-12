@@ -1,0 +1,32 @@
+/* NAVBAR CSS */
+
+.navbar-container {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-container li {
+    border-bottom: 1px solid var(--black);
+    background-color: var(--lightFrenchRose);
+    font-family: var(--lilitaOne);
+    list-style-type: none;
+    font-size: 40px;
+    width: 418px;
+    height: 85px;
+    padding-left: 37px;
+    line-height: 90px;
+    cursor: pointer;
+}
+
+.subMenu-child{
+    background-color: var(--white) !important;
+}
+
+.subMenu {
+    padding: 0;
+    display: none;
+}
+
+.isVisible {
+    display: initial;
+}

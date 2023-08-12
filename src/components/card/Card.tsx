@@ -1,5 +1,6 @@
 import { AllergenI, ProductI } from "../../interfaces/donuts.interface";
-import Button from "../button/Button";
+import Button from "../common/button/Button";
+import './Card.css';
 
 interface CardPropsI {
   item: ProductI;
