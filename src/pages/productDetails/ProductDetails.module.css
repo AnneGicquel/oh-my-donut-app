@@ -2,8 +2,9 @@
     min-width: 95vw;
 }
 
-/* necessaire?? */
+/* 🟢 necessaire pour la mise en page */
 .dFlex {
     display: flex;
     flex-direction: row;
 }
+

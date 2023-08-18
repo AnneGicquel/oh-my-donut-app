@@ -13,7 +13,27 @@ const ProductDetails = () => {
                     <Navbar />
                 </CategoryProvider>
 
-                <section>WORK HERE DEAR!</section>
+                <section>
+                    <h1>WORK HERE DEAR!</h1>
+                    <h1>WORK HERE DEAR!</h1>
+                    <h1>WORK HERE DEAR!</h1>
+                    <h1>WORK HERE DEAR!</h1>
+                    <h1>WORK HERE DEAR!</h1>
+                    <h1>WORK HERE DEAR!</h1>
+                    
+
+                </section>
+
+                <section>
+                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    
+
+                </section>
 
             </div>
 
