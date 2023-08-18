@@ -20,8 +20,6 @@ const ProductDetails = () => {
                     <h1>WORK HERE DEAR!</h1>
                     <h1>WORK HERE DEAR!</h1>
                     <h1>WORK HERE DEAR!</h1>
-                    
-
                 </section>
 
                 <section>
@@ -31,12 +29,8 @@ const ProductDetails = () => {
                     <h1> I WANT TO WORK HERE DEAR!</h1>
                     <h1> I WANT TO WORK HERE DEAR!</h1>
                     <h1> I WANT TO WORK HERE DEAR!</h1>
-                    
-
                 </section>
-
             </div>
-
         </main>
     )
 
