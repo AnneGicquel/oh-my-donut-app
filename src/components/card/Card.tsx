@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AllergenI, ProductI } from "../../interfaces/donuts.interface";
 import Button from "../common/button/Button";
 import './Card.css';
@@ -7,13 +8,13 @@ interface CardPropsI {
 }
 const Card = (props: CardPropsI) => {
   const { item } = props;
-  const { title, nbrPerson, price, description, imageUrl, allergenFree } = item;
+  const { id, title, nbrPerson, price, description, imageUrl, allergenFree } = item;
   return (
     <section className="card-container d-flex">
       <img className="card-img" src={imageUrl.src} alt={imageUrl.alt} />
       <div className="card-text d-flex">
         <h4>
-          {title.toUpperCase()} - {nbrPerson} PERSONNES
+          <Link className="card-link" to={`/ProductDetails/${id}`}>{title.toUpperCase()} - {nbrPerson} PERSONNES</Link>
         </h4>
         <p>{ description }</p>
         <h4 className="price">{price} €</h4>

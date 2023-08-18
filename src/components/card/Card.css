@@ -31,6 +31,10 @@
     margin-bottom: 16px;
 }
 
+.card-link {
+    color: var(--black)
+}
+
 .card-text .price {
     margin: 0;
 }

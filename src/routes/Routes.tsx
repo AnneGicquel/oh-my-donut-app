@@ -26,7 +26,7 @@ const ROUTES: RouteObject[] = [
   },
   ////// PRODUCT DETAIL //////
   {
-    path: "/ProductDetails",
+    path: "/ProductDetails/:id",
     element: <Home />,
     errorElement: <NotFound />,
     children: [
