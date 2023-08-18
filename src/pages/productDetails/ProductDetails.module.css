@@ -1,0 +1,9 @@
+.productDetailsMain{
+    min-width: 95vw;
+}
+
+/* necessaire?? */
+.dFlex {
+    display: flex;
+    flex-direction: row;
+}

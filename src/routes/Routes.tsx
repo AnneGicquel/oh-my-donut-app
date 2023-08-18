@@ -25,11 +25,11 @@ const ROUTES: RouteObject[] = [
   {
     path: "/ProductDetails",
     element: <ProductDetails />
-},
-{
-  path: "/Command",
-  element: <Command />
-},
+  },
+  {
+    path: "/Command",
+    element: <Command />
+  },
 ];
 
 export { ROUTES };
