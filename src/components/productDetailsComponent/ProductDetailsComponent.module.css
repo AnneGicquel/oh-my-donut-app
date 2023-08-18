@@ -1,0 +1,64 @@
+.productDetailsComponentSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+}
+
+.centeredContent {
+  text-align: center;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productName {
+  text-align: center;
+  font-family: var(--lilitaOne);
+  font-size: 24px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.productPrez {
+  text-align: center;
+  font-family: var(--varelaRound);
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.ingredient {
+  width: 320px;
+  text-align: center;
+  font-family: var(--varelaRound);
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.productCustomizable h3 {
+  text-align: center;
+  font-family: var(--lilitaOne);
+  font-size: 16px;
+}
+
+.productCustomizable {
+  font-family: var(--varelaRound);
+  font-size: 12px;
+  line-height: 18px;
+  width: 240px;
+  text-align: center;
+
+}
+
+.allergens img {
+  width: 25px;
+  height: 25px;
+  margin: 20px 15px;
+}
+
+.colorBackground {
+  width: 480px;
+  background-color: var(--babyPink);
+}

@@ -1,3 +1,4 @@
+import ProductDetailsComponent from "components/productDetailsComponent/ProductDetailsComponent";
 import CategoryProvider from "contexts/CategoryContext";
 import Navbar from "pages/partials/navbar/Navbar";
 import style from "pages/productDetails/ProductDetails.module.css"
@@ -14,12 +15,8 @@ const ProductDetails = () => {
                 </CategoryProvider>
 
                 <section>
-                    <h1>components/ProductDetails</h1>
-                    <h1>components/ProductDetails</h1>
-                    <h1>components/ProductDetails</h1>
-                    <h1>components/ProductDetails</h1>
-                    <h1>components/ProductDetails</h1>
-                    <h1>components/ProductDetails</h1>
+                    <ProductDetailsComponent/ >
+                    
                 </section>
 
                 <section>
