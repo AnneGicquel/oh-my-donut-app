@@ -16,10 +16,7 @@ const Products = () => {
     <main className="product-main">
       <h1>Toutes Nos Douceurs</h1>
       <div className="product-container d-flex">
-        <CategoryProvider>
-          <Navbar />
-        </CategoryProvider>
-
+        <Navbar />
         <section className="section-container d-flex">
           {products.map((product) => {
             return <Card key={product.id} item={product} />;
