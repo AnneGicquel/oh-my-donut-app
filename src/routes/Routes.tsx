@@ -22,14 +22,31 @@ const ROUTES: RouteObject[] = [
     path: "*",
     element: <NotFound />,
   },
+  ////// PRODUCT DETAIL //////
   {
     path: "/ProductDetails",
-    element: <ProductDetails />
+    element: <Home />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <ProductProvider><ProductDetails /></ProductProvider>
+      },
+    ],
   },
+  /////// COMMAND ////////
   {
     path: "/Command",
-    element: <Command />
+    element: <Home />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <ProductProvider><Command /></ProductProvider>
+      },
+    ],
   },
+
 ];
 
 export { ROUTES };

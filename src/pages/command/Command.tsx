@@ -1,5 +1,3 @@
-import CategoryProvider from "contexts/CategoryContext";
-import Navbar from "pages/partials/navbar/Navbar";
 import style from "pages/command/Command.module.css"
 
 
@@ -7,30 +5,33 @@ const Command = () => {
 
     return(
         <main className={style.commandMain}>
-            {/* ⬇️ NAVBAR */}
-            {/* 🔴 mais ne conduit pas au pages.. */}
             <div className={style.dFlex}>
-                <CategoryProvider>
-                    <Navbar />
-                </CategoryProvider>
-
+                <h1>DÉTAILS DE MA COMMANDE</h1>
+                <h2>NUMÉRO DE COMMANDE: numeroDeCommande entre accollades</h2>
                 <section>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
+                    <h1>components/ReusableCartCard * 2</h1>
+                    <h1>components/ReusableCartCard * 2</h1>
+                    <h1>components/ReusableCartCard * 2</h1>
+                    <h1>components/ReusableCartCard * 2</h1>
+                    <h1>components/ReusableCartCard * 2</h1>
+                    <h1>components/ReusableCartCard * 2</h1>
                 </section>
 
                 <section>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1>components/InfoFacturation</h1>
+                    <h1>components/InfoFacturation</h1>
+                    <h1>components/InfoFacturation</h1>
+                    <h1>components/InfoFacturation</h1>
+                    <h1>components/InfoFacturation</h1>
+                    <h1>components/InfoFacturation</h1>
                 </section>
+                <p>
+                    Merci prénomFormInfo entre accollades ! 😊
+                </p>
+                <p>
+                    Tu recevras ce récapitulatif dans ta boîte mail.
+                </p>
+                <img src="assets/images/oh-my-donut-images/GRAPHISM/see-u-soon-with-halo.png" alt="Graphic 'SEE YOU SOON' neon style with halo" />
             </div>
         </main>
 

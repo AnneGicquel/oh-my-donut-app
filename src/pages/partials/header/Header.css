@@ -16,8 +16,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     /* padding: 0 100px; */
-    background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg");
-    z-index: -1;
+    
+    /* 👋 ERDAL, j'ai mis en commentaire car les images ne
+    sont que sur les Catégories ⬇️ */
+    /* background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg");
+    z-index: -1; */
 }
 
 .header-icons-container {

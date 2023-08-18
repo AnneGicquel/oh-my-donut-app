@@ -14,21 +14,21 @@ const ProductDetails = () => {
                 </CategoryProvider>
 
                 <section>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
-                    <h1>WORK HERE DEAR!</h1>
+                    <h1>components/ProductDetails</h1>
+                    <h1>components/ProductDetails</h1>
+                    <h1>components/ProductDetails</h1>
+                    <h1>components/ProductDetails</h1>
+                    <h1>components/ProductDetails</h1>
+                    <h1>components/ProductDetails</h1>
                 </section>
 
                 <section>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
-                    <h1> I WANT TO WORK HERE DEAR!</h1>
+                    <h1>components/ProductCustomizer</h1>
+                    <h1>components/ProductCustomizer</h1>
+                    <h1>components/ProductCustomizer</h1>
+                    <h1>components/ProductCustomizer</h1>
+                    <h1>components/ProductCustomizer</h1>
+                    <h1>components/ProductCustomizer</h1>
                 </section>
             </div>
         </main>
