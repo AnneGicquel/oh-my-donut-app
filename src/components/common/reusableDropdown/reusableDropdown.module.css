@@ -1,0 +1,45 @@
+.dropdown {
+    align-self: center;
+    font-family: var(--varelaRound);
+    font-size: 14px;
+    color: var(--black);
+    height: 45px;
+    width: 320px;
+    background-color: var(--white);
+    height: 45px;
+    width: 320px;
+    padding: 0 15px 0 15px;
+    list-style: none;
+    position: relative;
+    /* ⬆️ position relative pour servir de contexte de positionnement pour ses éléments enfants (absolu). 
+    border: 2px solid transparent;
+    /* ⬆️ pour que les spans soit centrées*/
+    border-bottom: 0.2px solid black;
+}
+
+
+.dropdown ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subMenu {
+  border-top: 0.2px solid black;
+  /* ⬆️ Pour remplacer la border bottom du Menu*/
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  /* Position absolue par rapport au menu principal */
+  top: 100%;
+  /* Place le sous-menu en dessous du menu principal */
+  left: 0;
+  /* Aligne le sous-menu à gauche du menu principal */
+  background-color: white;
+  /* Couleur de fond du sous-menu */
+  z-index: +1; /*pour passer au dessus des menus principaux du dessous*/ 
+}
