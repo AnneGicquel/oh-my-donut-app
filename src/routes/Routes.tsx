@@ -5,6 +5,7 @@ import Products from "../pages/products/Products";
 import ProductProvider from "../contexts/ProductContext";
 import ProductDetails from "pages/productDetails/ProductDetails";
 import Command from "pages/command/Command";
+import CategoryProvider from "contexts/CategoryContext";
 
 const ROUTES: RouteObject[] = [
   {
@@ -14,13 +15,14 @@ const ROUTES: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <ProductProvider><Products /></ProductProvider>
+        element:
+          <ProductProvider>
+            <CategoryProvider>
+              <Products />
+            </CategoryProvider>
+          </ProductProvider>
       },
     ],
-  },
-  {
-    path: "*",
-    element: <NotFound />,
   },
   ////// PRODUCT DETAIL //////
   {
@@ -45,6 +47,10 @@ const ROUTES: RouteObject[] = [
         element: <ProductProvider><Command /></ProductProvider>
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 
 ];

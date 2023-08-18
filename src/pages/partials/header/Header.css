@@ -27,6 +27,7 @@
     width: 93vw;
     position: absolute;
     display: flex;
+    justify-content: space-evenly;
     top: 35px;
     right: 55px;
     left: 55px;

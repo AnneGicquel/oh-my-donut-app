@@ -10,7 +10,7 @@ interface CategoryDataI {
 
 const defaultCategory: CategoryDataI = {
     categories: [],
-    getCategories: () => {}
+    getCategories: () => {},
 }
 
 
@@ -32,7 +32,6 @@ const CategoryProvider = ({ children }: CategoryProviderProps): JSX.Element => {
             setCategories([...category.data])
         });
     }
-
 
     const allCategories: CategoryDataI = {
         categories: [...categories],
