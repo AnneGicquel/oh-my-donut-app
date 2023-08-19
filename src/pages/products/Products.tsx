@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CategoryProvider from "../../contexts/CategoryContext";
 import { useProductContext } from "../../contexts/ProductContext";
 import Navbar from "../partials/navbar/Navbar";
@@ -13,11 +13,33 @@ const Products = () => {
     getProducts();
   }, []);
 
+      // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
+      // will be refacto later
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    
+    function getCurrentDimension(){
+        return {
+              width: window.innerWidth,
+              height: window.innerHeight
+        }
+    }
+
+    useEffect(() => {
+        const updateDimension = () => {
+          setScreenSize(getCurrentDimension())
+        }
+        window.addEventListener('resize', updateDimension);
+        
+        return(() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+      }, [screenSize])
+
   return (
     <main className="product-main">
       <h1>Toutes Nos Douceurs</h1>
       <div className="product-container d-flex">
-        <Navbar />
+        {screenSize.width > 768 ? <Navbar /> : null}
         <section className="section-container d-flex">
           {products.map((product) => {
             return <Card key={product.id} item={product} />;
