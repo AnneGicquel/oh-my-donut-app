@@ -1,0 +1,64 @@
+.checkbox label {
+  align-self: center;
+  font-family: var(--varelaRound);
+  font-size: 14px;
+  color: var(--black);
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  width: 320px;
+  background-color: var(--white);
+  border-bottom: 0.2px solid var(--black);
+  height: 45px;
+  width: 320px;
+  padding: 0 15px 0 15px;
+}
+
+
+
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  align-self: center;
+  width: 1.3em;
+  height: 1.3em;
+  border: 1px solid var(--black);
+}
+
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: var(--cyan);
+}
+
+.checkbox input[type="text"] {
+  width: 75px;
+}
+
+.checkbox input[type="text"]:focus {
+  /* retire bordure bleue qd c'est cliqué (en focus) */
+  outline: none;
+}
+
+/* style qd le parent ".checkbox" est en mode focus */
+.checkbox:focus-within label {
+  color: #22C0DF;
+  -webkit-text-stroke: 0.2px black;
+}
+
+.checkbox input[type="text"] {
+  padding: 0 10px;
+  align-self: center;
+  height: 1.3em;
+  color: #22C0DF;
+  -webkit-text-stroke: 0.2px black;
+  text-transform: capitalize;
+}
+
+.checkbox p{
+  align-self: center;
+  font-family: var(--varelaRound);
+  font-size: 14px;
+  color: var(--black);
+}
