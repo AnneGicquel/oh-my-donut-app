@@ -1,7 +1,6 @@
 import { ProductI } from "interfaces/donuts.interface";
 import { createContext, useContext, useState } from "react";
-import shortUUID from "short-uuid";
-import short from 'short-uuid';
+import { uid } from 'uid'
 
 
 //interface des produits du panier
@@ -58,7 +57,7 @@ export const CartProvider = (props: CartProviderProps) => {
     const addToCart = (newProduct: ProductI, newQuantity: number) => {
 
     const newCartProduct : ICartProduct = {
-        id: shortUUID(),
+        id: uid(),
         product: newProduct,
         quantity: newQuantity
     }
