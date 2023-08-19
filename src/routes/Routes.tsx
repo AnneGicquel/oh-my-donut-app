@@ -6,7 +6,9 @@ import ProductProvider from "../contexts/ProductContext";
 import ProductDetails from "pages/productDetails/ProductDetails";
 import Command from "pages/command/Command";
 import CategoryProvider from "contexts/CategoryContext";
+import Payment from "pages/payment/Payment";
 import MobileProvider from "contexts/MobileContext";
+import Cart from "pages/cart/Cart";
 
 const ROUTES: RouteObject[] = [
   {
@@ -23,32 +25,28 @@ const ROUTES: RouteObject[] = [
             </CategoryProvider>
           </ProductProvider>
       },
-    ],
-  },
-  ////// PRODUCT DETAIL //////
-  {
-    path: "/ProductDetails/:id",
-    element: <Home />,
-    errorElement: <NotFound />,
-    children: [
+      ////// PRODUCT DETAIL //////
       {
-        index: true,
-        element: <ProductProvider><ProductDetails /></ProductProvider>
+        path: "/ProductDetails/:id",
+        element: <ProductProvider><ProductDetails /></ProductProvider>,
+      },
+      /////// CART ////////
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      /////// PAYMENT ////////
+      {
+        path: "/payment",
+        element: <Payment />,
+      },
+      {
+        path: "/command",
+        element: <Command />,
       },
     ],
   },
-  /////// COMMAND ////////
-  {
-    path: "/Command",
-    element: <Home />,
-    errorElement: <NotFound />,
-    children: [
-      {
-        index: true,
-        element: <ProductProvider><Command /></ProductProvider>
-      },
-    ],
-  },
+  /////// NOTFOUND ////////
   {
     path: "*",
     element: <NotFound />,
@@ -57,3 +55,4 @@ const ROUTES: RouteObject[] = [
 ];
 
 export { ROUTES };
+
