@@ -30,3 +30,28 @@
 .isVisible {
     display: initial;
 }
+
+.isDisplayed {
+    display: none;
+}
+
+@media screen and (min-width: 390px) and (max-width: 768px)  {
+    .navbar-container {
+        position: absolute;
+        top: 150px;
+        left: 0;
+    }
+    
+    .navbar-container li {
+        border-bottom: 1px solid var(--black);
+        background-color: var(--lightFrenchRose);
+        font-family: var(--lilitaOne);
+        list-style-type: none;
+        font-size: 40px;
+        width: 418px;
+        height: 85px;
+        padding-left: 37px;
+        line-height: 90px;
+        cursor: pointer;
+    }
+}

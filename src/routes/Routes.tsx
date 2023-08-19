@@ -6,11 +6,12 @@ import ProductProvider from "../contexts/ProductContext";
 import ProductDetails from "pages/productDetails/ProductDetails";
 import Command from "pages/command/Command";
 import CategoryProvider from "contexts/CategoryContext";
+import MobileProvider from "contexts/MobileContext";
 
 const ROUTES: RouteObject[] = [
   {
     path: "/",
-    element: <Home />,
+    element: <MobileProvider><Home /></MobileProvider>,
     errorElement: <NotFound />,
     children: [
       {

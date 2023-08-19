@@ -4,7 +4,7 @@
 }
 
 .product-main {
-    min-width: 95vw;
+    width: min(95vw, 100%);
 }
 
 .product-main h1 {

@@ -1,6 +1,7 @@
 import ProductCustomizer from "components/productCustomizer/ProductCustomizer";
 import ProductDetailsComponent from "components/productDetailsComponent/ProductDetailsComponent";
 import CategoryProvider from "contexts/CategoryContext";
+import MobileProvider from "contexts/MobileContext";
 import Navbar from "pages/partials/navbar/Navbar";
 import style from "pages/productDetails/ProductDetails.module.css"
 
@@ -12,16 +13,18 @@ const ProductDetails = () => {
             {/* 🔴 mais ne conduit pas au pages.. */}
             <div className={style.dFlex}>
                 <CategoryProvider>
-                    <Navbar />
+                    <MobileProvider>
+                        <Navbar />
+                    </MobileProvider>
                 </CategoryProvider>
 
                 <section>
-                    <ProductDetailsComponent/ >
-                    
+                    <ProductDetailsComponent />
+
                 </section>
 
                 <section>
-                    <ProductCustomizer/ >
+                    <ProductCustomizer />
                 </section>
             </div>
         </main>
