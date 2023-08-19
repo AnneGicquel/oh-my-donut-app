@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 480px;
+  width: 527px;
+  border: 2px solid red;
 }
 
 .centeredContent {

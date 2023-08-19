@@ -1,3 +1,4 @@
+import ProductCustomizer from "components/productCustomizer/ProductCustomizer";
 import ProductDetailsComponent from "components/productDetailsComponent/ProductDetailsComponent";
 import CategoryProvider from "contexts/CategoryContext";
 import Navbar from "pages/partials/navbar/Navbar";
@@ -20,12 +21,7 @@ const ProductDetails = () => {
                 </section>
 
                 <section>
-                    <h1>components/ProductCustomizer</h1>
-                    <h1>components/ProductCustomizer</h1>
-                    <h1>components/ProductCustomizer</h1>
-                    <h1>components/ProductCustomizer</h1>
-                    <h1>components/ProductCustomizer</h1>
-                    <h1>components/ProductCustomizer</h1>
+                    <ProductCustomizer/ >
                 </section>
             </div>
         </main>
