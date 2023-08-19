@@ -22,7 +22,6 @@ const Navbar: FC = () => {
     } else {
       menuRef.current.classList.remove('isDisplayed')
     }
-
   }, [toggleMobileMenu])
 
   const toggleMenu = (e: MouseEventHandler<HTMLElement>, category: any) => {

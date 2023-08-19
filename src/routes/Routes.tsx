@@ -13,17 +13,16 @@ import Cart from "pages/cart/Cart";
 const ROUTES: RouteObject[] = [
   {
     path: "/",
-    element: <MobileProvider><Home /></MobileProvider>,
+    element: <ProductProvider>
+                <CategoryProvider>
+                  <Home />
+                </CategoryProvider>
+             </ProductProvider>,
     errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element:
-          <ProductProvider>
-            <CategoryProvider>
-              <Products />
-            </CategoryProvider>
-          </ProductProvider>
+        element: <Products />
       },
       ////// PRODUCT DETAIL //////
       {

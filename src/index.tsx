@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import AppRouter from './routes/AppRouter';
+import MobileProvider from 'contexts/MobileContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   // <React.StrictMode>
-    <AppRouter />
+    <MobileProvider><AppRouter /></MobileProvider> 
   // </React.StrictMode>
 );
 
