@@ -4,6 +4,7 @@ import { useProductContext } from "../../contexts/ProductContext";
 import Navbar from "../partials/navbar/Navbar";
 import Card from "../../components/card/Card";
 import './Products.css'
+import MobileProvider from "contexts/MobileContext";
 
 const Products = () => {
   const { products, getProducts } = useProductContext();
