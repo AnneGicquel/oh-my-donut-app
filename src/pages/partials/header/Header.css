@@ -1,7 +1,8 @@
 .header {
     background-image: url("/public/assets/images/oh-my-donut-images/WAVES/header-wave svg.svg");
     background-repeat: no-repeat;
-    height: 500px;
+    background-size: auto;
+    height: 600px;
     z-index: 10000;
     display: flex;
     justify-content: center;
@@ -9,29 +10,22 @@
 }
 
 .header-image {
-    position: relative;
-    top: -20px;
-    width: 90vw;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* padding: 0 100px; */
-    
-    /* 👋 ERDAL, j'ai mis en commentaire car les images ne
-    sont que sur les Catégories ⬇️ */
-    /* background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg");
-    z-index: -1; */
+    width: min(1444px, 90vw);
+    height: 460px;
+    border-radius: 20px;
+    /* background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg"); */
+    /* background-repeat: no-repeat;
+    background-size: 100%; */
+     z-index: -10000; 
 }
 
 .header-icons-container {
-    width: min(93vw, 100%);
+    width: min(95vw, 100%);
     position: absolute;
     display: flex;
     justify-content: space-evenly;
-    top: 35px;
-    right: 55px;
-    left: 55px;
-    height: 50px;
+    top: 20px;
+    height: 60px;
 }
 
 .header-basket, .header-burger {
@@ -39,27 +33,72 @@
 }
 
 .header-basket {
-    position: inherit;
+}
+
+.CartCounter {
+    position: absolute;
     right: 0;
+    color: var(--white);
+    font-size: clamp(18px, 3vw, 20px);
+    display: flex;
+    font-weight: bold;
 }
 
 .header-burger {
     display: none;
 }
 
-@media screen and (min-width: 390px) and (max-width: 768px)  {
+@media screen and (min-width: 320px) and (max-width: 768px)  {
+
+    .header {
+        width: 100%;
+        background-size: contain;
+        justify-content: center;
+        align-items: center;
+        height: 197px;
+    }
+
+    .header-image {
+        margin-top: 165px;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        /* background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg"); */
+        background-repeat: no-repeat;
+        background-size: 100%;
+         z-index: -10000; 
+    }
 
     .header-icons-container {
-        width: 93vw;
         position: absolute;
+        width: 90vw;
         display: flex;
         justify-content: space-between;
-        top: 35px;
-        right: 55px;
-        left: 55px;
-        height: 50px;
     }
+
+    .header-logo {
+        width: 180px !important;
+        height: 40px !important;
+        align-self: center;
+    }
+
+    .CartCounter {
+        position: initial;
+        right: 0;
+    }
+
+    .header-basket {
+        position: initial;
+        right: 0;
+        width: 22px;
+        height: 20px;
+        padding-left: 2px;
+    }
+
     .header-burger {
         display: initial;
+        width: 30px;
+        height: 30px;
+        align-self: end;
     }
 }

@@ -33,3 +33,10 @@
     width: 106px;
     align-self: center;
 }
+
+
+@media screen and (min-width: 320px) and (max-width: 768px)  {
+
+    .footer {
+    }
+}
