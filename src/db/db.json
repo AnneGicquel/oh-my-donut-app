@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Donut framboise",
       "nbrPerson": 1,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
@@ -38,7 +38,7 @@
       "id": 2,
       "title": "Donut Fraise",
       "nbrPerson": 1,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-2.png",
@@ -72,7 +72,7 @@
       "id": 3,
       "title": "Donut Pistache",
       "nbrPerson": 1,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-3.png",
@@ -106,7 +106,7 @@
       "id": 4,
       "title": "Donut Oreo",
       "nbrPerson": 1,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-4.png",
@@ -140,7 +140,7 @@
       "id": 5,
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-1.png",
@@ -174,7 +174,7 @@
       "id": 6,
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-2.png",
@@ -208,7 +208,7 @@
       "id": 7,
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-3.png",
@@ -242,7 +242,7 @@
       "id": 8,
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l’eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-4.png",
