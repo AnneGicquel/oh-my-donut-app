@@ -22,10 +22,10 @@
   .checkbox input[type="checkbox"] {
     appearance: none;
     align-self: center;
-    width: 1.3em;
-    height: 1.3em; 
+    width: 15px;
+    height: 15px; 
     border: 1px solid var(--black);
-    margin-right: 200px;
+    margin-right: 205px;
 }
   
 

@@ -1,5 +1,4 @@
 .dropdown {
-    align-self: center;
     font-family: var(--varelaRound);
     font-size: 14px;
     color: var(--black);
@@ -15,17 +14,23 @@
     border: 2px solid transparent;
     /* ⬆️ pour que les spans soit centrées*/
     border-bottom: 0.2px solid black;
+
 }
 
 
 .dropdown ul {
   padding: 0;
   list-style-type: none;
+  margin: 0;
 }
+
 
 .menu-item {
   display: flex;
   justify-content: space-between;
+  align-items: center; 
+  height: 45px;
+  width: 320px;
 }
 
 .subMenu {
