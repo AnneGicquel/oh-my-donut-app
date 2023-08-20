@@ -3,7 +3,7 @@ import ReusableCheckbox from "components/common/reusableCheckbox/reusableCheckbo
 import CheckboxName from "components/checkboxName/CheckboxName";
 import style from "components/productCustomizer/ProductCustomizer.module.css"
 import CheckboxCandle from "components/checkboxCandle/CheckboxCandle";
-import ReusableDropdown from "components/common/reusableDropdown/ReusableDropdown";
+import ReusableDropdown from "components/common/reusableDropdown/reusableDropdown";
 import Button from "components/common/button/Button";
 
 
