@@ -1,7 +1,7 @@
 /** IMPORT **/
 import React, { useEffect, useRef, useState } from "react";
 
-import style from "components/common/reusableDropdown/ReusableDropdown.module.css";
+import style from "components/common/reusableDropdown/reusableDropdown.module.css";
 import GroupedCheckboxes from "components/groupedCheckboxes/GroupedCheckboxes";
 
 
