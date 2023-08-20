@@ -22,8 +22,8 @@
 .checkbox input[type="checkbox"] {
   appearance: none;
   align-self: center;
-  width: 1.3em;
-  height: 1.3em;
+  width: 15px;
+  height: 15px;
   border: 1px solid var(--black);
 }
 
@@ -50,7 +50,7 @@
 .checkbox input[type="text"] {
   padding: 0 10px;
   align-self: center;
-  height: 1.3em;
+  height: 15px;
   color: #22C0DF;
   -webkit-text-stroke: 0.2px black;
   text-transform: capitalize;

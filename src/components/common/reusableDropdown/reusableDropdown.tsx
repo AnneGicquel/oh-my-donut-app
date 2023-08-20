@@ -1,7 +1,8 @@
 /** IMPORT **/
 import React, { useEffect, useRef, useState } from "react";
 
-import style from "components/ReusableDropdown/ReusableDropdown.module.css";
+import style from "components/common/reusableDropdown/ReusableDropdown.module.css";
+import GroupedCheckboxes from "components/groupedCheckboxes/GroupedCheckboxes";
 
 
 /** PROPS **/
@@ -80,10 +81,10 @@ const ReusableDropdown = ({
                     onClick={() => onSubMenuItemClick(item.id, subItem.id)}
                   >
                     <div>
-                      {/* <ReusableCheckbox 
+                      <GroupedCheckboxes
                         label={subItem.title} 
                         callback={test}
-                         /> */}
+                         /> 
                     </div>
                   </li>
                 ))}

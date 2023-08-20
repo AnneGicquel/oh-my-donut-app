@@ -14,21 +14,22 @@ const ROUTES: RouteObject[] = [
   {
     path: "/",
     element: <ProductProvider>
-                <CategoryProvider>
-                  <Home />
-                </CategoryProvider>
-             </ProductProvider>,
+      <CategoryProvider>
+        <Home />
+      </CategoryProvider>
+    </ProductProvider>,
     errorElement: <NotFound />,
     children: [
       {
         index: true,
         element: <Products />
       },
-      ////// PRODUCT DETAIL //////
+      /// PRODUCT DETAIL //////
       {
-        path: "/ProductDetails/:id",
+        path: "/ProductDetails", //"/ProductDetails/:id"
         element: <ProductProvider><ProductDetails /></ProductProvider>,
       },
+      
       /////// CART ////////
       {
         path: "/cart",

@@ -1,8 +1,68 @@
 .productCustomizerSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 458px;
-    border: 2px solid blueviolet
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 458px;
+}
+
+.ifCustomize{
+  width: 350px;
+}
+
+.customButtonWrapper {
+  width: 350px; 
+  height: 53px;
+  background-color: black;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.customButtonWrapper button {
+  font-family: var(--lilitaOne);
+  font-size: 16px;
+}
+
+
+.clockContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 70px;
+}
+
+.clockContainer img{
+  width: 45px;
+  height: 45px;
+}
+
+.clockContainer span{
+  font-family: var(--varelaRound);
+  font-size: 25px;
+}
+
+.quantityContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--varelaRound);
+width: 350px;
+height: 60px;
+}
+
+.allergensContainer{
+  display: flex;
+  align-items: center;
+  font-family: var(--lilitaOne);
+  font-size: 20px;
+  width: 458px;
+  margin-top: 74px;
+}
+
+.allergensContainer img {
+  width: 25px;
+  height: 25px;
+  margin: 0 8px 0 25px;
+}
