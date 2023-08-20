@@ -10,3 +10,16 @@
     text-align: center;
     border: none;
 }
+
+
+/* MOBILE */
+
+@media screen and (min-width: 320px) and (max-width: 768px)  {
+
+    .button-add-cart {
+        width: 120px;
+        height: 15px;
+        
+    }
+    
+}
