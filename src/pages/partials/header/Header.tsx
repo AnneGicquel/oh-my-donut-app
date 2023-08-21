@@ -39,7 +39,7 @@ const Header = () => { // Make this reusable component
                 <span className='CartCounter'>(0)<img className='header-basket' src="/assets/images/oh-my-donut-images/ICONS/basket.png" alt="basket icon" /></span>
             </div>
             {/* <div className='header-image'></div> */}
-            {/* <img className='header-image' src="/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg" alt="header background" /> */}
+            {<img className='header-image' src="/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg" alt="header background" /> }
         </header>
          { toggleMobileMenu  && (screenSize.width < 768 ) ? <Navbar/> : null} 
         </>
