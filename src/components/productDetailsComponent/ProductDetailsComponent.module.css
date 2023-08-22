@@ -62,3 +62,7 @@
   width: 480px;
   background-color: var(--babyPink);
 }
+
+.colorBackground img{
+  width: 430px;
+}

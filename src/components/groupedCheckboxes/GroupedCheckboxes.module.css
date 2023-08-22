@@ -9,7 +9,8 @@
     justify-content: space-between;
     height: 45px;
     width: 320px;
-    background-color: #ffffff; 
+    background-color: #FEF8F9; 
+    /* ajout couleur pour ⬆️ distinguer le groupe de choix */
     border-bottom:0.2px solid #000000; 
     height: 45px;
     width: 320px;

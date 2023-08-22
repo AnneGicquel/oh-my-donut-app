@@ -275,31 +275,41 @@
     {
       "id": 9,
       "title": "Mochi Fruits",
-      "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
-      "price": 499,
+      "nbrPerson": 1,
+      "description": "Mochi garni de fruits confits, posé sur un glaçage citronné.",
+      "price": 5.99,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-1.png",
-        "alt": "Mochi framboise image"
+        "alt": "Mochi Fruits"
       },
       "allergenFree": [
         {
           "id": 1,
-          "name": "sans gluten",
+          "name": "gluten",
           "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
         },
         {
           "id": 2,
-          "name": "bloup",
+          "name": "lait",
           "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"
         },
         {
           "id": 3,
-          "name": "lorem",
+          "name": "fruit à coques",
           "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"
         }
       ],
-      "ingredients": [],
+      "ingredients": [
+        "Farine",
+        "Oeufs",
+        "Lait",
+        "Levure de boulanger",
+        "Sucre de canne",
+        "Citron",
+        "Purée de cumbawa",
+        "Fruits confits",
+        "Pistaches"
+      ],
       "extras": [],
       "quantity": 1,
       "isCustomizable": true,
@@ -952,7 +962,6 @@
       "categoryId": 5,
       "subCategory": 10
     },
-
     {
       "id": 29,
       "title": "Allergen Free",
@@ -964,8 +973,16 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"},
-        { "id": 3, "name": "lorem", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"}
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 3,
+          "name": "lorem",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"
+        }
       ],
       "ingredients": [],
       "extras": [],
@@ -985,8 +1002,16 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"},
-        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"}
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 2,
+          "name": "bloup",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"
+        }
       ],
       "ingredients": [],
       "extras": [],
@@ -1006,8 +1031,16 @@
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
-        { "id": 1, "name": "sans gluten", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"},
-        { "id": 2, "name": "bloup", "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"}
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 2,
+          "name": "bloup",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"
+        }
       ],
       "ingredients": [],
       "extras": [],
@@ -1034,7 +1067,6 @@
       "categoryId": 3,
       "subCategory": 5
     },
-
     {
       "id": 33,
       "title": "Coca cola",
