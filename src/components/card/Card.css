@@ -42,7 +42,6 @@
 .card-text p {
    font-size: clamp(8px, 3vw, 10px);
    font-family: var(--varelaRound);
-
 }
 
 .allergen-container {

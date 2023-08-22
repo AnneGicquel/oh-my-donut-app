@@ -17,3 +17,9 @@ export const getProductsByCategories = async (categoryId?: number, subCategory?:
         return await Axios.get("/products");
     }
 }
+
+export const getProduct = async (id: number): Promise<AxiosResponse<ProductI, any>> => {
+
+    return await Axios.get(`/products/${id}`); // productDetails
+
+}
