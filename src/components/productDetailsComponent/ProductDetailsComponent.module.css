@@ -1,3 +1,5 @@
+/* DESKTOP */
+
 .productDetailsComponentSection {
   display: flex;
   justify-content: center;
@@ -17,7 +19,7 @@
 .productName {
   text-align: center;
   font-family: var(--lilitaOne);
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   line-height: 18px;
   text-transform: uppercase;
 }
@@ -25,7 +27,7 @@
 .productPrez {
   text-align: center;
   font-family: var(--varelaRound);
-  font-size: 20px;
+  font-size: clamp(14px, 3vw, 20px);
   line-height: 18px;
 }
 
@@ -33,7 +35,7 @@
   width: 320px;
   text-align: center;
   font-family: var(--varelaRound);
-  font-size: 20px;
+  font-size: clamp(14px, 3vw, 20px);
   line-height: 18px;
 }
 
@@ -59,10 +61,37 @@
 }
 
 .colorBackground {
+  /* max-width: 480px; */
   width: 480px;
   background-color: var(--babyPink);
 }
 
+/* .colorBackground img{
+  max-width: 480px;
+  width: 80%; /* ajuste largeur pour tenir dans conteneur */
+/* } */
 .colorBackground img{
-  width: 430px;
+  width: 450px;
 }
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .productDetailsComponentSection {
+    width: 100%; /* occupe toute la largeur de l écran */
+  }
+
+  .centeredContent {
+    width: 80%; /* réduit largeur pour écran plus petit */
+  }
+
+  .colorBackground img{
+    width: 350px;
+  }
+
+  .colorBackground {
+    width: 370px;
+  }
+
+
+}
+

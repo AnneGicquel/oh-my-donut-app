@@ -1,6 +1,6 @@
 import style from "components/productDetailsComponent/ProductDetailsComponent.module.css";
 import { useProductContext } from "contexts/ProductContext";//fetch data
-import { Key, useEffect } from "react";//fetch data
+import { useEffect } from "react";//fetch data
 import { useParams } from "react-router-dom";//fetch data
 
 
@@ -23,20 +23,26 @@ const ProductDetailsComponent = () => {
     -> getOneProduct est appelé uniquement lorsque id ou getOneProduct change.
     -> pas de risque de rendus infinis */
 
-
+    const subCategoriesToCheck = [8, 9, 10, 4, 2];
+    // liste des subCategories qui sont customisables
 
     return (
         <section className={style.productDetailsComponentSection}>
-            {/*⬇️  pour test fetch data*/}
+            {/* ⬇️ pour test fetch data*/}
             {/* {JSON.stringify(product)}  */}
             <div className={style.centeredContent}>
+
+                {/* TITLE */}
                 <h3 className={style.productName}>{product && product.title}</h3>
                 {/*  doublecheck si product est défini ⬆️. 
                 pour éviter l'erreur "Cannot read properties of undefined". */}
+
+                {/* DESCRIPTION */}
                 <p className={style.productPrez}>
                     {product && product.description}
                 </p>
-               
+
+                {/* INGREDIENTS */}
                 {/*  doublecheck si product est défini ⬆️. 
                 pour éviter l'erreur "Cannot read properties of undefined". */}
                 {product && product.ingredients && (
@@ -50,20 +56,26 @@ const ProductDetailsComponent = () => {
                     </p>
                 )}
 
+                {/* PARAGRAPH IF CUSTOMIZABLE */}
+                {/*  doublecheck si product est défini ⬆️. 
+                pour éviter l'erreur "Cannot read properties of undefined". */}
+                {product && subCategoriesToCheck.includes(product.subCategory) && (
+                    <div className={style.productCustomizable}>
+                        <h3>
+                            Produit personnalisable
+                        </h3>
+                        Personnalisation possible en cochant “oui” dans “Personnaliser”.
 
+                        {/* ONLY FOR TOWER */}
+                        {product.categoryId === 5 && (
+                            <p>
+                                ⚠️ COMMANDE A PASSER 48 HEURES A L’AVANCE ⚠️
+                            </p>
+                        )}
+                    </div>
+                )}
 
-                {/* if produit personnalisable */}
-                <div className={style.productCustomizable}>
-                    <h3>
-                        Produit personnalisable
-                    </h3>
-                    Personnalisation possible en cochant “oui” dans “Personnaliser”.
-                    {/* if tower */}
-                    <p>
-                        ⚠️ COMMANDE A PASSER 48 HEURES A L’AVANCE ⚠️
-                    </p>
-                </div>
-
+                {/* ALLERGENS ICONS */}
                 {/*  doublecheck si product est défini ⬆️. 
                 pour éviter l'erreur "Cannot read properties of undefined". */}
                 {product && product.allergenFree && (
@@ -79,7 +91,7 @@ const ProductDetailsComponent = () => {
                     </div>
                 )}
 
-
+                {/* PRODUCT IMAGE */}
                 <div className={style.colorBackground}>
                     <img className="imgProduct" alt={product && product.imageUrl.alt} src={product && product.imageUrl.src} />
                 </div>
