@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AllergenI, ProductI } from "../../interfaces/donuts.interface";
+import { ProductI } from "../../interfaces/donuts.interface";
 import Button from "../common/button/Button";
 import './Card.css';
 

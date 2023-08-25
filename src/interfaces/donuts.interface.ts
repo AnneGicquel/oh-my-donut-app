@@ -44,8 +44,10 @@ export interface IngredientI {
   name: string;
 }
 
-export interface CartI {
-  products: ProductI[];
+export interface ProductCartI {
+  id: string;
+  products: ProductI;
+  quantity: number;
   totalPrice: number;
   tva: number;
 }
@@ -65,7 +67,7 @@ export interface CustomerInformationI {
 
 export interface CommandeI {
   id: string;
-  cart: CartI;
+  cart: ProductCartI;
   Customer: CustomerInformationI;
   StayOrGo: StayOrGoType;
 }

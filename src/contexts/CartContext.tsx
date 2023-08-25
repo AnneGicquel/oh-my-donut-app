@@ -1,169 +1,169 @@
-import { ProductI } from "interfaces/donuts.interface";
+import { ProductCartI, ProductI } from "interfaces/donuts.interface";
 import { createContext, useContext, useState } from "react";
-import { uid } from 'uid'
+import { getCart } from "services/cart.services";
+import { uid } from "uid";
 
+/* Interface article dans le Panier */
+// interface ICartProduct {
+//     id: string;
+//     product: ProductI;
+//     quantity: number
+// }
 
-//interface des produits du panier
-interface ICartProduct {
-    id: string,
-    product: ProductI; 
-    quantity: number;
-}
-
-//interface panier, contient un tableau des produits du panier
+/* Interface panier */
 interface ICart {
-    products: ProductI[];
-    addToCart:(newProduct: ProductI, newQuantity:number ) => void;
-    removeProduct: (newProduct: ProductI) => void;
-    removeOneQuantity: (newProduct: ProductI) => void;
+    products: ProductCartI | undefined;
+    getProductsFromCart: () => void;
+    addProductToCart: (product: ProductI, quantity: number) => void;
+    removeOne: (product: ProductI) => void;
+    removeProduct: (product: ProductI) => void;
     getTotalProduct: () => number;
     getTotalPrice: () => number;
     resetCart: () => void;
-
 }
 
-//panier par défaut: panier vide, tableau de produits vide
+/* Initialisation d'un panier par défaut */
 const defaultCart: ICart = {
-    //création d'une instance où tout est réinitialisé à son point de départ par défault
-    products: [],
-    addToCart: () => {}, //on appelle la fonction vide
-    removeProduct: () => {},
-    removeOneQuantity: () => {},
+    products: undefined,
+    getProductsFromCart: () => { },
+    addProductToCart: () => { },
+    removeOne: () => { },
+    removeProduct: () => { },
     getTotalProduct: () => 0,
     getTotalPrice: () => 0,
-    resetCart: () => {},
+    resetCart: () => { },
 }
 
-//création du contexte, de type <ICart>
-const CartContext = createContext<ICart>(defaultCart)
+/* Initialisation d'un contexte */
+const CartContext = createContext<ICart>(defaultCart);
 
 
-//création du provider, qui wrappe le context pour qu'il soit utilisable dans tous les composants, on a aussi besoin d'un children
+/* Provider */
 interface CartProviderProps {
     children: JSX.Element;
 }
 
 export const CartProvider = (props: CartProviderProps) => {
-    const {children} = props; 
-
-    //besoin d'un hook useState pour la mise à jour du panier. Agit sur l'ensemble des cartProducts du panier, et permet de faire fonctionner notre méthode addToCart 
-    const [cartProducts, setCartProducts] = useState<ICartProduct[]>([]);
+    const { children } = props;
+    const [cartProducts, setCartProducts] = useState<ProductCartI[]>([]);
 
 
-    //==> CREATION DES METHODES:
 
-    // AJOUT AU PANIER:
+    const createCart = () => {
+        const newCart: [] = [];
+        const stringifyBasket = JSON.stringify(newCart);
+        localStorage.setItem('cart', stringifyBasket);
+      }
 
-    const addToCart = (newProduct: ProductI, newQuantity: number) => {
+    const getProductsFromCart = async () => {
 
-    const newCartProduct : ICartProduct = {
-        id: uid(),
-        product: newProduct,
-        quantity: newQuantity
-    }
+        const cart = localStorage.getItem("cart");
 
-    // une fois méthode créée, mettre enplace le setteur "setCartProducts([ ... valeur du UseState])
-    //création d'un nouveau tableau avec les cardProducts déjà existant, et on ajoute le nouveau cartProduct créé
-
-    setCartProducts([...cartProducts, newCartProduct])
-    console.log(cartProducts)
-
-    //Condition: vérifier si le produit existe dans le panier:
-    const existingProduct = cartProducts.find((p) => p.product === newProduct);
-
-    if (!existingProduct) {
-        setCartProducts([...cartProducts, newCartProduct]);
-    } else {
-        existingProduct.quantity += 1;
-        setCartProducts([...cartProducts]);
-    }
-    console.log(cartProducts);
-
-    }
-
-
-    // RETIRER UN PRODUIT DU PANIER:
-
-    const removeProduct = (newProduct: ProductI) => {
-        const existingProduct = cartProducts.find((p) => p.product.id === newProduct.id);
-        if (existingProduct) {
-            const index = cartProducts.indexOf(existingProduct);
-            cartProducts.splice(index, 1);
-            setCartProducts([...cartProducts]);
-        }
-        return cartProducts;
-    }
-
-
-    // RETIRER UNE QUANTITE DU PANIER:
-
-    const removeOneQuantity = (newProduct: ProductI) => {
-        const existingProduct = cartProducts.find((p) => p.product.id === newProduct.id);
-
-        console.log("existing", existingProduct);
-        if (!existingProduct) {
-            return;
+        if(cart) {
+          return JSON.parse(cart);
         } else {
-            if (existingProduct.quantity > 1) {
-                existingProduct.quantity -= 1;
-                setCartProducts([...cartProducts]);
-            } else {
-                removeProduct(newProduct);
-                setCartProducts([...cartProducts]);
-            }
-
+          createCart();
+          getCart();
         }
-        const index = cartProducts.indexOf(existingProduct);
-        console.log("index", index);
+
+        // return await getCart()
+        //     .then((cartProduct) => setCartProducts(cartProduct.data))
+        //     .catch((error) => { throw new Error(error) });
     }
 
-    // OBTENIR LE TOTAL DE PRODUIT
+    /* Function add product(s) to cart */
+    const addProductToCart = (product: ProductI, quantity: number) => {
+        const newProduct = {
+            id: uid(),
+            product,
+            quantity,
+            totalPrice: 0,
+            tva: 19
+        }
+        /* check if product exist in the cart */
+        const foundProduct = cartProducts?.find((p) => p.products.id === newProduct.product.id);
 
+        if (!foundProduct) {
+            setCartProducts((prev) => [newProduct]);
+        } else {
+            /* add quantity */
+            foundProduct.product.quantity += 1;
+            setCartProducts([...cartProducts?.products]);
+        }
+        console.log(cartProducts);
+    }
+
+    /* Function to remove quantity from a product */
+    const removeOne = (product: ProductI) => {
+        // const foundProduct = cartProducts.find((p) => p.product.id === product.id);
+
+        // console.log("found", foundProduct);
+        // if (!foundProduct) {
+        //     return;
+        // } else {
+        //     if (foundProduct.quantity > 1) {
+        //         foundProduct.quantity -= 1;
+        //         setCartProducts([...cartProducts]);
+        //     } else {
+        //         removeProduct(product);
+        //         setCartProducts([...cartProducts]);
+        //     }
+
+        // }
+        // const index = cartProducts.indexOf(foundProduct);
+        // console.log("index", index);
+    }
+
+    /*  Function to remove a product from the cart */
+    const removeProduct = (product: ProductI) => {
+        // const foundProduct = cartProducts.find((p) => p.product.id === product.id);
+        // if (foundProduct) {
+        //     const index = cartProducts.indexOf(foundProduct);
+        //     cartProducts.splice(index, 1);
+        //     setCartProducts([...cartProducts]);
+        // }
+        // return cartProducts;
+    }
+
+    /* Function to get the total quantity of the cart */
     const getTotalProduct = () => {
-        const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ICartProduct) => {
-            return accumulator += currentValue.quantity;
-        }, 0);
-        return totalProducts;
+        // const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ICartProduct) => {
+        //     return accumulator += currentValue.quantity;
+        // }, 0);
+        // return totalProducts;
+        return 0;
 
     }
 
-    // OBTENIR LE PRIX TOTAL
-
+    /* Function to get the total price of the cart */
     const getTotalPrice = () => {
-        const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ICartProduct) => {
-            return accumulator += (currentValue.product.price * currentValue.quantity);
-        }, 0);
-        return totalPrice;
+        // const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ICartProduct) => {
+        //     return accumulator += (currentValue.product.price * currentValue.quantity);
+        // }, 0);
+        // return totalPrice;
+        return 0;
 
     }
 
-    // REINITIALISATION DU PANIER:
-
+    /* Function to reset the cart */
     const resetCart = () => {
-        setCartProducts([]);
+        // setCartProducts();
     }
 
-    // ==> CREATION DU COEUR DE NOTRE PANIER, doit être codé après la déclaration des méthodes, sinon problème de scope 
     const cart: ICart = {
-        products: [],
-        addToCart,
-        removeOneQuantity,
+        products: cartProducts,
+        getProductsFromCart,
+        addProductToCart,
+        removeOne,
         removeProduct,
         getTotalProduct,
         getTotalPrice,
         resetCart
     }
 
-    return <CartContext.Provider value = {cart}> {children} </CartContext.Provider>
-
+    return <CartContext.Provider value={cart}>
+        {children}
+    </CartContext.Provider>
 }
 
-// méthode pour pouvoir exporter et utiliser les méthodes de notre context dans les autres composants:
-export const useCartContext = () => {
-    return useContext(CartContext);
-}
-
-
-
-//export du composant CartProvider
-export default CartProvider
+export const useCartContext = () => useContext(CartContext);
