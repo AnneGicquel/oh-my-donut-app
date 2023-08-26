@@ -12,9 +12,9 @@ import { uid } from "uid";
 
 /* Interface panier */
 interface ICart {
-    products: ProductCartI | undefined;
+    products: ProductCartI[] | undefined;
     getProductsFromCart: () => void;
-    addProductToCart: (product: ProductI, quantity: number) => void;
+    addProductToCart: (product: ProductI, quantity?: number) => void;
     removeOne: (product: ProductI) => void;
     removeProduct: (product: ProductI) => void;
     getTotalProduct: () => number;
@@ -24,7 +24,7 @@ interface ICart {
 
 /* Initialisation d'un panier par défaut */
 const defaultCart: ICart = {
-    products: undefined,
+    products: [],
     getProductsFromCart: () => { },
     addProductToCart: () => { },
     removeOne: () => { },
@@ -48,6 +48,10 @@ export const CartProvider = (props: CartProviderProps) => {
     const [cartProducts, setCartProducts] = useState<ProductCartI[]>([]);
 
 
+    const saveProduct = (table: ProductCartI) => {
+        localStorage.setItem('table', JSON.stringify(table));
+      }
+    
 
     const createCart = () => {
         const newCart: [] = [];
@@ -58,89 +62,90 @@ export const CartProvider = (props: CartProviderProps) => {
     const getProductsFromCart = async () => {
 
         const cart = localStorage.getItem("cart");
-
+        setCartProducts(() => [JSON.parse(cart!)])
+        console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', cartProducts)
         if(cart) {
           return JSON.parse(cart);
         } else {
           createCart();
           getCart();
         }
-
-        // return await getCart()
-        //     .then((cartProduct) => setCartProducts(cartProduct.data))
-        //     .catch((error) => { throw new Error(error) });
     }
 
     /* Function add product(s) to cart */
-    const addProductToCart = (product: ProductI, quantity: number) => {
+    const addProductToCart = (product: ProductI, quantity?: number) => {
         const newProduct = {
             id: uid(),
             product,
-            quantity,
+            quantity : 0,
             totalPrice: 0,
             tva: 19
         }
         /* check if product exist in the cart */
-        const foundProduct = cartProducts?.find((p) => p.products.id === newProduct.product.id);
+        const foundProduct = cartProducts?.find((p) => p.product.id === newProduct.product.id);
+        console.log('FOUNDED PRODUCT => ',foundProduct);
 
         if (!foundProduct) {
-            setCartProducts((prev) => [newProduct]);
+            setCartProducts([...cartProducts, newProduct]);
+            saveProduct(newProduct);
         } else {
             /* add quantity */
-            foundProduct.product.quantity += 1;
-            setCartProducts([...cartProducts?.products]);
+            // foundProduct.quantity += 1;
+            foundProduct.product.quantity! += 1;
+            setCartProducts([...cartProducts]);
+            saveProduct(foundProduct);
         }
         console.log(cartProducts);
     }
 
     /* Function to remove quantity from a product */
     const removeOne = (product: ProductI) => {
-        // const foundProduct = cartProducts.find((p) => p.product.id === product.id);
+        const foundProduct = cartProducts.find((p) => p.product.id === product.id);
 
-        // console.log("found", foundProduct);
-        // if (!foundProduct) {
-        //     return;
-        // } else {
-        //     if (foundProduct.quantity > 1) {
-        //         foundProduct.quantity -= 1;
-        //         setCartProducts([...cartProducts]);
-        //     } else {
-        //         removeProduct(product);
-        //         setCartProducts([...cartProducts]);
-        //     }
+        console.log("found", foundProduct);
+        if (!foundProduct) {
+            return;
+        } else {
+            if (foundProduct.quantity > 1) {
+                foundProduct.quantity -= 1;
+                setCartProducts([...cartProducts]);
+            } else {
+                removeProduct(product);
+                setCartProducts([...cartProducts]);
+            }
 
-        // }
-        // const index = cartProducts.indexOf(foundProduct);
-        // console.log("index", index);
+        }
+        const index = cartProducts.indexOf(foundProduct);
+        console.log("index", index);
     }
 
     /*  Function to remove a product from the cart */
     const removeProduct = (product: ProductI) => {
-        // const foundProduct = cartProducts.find((p) => p.product.id === product.id);
-        // if (foundProduct) {
-        //     const index = cartProducts.indexOf(foundProduct);
-        //     cartProducts.splice(index, 1);
-        //     setCartProducts([...cartProducts]);
-        // }
-        // return cartProducts;
+        const foundProduct = cartProducts.find((p) => p.product.id === product.id);
+        if (foundProduct) {
+            const index = cartProducts.indexOf(foundProduct);
+            cartProducts.splice(index, 1);
+            setCartProducts([...cartProducts]);
+        }
+        return cartProducts;
     }
 
     /* Function to get the total quantity of the cart */
     const getTotalProduct = () => {
-        // const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ICartProduct) => {
-        //     return accumulator += currentValue.quantity;
-        // }, 0);
-        // return totalProducts;
+        const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
+            return accumulator += currentValue.quantity;
+        }, 0);
+        return totalProducts;
         return 0;
 
     }
 
     /* Function to get the total price of the cart */
     const getTotalPrice = () => {
-        // const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ICartProduct) => {
-        //     return accumulator += (currentValue.product.price * currentValue.quantity);
-        // }, 0);
-        // return totalPrice;
+        const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
+            return accumulator += (currentValue.product.price * currentValue.quantity);
+        }, 0);
+        return totalPrice;
         return 0;
 
     }

@@ -5,11 +5,11 @@ interface ProductProps {
   title: string;
   product?: ProductI;
   quantity?: number;
-  // callback: () => void
+  callback?: () => void
 }
 
-const Button = ({ product, quantity, title }: ProductProps) => (
-  <button className="button-add-cart" onClick={() => {}}>{title.toUpperCase()}</button>
+const Button = ({ product, quantity, title, callback }: ProductProps) => (
+  <button className="button-add-cart" onClick={callback}>{title.toUpperCase()}</button>
 );
 
 export default Button;

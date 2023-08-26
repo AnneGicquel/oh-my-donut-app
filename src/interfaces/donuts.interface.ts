@@ -46,7 +46,7 @@ export interface IngredientI {
 
 export interface ProductCartI {
   id: string;
-  products: ProductI;
+  product: ProductI;
   quantity: number;
   totalPrice: number;
   tva: number;
