@@ -14,7 +14,7 @@ import { uid } from "uid";
 interface ICart {
     products: ProductCartI[] | undefined;
     getProductsFromCart: () => void;
-    addProductToCart: (product: ProductI, quantity?: number) => void;
+    addProductToCart: (product: ProductI) => void;
     removeOne: (product: ProductI) => void;
     removeProduct: (product: ProductI) => void;
     getTotalProduct: () => number;
@@ -48,8 +48,8 @@ export const CartProvider = (props: CartProviderProps) => {
     const [cartProducts, setCartProducts] = useState<ProductCartI[]>([]);
 
 
-    const saveProduct = (table: ProductCartI) => {
-        localStorage.setItem('table', JSON.stringify(table));
+    const saveProduct = (cart: ProductCartI) => {
+        localStorage.setItem('cart', JSON.stringify(cart));
       }
     
 
@@ -59,10 +59,10 @@ export const CartProvider = (props: CartProviderProps) => {
         localStorage.setItem('cart', stringifyBasket);
       }
 
-    const getProductsFromCart = async () => {
+    const getProductsFromCart = () => {
 
         const cart = localStorage.getItem("cart");
-        setCartProducts(() => [JSON.parse(cart!)])
+        // setCartProducts(() => [JSON.parse(cart!)])
         console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', cartProducts)
         if(cart) {
           return JSON.parse(cart);
@@ -73,7 +73,11 @@ export const CartProvider = (props: CartProviderProps) => {
     }
 
     /* Function add product(s) to cart */
-    const addProductToCart = (product: ProductI, quantity?: number) => {
+    const addProductToCart = (product: ProductI) => {
+        const cart = getProductsFromCart();
+
+        console.log("CARRRRT", cart);
+
         const newProduct = {
             id: uid(),
             product,
@@ -82,19 +86,19 @@ export const CartProvider = (props: CartProviderProps) => {
             tva: 19
         }
         /* check if product exist in the cart */
-        const foundProduct = cartProducts?.find((p) => p.product.id === newProduct.product.id);
+        const foundProduct = cart?.find((p: ProductCartI) => p.product.id === newProduct.product.id)!;
         console.log('FOUNDED PRODUCT => ',foundProduct);
 
         if (!foundProduct) {
             setCartProducts([...cartProducts, newProduct]);
-            saveProduct(newProduct);
+            cart.push(newProduct);
         } else {
             /* add quantity */
             // foundProduct.quantity += 1;
             foundProduct.product.quantity! += 1;
             setCartProducts([...cartProducts]);
-            saveProduct(foundProduct);
         }
+        saveProduct(cart);
         console.log(cartProducts);
     }
 

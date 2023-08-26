@@ -9,7 +9,7 @@ interface CardPropsI {
 }
 const Card = (props: CardPropsI) => {
 
-  const { addProductToCart } = useCartContext();
+  const { addProductToCart, getProductsFromCart } = useCartContext();
 
   const { item } = props;
   const { id, title, nbrPerson, price, description, imageUrl, allergenFree } = item;

@@ -5,12 +5,15 @@ import Navbar from "../partials/navbar/Navbar";
 import Card from "../../components/card/Card";
 import './Products.css'
 import MobileProvider from "contexts/MobileContext";
+import { useCartContext } from "contexts/CartContext";
 
 const Products = () => {
   const { products, getProducts } = useProductContext();
+  const { getProductsFromCart } = useCartContext();
 
   useEffect(() => {
     getProducts();
+    getProductsFromCart();
   }, []);
 
       // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
