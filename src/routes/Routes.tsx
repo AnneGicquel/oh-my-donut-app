@@ -33,7 +33,7 @@ const ROUTES: RouteObject[] = [
       /////// CART ////////
       {
         path: "/cart",
-        element: <CartProvider><Cart /></CartProvider>,
+        element: <Cart />,
       },
       /////// PAYMENT ////////
       {

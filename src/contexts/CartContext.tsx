@@ -134,13 +134,10 @@ export const CartProvider = (props: CartProviderProps) => {
     /* Function to get the total quantity of the cart */
     const getTotalProductQuantity = () => {
         const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
-            console.log(currentValue.product.quantity)
             return accumulator += currentValue.product.quantity!;
         }, 0);
 
-        console.log(totalProducts)
         return totalProducts;
-
     }
 
     /* Function to get the total price of the cart */

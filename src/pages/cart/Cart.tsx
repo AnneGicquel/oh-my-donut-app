@@ -11,7 +11,7 @@ const Cart = () => {
         getProductsFromCart();
     }, []);
 
-    const emptyCart = <h1>Le panier est vide</h1>
+    const emptyCart = <h1 className={styles.empty_cart}>Le panier est vide</h1>
 
     const panier = <>
         <h1>Mon Panier</h1>

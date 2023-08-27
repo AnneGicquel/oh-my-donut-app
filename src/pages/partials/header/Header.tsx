@@ -9,12 +9,6 @@ const Header = () => { // Make this reusable component
 
     const { toggleMobileMenu, getToggle } = useMobileContext();
     const { products, getTotalProductQuantity } = useCartContext();
-    const [total, setTotal] = useState<number>();
-
-    useEffect(() => {
-        const t: number = getTotalProductQuantity();
-        setTotal(t)
-    }, [products])
     
     // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -45,7 +39,7 @@ const Header = () => { // Make this reusable component
             <div className='header-icons-container'>
                 <img onClick={() => getToggle()} className='header-burger' src="/assets/images/oh-my-donut-images/ICONS/menu-burger-icon.png" alt="menu burger icon" />
                 <img className='header-logo' src="/assets/images/oh-my-donut-images/GRAPHISM/oh-my-donut-long-with-halo.png" alt="oh my donuts logo" />
-                <span className='CartCounter'>({total})<Link to={'/cart'}><img className='header-basket' src="/assets/images/oh-my-donut-images/ICONS/basket.png" alt="basket icon" /></Link></span>
+                <span className='CartCounter'>({getTotalProductQuantity()})<Link to={'/cart'}><img className='header-basket' src="/assets/images/oh-my-donut-images/ICONS/basket.png" alt="basket icon" /></Link></span>
             </div>
             {/* <div className='header-image'></div> */}
             {/* J'ai commenté ⬇️ cette ligne pour mieux voir mon taff ⬇️ ;-) */}
