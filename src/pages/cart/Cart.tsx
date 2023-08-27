@@ -9,15 +9,19 @@ const Cart = () => {
 
     useEffect(() => {
         getProductsFromCart();
-      }, []);
+    }, []);
 
 
     return <>
-    <div>{JSON.stringify(products)}</div>
         <h1>Mon Panier</h1>
         <section className={styles.cart_section}>
-            <ReusableCartCard />
+            <div className={styles.cart_card_container}>
+                {products.map(product => {
+                    return <ReusableCartCard key={product.id} item={product} />
+                })}
+            </div>
             <RecapCard />
+
         </section>
     </>
 }

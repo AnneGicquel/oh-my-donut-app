@@ -3,42 +3,31 @@ import { createContext, useContext, useState } from "react";
 import { getCart } from "services/cart.services";
 import { uid } from "uid";
 
-/* Interface article dans le Panier */
-// interface ICartProduct {
-//     id: string;
-//     product: ProductI;
-//     quantity: number
-// }
-
-/* Interface panier */
 interface ICart {
-    products: ProductCartI[] | undefined;
+    products: ProductCartI[];
     getProductsFromCart: () => void;
     addProductToCart: (product: ProductI) => void;
-    removeOne: (product: ProductI) => void;
-    removeProduct: (product: ProductI) => void;
+    changeQuantity: (quantity: number, product: ProductI) => void;
+    removeProductFromCart: (product: ProductI) => void;
     getTotalProduct: () => number;
     getTotalPrice: () => number;
     resetCart: () => void;
 }
 
-/* Initialisation d'un panier par défaut */
 const defaultCart: ICart = {
     products: [],
     getProductsFromCart: () => { },
     addProductToCart: () => { },
-    removeOne: () => { },
-    removeProduct: () => { },
+    changeQuantity: () => { },
+    removeProductFromCart: () => { },
     getTotalProduct: () => 0,
     getTotalPrice: () => 0,
     resetCart: () => { },
 }
 
-/* Initialisation d'un contexte */
 const CartContext = createContext<ICart>(defaultCart);
 
 
-/* Provider */
 interface CartProviderProps {
     children: JSX.Element;
 }
@@ -50,29 +39,28 @@ export const CartProvider = (props: CartProviderProps) => {
 
     const saveProduct = (cart: ProductCartI) => {
         localStorage.setItem('cart', JSON.stringify(cart));
-      }
-    
+    }
+
 
     const createCart = () => {
         const newCart: [] = [];
         const stringifyBasket = JSON.stringify(newCart);
         localStorage.setItem('cart', stringifyBasket);
-      }
+    }
 
     const getProductsFromCart = () => {
 
         const cart = localStorage.getItem("cart");
-        // setCartProducts(() => [JSON.parse(cart!)])
+        setCartProducts(() => JSON.parse(cart!))
         console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', cartProducts)
-        if(cart) {
-          return JSON.parse(cart);
+        if (cart) {
+            return JSON.parse(cart);
         } else {
-          createCart();
-          getCart();
+            createCart();
+            getCart();
         }
     }
 
-    /* Function add product(s) to cart */
     const addProductToCart = (product: ProductI) => {
         const cart = getProductsFromCart();
 
@@ -81,20 +69,18 @@ export const CartProvider = (props: CartProviderProps) => {
         const newProduct = {
             id: uid(),
             product,
-            quantity : 0,
+            quantity: 0,
             totalPrice: 0,
             tva: 19
         }
-        /* check if product exist in the cart */
+
         const foundProduct = cart?.find((p: ProductCartI) => p.product.id === newProduct.product.id)!;
-        console.log('FOUNDED PRODUCT => ',foundProduct);
+        console.log('FOUNDED PRODUCT => ', foundProduct);
 
         if (!foundProduct) {
             setCartProducts([...cartProducts, newProduct]);
             cart.push(newProduct);
         } else {
-            /* add quantity */
-            // foundProduct.quantity += 1;
             foundProduct.product.quantity! += 1;
             setCartProducts([...cartProducts]);
         }
@@ -102,45 +88,52 @@ export const CartProvider = (props: CartProviderProps) => {
         console.log(cartProducts);
     }
 
-    /* Function to remove quantity from a product */
-    const removeOne = (product: ProductI) => {
-        const foundProduct = cartProducts.find((p) => p.product.id === product.id);
 
-        console.log("found", foundProduct);
+    const removeProductFromCart = (product: ProductI) => {
+        const cart = getProductsFromCart();
+
+        const foundProduct = cart.find((item: ProductCartI) => item.product.id === product.id);
+
+        if (foundProduct) {
+            const index = cart.indexOf(foundProduct);
+            console.log('INDEXOF => ', index);
+            cart.splice(index, 1);
+            saveProduct(cart);
+            getProductsFromCart()
+        }
+
+    }
+
+    /* Function to Change quantity from a product */
+    const changeQuantity = (quantity: number, product: ProductI) => {
+        const cart = getProductsFromCart();
+        let foundProduct = cart.find((item: ProductCartI) => item.product.id === product.id);
         if (!foundProduct) {
             return;
         } else {
-            if (foundProduct.quantity > 1) {
-                foundProduct.quantity -= 1;
-                setCartProducts([...cartProducts]);
+            if (quantity <= 0) {
+                const index = cart.indexOf(foundProduct);
+                cart.splice(index, 1);
+                saveProduct(cart);
+                getProductsFromCart()
             } else {
-                removeProduct(product);
-                setCartProducts([...cartProducts]);
+                foundProduct.product.quantity = quantity
+                saveProduct(cart);
+                getProductsFromCart();
             }
-
         }
-        const index = cartProducts.indexOf(foundProduct);
-        console.log("index", index);
-    }
-
-    /*  Function to remove a product from the cart */
-    const removeProduct = (product: ProductI) => {
-        const foundProduct = cartProducts.find((p) => p.product.id === product.id);
-        if (foundProduct) {
-            const index = cartProducts.indexOf(foundProduct);
-            cartProducts.splice(index, 1);
-            setCartProducts([...cartProducts]);
-        }
-        return cartProducts;
     }
 
     /* Function to get the total quantity of the cart */
     const getTotalProduct = () => {
-        const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
-            return accumulator += currentValue.quantity;
+        const cart = getProductsFromCart();
+
+        const totalProducts = cart.reduce((accumulator: number, currentValue: ProductCartI) => {
+            console.log(currentValue.product.quantity)
+            return accumulator += currentValue.product.quantity!;
         }, 0);
+        console.log(totalProducts)
         return totalProducts;
-        return 0;
 
     }
 
@@ -150,12 +143,15 @@ export const CartProvider = (props: CartProviderProps) => {
             return accumulator += (currentValue.product.price * currentValue.quantity);
         }, 0);
         return totalPrice;
-        return 0;
 
     }
 
     /* Function to reset the cart */
     const resetCart = () => {
+        // localStorage.clear();
+        // this.router.navigate(['/']);
+        // return of(this.getTableFromStorage());
+
         // setCartProducts();
     }
 
@@ -163,8 +159,8 @@ export const CartProvider = (props: CartProviderProps) => {
         products: cartProducts,
         getProductsFromCart,
         addProductToCart,
-        removeOne,
-        removeProduct,
+        changeQuantity,
+        removeProductFromCart,
         getTotalProduct,
         getTotalPrice,
         resetCart

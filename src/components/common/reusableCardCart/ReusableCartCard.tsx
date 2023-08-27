@@ -1,30 +1,40 @@
-import { ProductI } from "interfaces/donuts.interface";
+import { ProductCartI } from "interfaces/donuts.interface";
 import styles from './ReusableCartCard.module.css';
+import { useCartContext } from "contexts/CartContext";
 
 interface CartPropsI {
-    item: ProductI;
+    item: ProductCartI;
   }
 
-export const ReusableCartCard = () => { //props: CartPropsI
+export const ReusableCartCard = (props : CartPropsI) => { //props: CartPropsI
+
+    const { addProductToCart, removeProductFromCart, changeQuantity } = useCartContext()
+
+    const { item } = props;
+
+    const { product } = item;
     
     return (
         <section className={`${styles.dflex} ${styles.recap_card_section}`}>
             <img className={styles.cart_card_image} src="/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png" alt="image donuts" />
             <div>
-                <h4>COFFRET DE 4 DONUTS</h4>
+                {/* COFFRET DE 4 DONUTS */}
+                
+                <h4>{product.title }</h4> 
                 <div>
                     <div>
-                        <p>COFFRET PARFUMS DE REVE</p>
+                        <p>{product.description}</p>
                         <p>Coffret:  Signature - Ássortiment Éte gourmand</p>
                     </div>
                     <div>
-                        <span>-</span>
-                        <input type="text" name="price" id="card-price" />
-                        <span>+</span>
-                        <span>30.00 € TTC</span>
+                        <span onClick={() => changeQuantity(--product.quantity!, product)} style={{backgroundColor: "cyan", padding: '10px'}}>-</span>
+                        <span style={{backgroundColor: "lightgreen", padding: '10px'}}>{product.quantity}</span>
+                        <span onClick={() => changeQuantity(++product.quantity!, product)} style={{backgroundColor: "cyan", padding: '10px'}}>+</span>
+
+                        <span>{item.totalPrice} TTC</span>
                     </div>
                 </div>
-                <p><img src="" alt="" /> supprimer</p>
+                <p onClick={() => removeProductFromCart(product)} style={{backgroundColor: "tomato", cursor: "pointer"}}><img src="" alt="" /> supprimer</p>
             </div>
         </section>
     )
