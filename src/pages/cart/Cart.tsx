@@ -11,8 +11,9 @@ const Cart = () => {
         getProductsFromCart();
     }, [products]);
 
+    const emptyCart = <h1>Le panier est vide</h1>
 
-    return <>
+    const panier = <>
         <h1>Mon Panier</h1>
         <section className={styles.cart_section}>
             <div className={styles.cart_card_container}>
@@ -22,8 +23,9 @@ const Cart = () => {
             </div>
             <RecapCard />
 
-        </section>
-    </>
+        </section></>
+
+    return <>{ products.length <= 0 ? emptyCart : panier} </>
 }
 
 export default Cart;
