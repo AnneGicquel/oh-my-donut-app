@@ -10,8 +10,12 @@ interface ICart {
     changeQuantity: (quantity: number, product: ProductI) => void;
     removeProductFromCart: (product: ProductI) => void;
     getTotalProductQuantity: () => number;
-    getTotalPrice: () => number;
+    getProductTotalPrice: (qty: number, price: number) => number;
+    getTotalOfAllProducts: () => number
     resetCart: () => void;
+    getRound: (val: number) => number;
+    getProducstTva: () => string;
+    getTotal: () => number;
 }
 
 const defaultCart: ICart = {
@@ -21,8 +25,12 @@ const defaultCart: ICart = {
     changeQuantity: () => { },
     removeProductFromCart: () => { },
     getTotalProductQuantity: () => 0,
-    getTotalPrice: () => 0,
+    getProductTotalPrice: () => 0,
+    getTotalOfAllProducts: () => 0,
     resetCart: () => { },
+    getRound: () => 0,
+    getProducstTva: () => '0',
+    getTotal: () => 0
 }
 
 const CartContext = createContext<ICart>(defaultCart);
@@ -51,9 +59,9 @@ export const CartProvider = (props: CartProviderProps) => {
     const getProductsFromCart = () => {
 
         const cart = localStorage.getItem("cart");
-        setCartProducts(() => JSON.parse(cart!))
         console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', cartProducts)
         if (cart) {
+            setCartProducts(() => JSON.parse(cart));
             return JSON.parse(cart);
         } else {
             createCart();
@@ -71,7 +79,7 @@ export const CartProvider = (props: CartProviderProps) => {
             product,
             quantity: 0,
             totalPrice: 0,
-            tva: 19
+            tva: 10
         }
 
         const foundProduct = cart?.find((p: ProductCartI) => p.product.id === newProduct.product.id)!;
@@ -85,7 +93,7 @@ export const CartProvider = (props: CartProviderProps) => {
             setCartProducts([...cartProducts]);
         }
         saveProduct(cart);
-        console.log(cartProducts);
+        getTotalProductQuantity();
     }
 
 
@@ -115,42 +123,66 @@ export const CartProvider = (props: CartProviderProps) => {
                 const index = cart.indexOf(foundProduct);
                 cart.splice(index, 1);
                 saveProduct(cart);
-                getProductsFromCart()
             } else {
                 foundProduct.product.quantity = quantity
                 saveProduct(cart);
-                getProductsFromCart();
             }
+            getProductsFromCart();
         }
     }
 
     /* Function to get the total quantity of the cart */
     const getTotalProductQuantity = () => {
-        const cart = getProductsFromCart();
-
-        const totalProducts = cart.reduce((accumulator: number, currentValue: ProductCartI) => {
+        const totalProducts = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
             console.log(currentValue.product.quantity)
             return accumulator += currentValue.product.quantity!;
         }, 0);
+
         console.log(totalProducts)
         return totalProducts;
 
     }
 
     /* Function to get the total price of the cart */
-    const getTotalPrice = () => {
-        const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
-            return accumulator += (currentValue.product.price * currentValue.quantity);
-        }, 0);
-        return totalPrice;
-
+    const getProductTotalPrice = (qty: number, price: number) => {
+        console.log(qty, price)
+        let result = qty * price;
+            return getRound(result);
     }
 
-    /* Function to reset the cart */
+    const getTotalOfAllProducts = () => {
+        const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
+            console.log(currentValue);
+            return accumulator += (currentValue.product.price * currentValue.product.quantity!);
+        }, 0);
+        const result = getRound(totalPrice);
+
+        return +result;
+    }
+
+
+    const getProducstTva = () => {
+        const total = getTotalOfAllProducts();
+        let result = (10 * total) / 100;
+        return result.toFixed(2)
+    }
+
+    const getTotal = () => {
+        const totalProducts = getTotalOfAllProducts();
+        const totalTva = getProducstTva();
+        const result = (totalProducts + Number(totalTva));
+        return result;
+    }
+
     const resetCart = () => {
         localStorage.clear();
         getProductsFromCart();
     }
+
+    const getRound = (val: number) => {
+        return +Number(val/100).toFixed(2)
+      }
+    
 
     const cart: ICart = {
         products: cartProducts,
@@ -159,8 +191,12 @@ export const CartProvider = (props: CartProviderProps) => {
         changeQuantity,
         removeProductFromCart,
         getTotalProductQuantity,
-        getTotalPrice,
-        resetCart
+        getProductTotalPrice,
+        getTotalOfAllProducts,
+        resetCart,
+        getRound,
+        getProducstTva,
+        getTotal,
     }
 
     return <CartContext.Provider value={cart}>

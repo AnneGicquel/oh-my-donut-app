@@ -9,7 +9,7 @@ const Cart = () => {
 
     useEffect(() => {
         getProductsFromCart();
-    }, [products]);
+    }, []);
 
     const emptyCart = <h1>Le panier est vide</h1>
 

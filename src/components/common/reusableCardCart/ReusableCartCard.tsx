@@ -8,7 +8,7 @@ interface CartPropsI {
 
 export const ReusableCartCard = (props : CartPropsI) => { //props: CartPropsI
 
-    const { addProductToCart, removeProductFromCart, changeQuantity } = useCartContext()
+    const { removeProductFromCart, changeQuantity, getProductTotalPrice, getTotalOfAllProducts } = useCartContext()
 
     const { item } = props;
 
@@ -31,7 +31,7 @@ export const ReusableCartCard = (props : CartPropsI) => { //props: CartPropsI
                         <span style={{backgroundColor: "lightgreen", padding: '10px'}}>{product.quantity}</span>
                         <span onClick={() => changeQuantity(++product.quantity!, product)} style={{backgroundColor: "cyan", padding: '10px'}}>+</span>
 
-                        <span>{item.totalPrice} TTC</span>
+                        <span>{getProductTotalPrice(product.quantity!, product.price)} € TTC</span>
                     </div>
                 </div>
                 <p onClick={() => removeProductFromCart(product)} style={{backgroundColor: "tomato", cursor: "pointer"}}><img src="" alt="" /> supprimer</p>

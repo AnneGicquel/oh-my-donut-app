@@ -1,5 +1,6 @@
 import { useCartContext } from 'contexts/CartContext';
 import styles  from './Modal.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export interface IModalProps {
     toggleModal: boolean,
@@ -8,7 +9,9 @@ export interface IModalProps {
 
 const Modal = ({setToggleModal, toggleModal}: IModalProps) => {
 
-    const { products, resetCart, getProductsFromCart } = useCartContext();
+    const navigate = useNavigate();
+
+    const { products, resetCart } = useCartContext();
 
     return (
         <>
@@ -20,6 +23,7 @@ const Modal = ({setToggleModal, toggleModal}: IModalProps) => {
                     <button className={styles.modalButton} onClick={() => {
                         setToggleModal(false);
                         resetCart();
+                        navigate('/');
                         }}>OUI</button>
                     <button className={styles.modalButton} onClick={() => setToggleModal(false)}>NON</button>
                 </div>
