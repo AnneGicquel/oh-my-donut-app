@@ -8,11 +8,11 @@ import { useCartContext } from 'contexts/CartContext';
 const Header = () => { // Make this reusable component
 
     const { toggleMobileMenu, getToggle } = useMobileContext();
-    const { products, getTotalProduct } = useCartContext();
+    const { products, getTotalProductQuantity } = useCartContext();
     const [total, setTotal] = useState<number>();
 
     useEffect(() => {
-        const t: number = getTotalProduct();
+        const t: number = getTotalProductQuantity();
         setTotal(t)
     }, [products])
     

@@ -9,7 +9,7 @@ interface ICart {
     addProductToCart: (product: ProductI) => void;
     changeQuantity: (quantity: number, product: ProductI) => void;
     removeProductFromCart: (product: ProductI) => void;
-    getTotalProduct: () => number;
+    getTotalProductQuantity: () => number;
     getTotalPrice: () => number;
     resetCart: () => void;
 }
@@ -20,7 +20,7 @@ const defaultCart: ICart = {
     addProductToCart: () => { },
     changeQuantity: () => { },
     removeProductFromCart: () => { },
-    getTotalProduct: () => 0,
+    getTotalProductQuantity: () => 0,
     getTotalPrice: () => 0,
     resetCart: () => { },
 }
@@ -125,7 +125,7 @@ export const CartProvider = (props: CartProviderProps) => {
     }
 
     /* Function to get the total quantity of the cart */
-    const getTotalProduct = () => {
+    const getTotalProductQuantity = () => {
         const cart = getProductsFromCart();
 
         const totalProducts = cart.reduce((accumulator: number, currentValue: ProductCartI) => {
@@ -148,11 +148,8 @@ export const CartProvider = (props: CartProviderProps) => {
 
     /* Function to reset the cart */
     const resetCart = () => {
-        // localStorage.clear();
-        // this.router.navigate(['/']);
-        // return of(this.getTableFromStorage());
-
-        // setCartProducts();
+        localStorage.clear();
+        getProductsFromCart();
     }
 
     const cart: ICart = {
@@ -161,7 +158,7 @@ export const CartProvider = (props: CartProviderProps) => {
         addProductToCart,
         changeQuantity,
         removeProductFromCart,
-        getTotalProduct,
+        getTotalProductQuantity,
         getTotalPrice,
         resetCart
     }
