@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import AppRouter from './routes/AppRouter';
 import MobileProvider from 'contexts/MobileContext';
 import { CartProvider } from 'contexts/CartContext';
+import CommandeProvider from 'contexts/CommandContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,9 @@ root.render(
   // <React.StrictMode>
     <MobileProvider>
       <CartProvider>
+        <CommandeProvider>
         <AppRouter />
+        </CommandeProvider>
       </CartProvider>
     </MobileProvider> 
   // </React.StrictMode>

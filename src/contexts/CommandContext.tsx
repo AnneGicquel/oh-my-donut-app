@@ -1,17 +1,23 @@
-import { CommandeI, CustomerInformationI, ProductCartI, ProductI } from "interfaces/donuts.interface";
+import { CommandeI, CustomerInformationI, ProductCartI, ProductI, StayOrGoType } from "interfaces/donuts.interface";
 import { createContext, useContext, useState } from "react";
 import { uid } from 'uid'
 
 
 interface ICommandeProduct {
-    command: CommandeI[];
-    addToCommand:(newCommand: ProductCartI, customerInfo: CustomerInformationI ) => void;
+    command: CommandeI[] ;
+    addToCommand: (newCommand: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType ) => void;
+    getCommand: () =>void;
+    createCommand: () => void;
+    saveCommand: (command: CommandeI) => void;
     resetCommande: () => void
 }
 
 const defaultCommand: ICommandeProduct = {
     command: [],
+    getCommand:() => {},
     addToCommand: () => {}, 
+    createCommand: () => {},
+    saveCommand: () => { },
     resetCommande: () => {}
 }
 
@@ -27,25 +33,48 @@ export const CommandeProvider = (props: CommandProviderProps) => {
 
     const [commandProducts, setCommandProducts] = useState<CommandeI[]>([]);
 
-    const addToCommand = (newOrderedCart: ProductCartI, customerInfo: CustomerInformationI) => {
+    const saveCommand = (command: CommandeI) => {
+        localStorage.setItem('command', JSON.stringify(command));
+    }
+
+    const createCommand = () => {
+        const newCommand: [] = [];
+        const stringifyCommand = JSON.stringify(newCommand);
+        localStorage.setItem('command', stringifyCommand);
+    }
+
+    const getCommand = () => {
+
+        const command = localStorage.getItem("command");
+        console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', commandProducts)
+        if (command) {
+            setCommandProducts(() => JSON.parse(command));
+            return JSON.parse(command);
+        } else {
+            createCommand();
+            getCommand();
+        }
+    }
+
+    const addToCommand = (newOrderedCart: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType) => {
+
+        console.log('HEHOOO => ', newOrderedCart)
+        console.log('HEHOOO2 => ', customerInfo)
+        console.log('HEHOOO3 => ', stay)
+
+    const command = getCommand();
+
     const newCommandProduct : CommandeI = {
         id: uid(),
         orderedProducts: newOrderedCart,
         customer: customerInfo,
-        stayOrGo: 'Sur place',
+        stayOrGo: stay,
         cgv: false
     }
 
-    setCommandProducts([...commandProducts, newCommandProduct])
-    console.log(commandProducts)
-
-    //Condition: vérifier si le produit existe dans le panier:
-    const existingProduct = commandProducts.find((p) => p.id === newOrderedCart.id);
-
-    if (!existingProduct) {
-        setCommandProducts([...commandProducts, newCommandProduct]);
-    }
-
+    setCommandProducts(() => commandProducts);
+    saveCommand(newCommandProduct);
+    
     }
 
 
@@ -56,6 +85,9 @@ export const CommandeProvider = (props: CommandProviderProps) => {
     const commande: ICommandeProduct = {
         command: commandProducts,
         addToCommand,
+        getCommand,
+        createCommand,
+        saveCommand,
         resetCommande
     }
 
