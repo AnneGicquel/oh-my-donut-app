@@ -9,6 +9,7 @@ import CategoryProvider from "contexts/CategoryContext";
 import Payment from "pages/payment/Payment";
 import MobileProvider from "contexts/MobileContext";
 import Cart from "pages/cart/Cart";
+import { CartProvider } from "contexts/CartContext";
 
 const ROUTES: RouteObject[] = [
   {
@@ -29,7 +30,6 @@ const ROUTES: RouteObject[] = [
         path: "/ProductDetails/:id", 
         element: <ProductProvider><ProductDetails /></ProductProvider>,
       },
-      
       /////// CART ////////
       {
         path: "/cart",

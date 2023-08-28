@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
-import { AllergenI, ProductI } from "../../interfaces/donuts.interface";
+import { ProductI } from "../../interfaces/donuts.interface";
 import Button from "../common/button/Button";
 import './Card.css';
+import { useCartContext } from "contexts/CartContext";
 
 interface CardPropsI {
   item: ProductI;
 }
 const Card = (props: CardPropsI) => {
+
+  const { addProductToCart, getProductsFromCart } = useCartContext();
+
   const { item } = props;
   const { id, title, nbrPerson, price, description, imageUrl, allergenFree } = item;
+
   return (
     <section className="card-container d-flex">
       <img className="card-img" src={imageUrl.src} alt={imageUrl.alt} />
@@ -25,7 +30,7 @@ const Card = (props: CardPropsI) => {
             ))}
         </div>
       </div>
-      <Button title="Ajouter au panier" />
+      <Button title="Ajouter au panier" callback={() => addProductToCart(item)}/>
     </section>
   );
 };

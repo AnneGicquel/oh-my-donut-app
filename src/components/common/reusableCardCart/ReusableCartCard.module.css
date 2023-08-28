@@ -1,0 +1,13 @@
+.dflex {
+    display: flex;
+}
+
+.recap_card_section {
+    border: 1px solid var(--black);
+}
+
+.cart_card_image {
+    width: 200;
+    height: 170px;
+}
+
