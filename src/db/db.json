@@ -1165,6 +1165,46 @@
       "name": "typicode"
     }
   ],
-  "cart": {},
-  "command": {}
+  "cart": {
+    "products": [
+      {
+        "id": 1,
+        "title": "Donut framboise",
+        "nbrPerson": 1,
+        "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+        "price": 499,
+        "imageUrl": {
+          "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
+          "alt": "Mochi framboise image"
+        },
+        "allergenFree": [
+          {
+            "id": 1,
+            "name": "sans gluten",
+            "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+          },
+          {
+            "id": 2,
+            "name": "bloup",
+            "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"
+          },
+          {
+            "id": 3,
+            "name": "lorem",
+            "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"
+          }
+        ],
+        "ingredients": [],
+        "extras": [],
+        "quantity": 1,
+        "isCustomizable": true,
+        "categoryId": 1,
+        "subCategory": 1
+      }
+    ],
+    "totalPrice": 0,
+    "tva": 19
+  },
+  "payment": [],
+  "command": []
 }

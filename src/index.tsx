@@ -1,16 +1,20 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import AppRouter from './routes/AppRouter';
 import MobileProvider from 'contexts/MobileContext';
+import { CartProvider } from 'contexts/CartContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   // <React.StrictMode>
-    <MobileProvider><AppRouter /></MobileProvider> 
+    <MobileProvider>
+      <CartProvider>
+        <AppRouter />
+      </CartProvider>
+    </MobileProvider> 
   // </React.StrictMode>
 );
 

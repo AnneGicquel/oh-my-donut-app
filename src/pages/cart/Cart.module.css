@@ -1,0 +1,12 @@
+.cart_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cart_card_container {
+}
+
+.empty_cart {
+    text-align: center;
+}
