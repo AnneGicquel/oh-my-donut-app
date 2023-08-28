@@ -1,10 +1,22 @@
+
 import ChoiceOption from 'components/formMealChoice/FormMealChoice';
 import { StayOrGoProvider } from 'contexts/FormMealChoiceContext';
-
+import ContactForm from "components/formInfo/FormInfo";
+import ContactFormProvider from "contexts/FormInfoContext";
 
 const Payment = () => {
 
   return (
+        //<section>Payment</section>
+    <ContactFormProvider>
+      
+      <div>
+        <h1>Mes Informations</h1>
+        <ContactForm />
+        <p>* Ces champs sont requis</p>
+      </div>
+
+    </ContactFormProvider>
     <StayOrGoProvider>
       <div className="app">
         <ChoiceOption
@@ -23,6 +35,5 @@ const Payment = () => {
     </StayOrGoProvider>
   );
 };
-
 
 export default Payment;
