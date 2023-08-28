@@ -3,11 +3,13 @@ export type StayOrGoType = "Emporter" | "Sur place";
 export interface SubMenu {
   id: number;
   title: string;
+  imageUrl: string;
 }
 
 export interface CategoryI {
   id: number;
   title: string;
+  imageUrl: string;
   subCategories?: SubMenu[];
   isVisible?: boolean;
   isDefault?: boolean;
