@@ -3,12 +3,16 @@ import { RecapCard } from "components/recapCard/RecapCard"
 import styles from './Cart.module.css';
 import { useCartContext } from "contexts/CartContext";
 import { useEffect } from "react";
+import { useCommandeContext } from "contexts/CommandContext";
 
 const Cart = () => {
     const { products, getProductsFromCart } = useCartContext();
 
+    const { getCommand } = useCommandeContext();
+
     useEffect(() => {
         getProductsFromCart();
+        getCommand();
     }, []);
 
     const emptyCart = <h1 className={styles.empty_cart}>Le panier est vide</h1>

@@ -4,13 +4,19 @@ import { StayOrGoProvider } from 'contexts/FormMealChoiceContext';
 import ContactForm from "components/formInfo/FormInfo";
 import ContactFormProvider from "contexts/FormInfoContext";
 import { RecapCard } from 'components/recapCard/RecapCard';
-import { CartProvider } from 'contexts/CartContext';
+import { CartProvider, useCartContext } from 'contexts/CartContext';
+import { useEffect } from 'react';
 
 const Payment = () => {
 
+  const { getProductsFromCart } = useCartContext();
+
+  useEffect(() => {
+    getProductsFromCart();
+  }, [])
+
   return (<>
   <section>Payment</section>
-    <ContactFormProvider>
       
       <div>
         <h1>Mes Informations</h1>
@@ -18,8 +24,6 @@ const Payment = () => {
         <p>* Ces champs sont requis</p>
       </div>
 
-    </ContactFormProvider>
-    <StayOrGoProvider>
       <div className="app">
         <ChoiceOption
           type="Emporter" //le radiobutton pour Emporter
@@ -34,7 +38,6 @@ const Payment = () => {
           description="En échange de votre ticket, vous recevrez un bipper à l'accueil. Vous pouvez ensuite aller vous asseoir confortablement. Nous nous occupons du reste. "
         />
       </div>
-    </StayOrGoProvider>
     <div>
         <RecapCard />
     </div>

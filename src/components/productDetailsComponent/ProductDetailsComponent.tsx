@@ -17,7 +17,7 @@ const ProductDetailsComponent = () => {
     useEffect(() => {
         getOneProduct(Number(id));
         console.log(Number(id));
-    }, [id, getOneProduct]);
+    }, [id]);
     /* appeler getOneProduct sans fournir de tableau de dépendances
     -> ajoutez id et getOneProduct au tableau de dépendances
     -> getOneProduct est appelé uniquement lorsque id ou getOneProduct change.

@@ -67,8 +67,8 @@ export interface CustomerInformationI {
 
 export interface CommandeI {
   id: string;
-  orderedProducts: ProductCartI;
-  customer: CustomerInformationI;
-  stayOrGo: StayOrGoType;
-  cgv: false
+  orderedProducts: ProductCartI[];
+  customer?: CustomerInformationI;
+  stayOrGo?: StayOrGoType;
+  cgv?: false
 }
