@@ -17,11 +17,8 @@ const ProductDetailsComponent = () => {
     useEffect(() => {
         getOneProduct(Number(id));
         console.log(Number(id));
-    }, [id, getOneProduct]);
-    /* appeler getOneProduct sans fournir de tableau de dépendances
-    -> ajoutez id et getOneProduct au tableau de dépendances
-    -> getOneProduct est appelé uniquement lorsque id ou getOneProduct change.
-    -> pas de risque de rendus infinis */
+    }, [id]); 
+    // , getOneProduct
 
     const subCategoriesToCheck = [8, 9, 10, 4, 2];
     // liste des subCategories qui sont customisables

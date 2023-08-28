@@ -1,12 +1,14 @@
 .header {
     background-image: url("/public/assets/images/oh-my-donut-images/WAVES/header-wave svg.svg");
     background-repeat: no-repeat;
-    background-size: auto;
-    height: 600px;
+    background-size: auto; 
+    background-color: transparent;
+    height: 600px; 
+    /* ⬆ mis en commentaire par Anne pour la page 404 */
     z-index: 10000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .header-image {
@@ -47,8 +49,9 @@
     width: 50px;
 }
 
-.header-basket {
-}
+/* .header-basket {
+} */ 
+/* ⬆️ commenté par Anne car "erreur" */
 
 .CartCounter {
     position: absolute;
