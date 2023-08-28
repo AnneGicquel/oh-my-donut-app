@@ -93,7 +93,8 @@ export const CartProvider = (props: CartProviderProps) => {
             setCartProducts([...cartProducts]);
         }
         saveProduct(cart);
-        getTotalProductQuantity();
+        // getTotalProductQuantity();
+        getProductsFromCart();
     }
 
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 
 const ContactForm: React.FC = () => {
-  const { updateCustomerInfo } = useContactForm();
+  const { customerInfo, updateCustomerInfo } = useContactForm();
   const [formData, setFormData] = useState<CustomerInformationI>({
     id: 0,
     lastName: '',
@@ -24,12 +24,12 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onChange={handleSubmit} style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
       <input type="text" name="lastName" placeholder="Nom" onChange={handleInputChange} required />
       <input type="text" name="firstName" placeholder="Prénom" onChange={handleInputChange} required/>
       <input type="email" name="email" placeholder="Email" onChange={handleInputChange} required/>
       <input type="tel" name="phone" placeholder="Mobile" onChange={handleInputChange} required/>
-      <button type="submit">Envoyer</button>
+      {/* <button  onChange={(e) => handleSubmit(e)} type="submit">Envoyer</button> */}
     </form>
   );
 };

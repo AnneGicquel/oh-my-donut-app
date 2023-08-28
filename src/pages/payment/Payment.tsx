@@ -3,11 +3,13 @@ import ChoiceOption from 'components/formMealChoice/FormMealChoice';
 import { StayOrGoProvider } from 'contexts/FormMealChoiceContext';
 import ContactForm from "components/formInfo/FormInfo";
 import ContactFormProvider from "contexts/FormInfoContext";
+import { RecapCard } from 'components/recapCard/RecapCard';
+import { CartProvider } from 'contexts/CartContext';
 
 const Payment = () => {
 
-  return (
-        //<section>Payment</section>
+  return (<>
+  <section>Payment</section>
     <ContactFormProvider>
       
       <div>
@@ -33,6 +35,10 @@ const Payment = () => {
         />
       </div>
     </StayOrGoProvider>
+    <div>
+        <RecapCard />
+    </div>
+    </>
   );
 };
 

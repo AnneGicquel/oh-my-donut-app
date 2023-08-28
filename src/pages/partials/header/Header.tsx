@@ -9,6 +9,10 @@ const Header = () => { // Make this reusable component
 
     const { toggleMobileMenu, getToggle } = useMobileContext();
     const { products, getTotalProductQuantity } = useCartContext();
+
+    // useEffect(() => {
+    //     getTotalProductQuantity();
+    // }, [products])
     
     // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
