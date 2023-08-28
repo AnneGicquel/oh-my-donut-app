@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import CategoryProvider from "../../contexts/CategoryContext";
 import { useProductContext } from "../../contexts/ProductContext";
 import Navbar from "../partials/navbar/Navbar";
@@ -6,6 +6,7 @@ import Card from "../../components/card/Card";
 import './Products.css'
 import MobileProvider from "contexts/MobileContext";
 import { useCartContext } from "contexts/CartContext";
+import { useLocation } from "react-router-dom";
 
 const Products = () => {
   const { products, getProducts } = useProductContext();
@@ -15,6 +16,12 @@ const Products = () => {
     getProducts();
     getProductsFromCart();
   }, []);
+
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
 
       // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
       // will be refacto later

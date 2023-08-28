@@ -5,7 +5,8 @@ import ContactForm from "components/formInfo/FormInfo";
 import ContactFormProvider from "contexts/FormInfoContext";
 import { RecapCard } from 'components/recapCard/RecapCard';
 import { CartProvider, useCartContext } from 'contexts/CartContext';
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Payment = () => {
 
@@ -13,7 +14,12 @@ const Payment = () => {
 
   useEffect(() => {
     getProductsFromCart();
-  }, [])
+  }, []);
+
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (<>
   <section>Payment</section>

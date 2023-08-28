@@ -2,8 +2,9 @@ import { ReusableCartCard } from "components/common/reusableCardCart/ReusableCar
 import { RecapCard } from "components/recapCard/RecapCard"
 import styles from './Cart.module.css';
 import { useCartContext } from "contexts/CartContext";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useCommandeContext } from "contexts/CommandContext";
+import { useLocation } from "react-router-dom";
 
 const Cart = () => {
     const { products, getProductsFromCart } = useCartContext();
@@ -14,6 +15,12 @@ const Cart = () => {
         getProductsFromCart();
         getCommand();
     }, []);
+
+    const location = useLocation();
+    useLayoutEffect(() => {
+      window.scrollTo(200, 300);
+    }, [location.pathname]);
+  
 
     const emptyCart = <h1 className={styles.empty_cart}>Le panier est vide</h1>
 
