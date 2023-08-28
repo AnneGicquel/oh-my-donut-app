@@ -21,7 +21,6 @@ const Payment = () => {
       <div>
         <h1>Mes Informations</h1>
         <ContactForm />
-        <p>* Ces champs sont requis</p>
       </div>
 
       <div className="app">
