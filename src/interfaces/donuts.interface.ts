@@ -71,4 +71,9 @@ export interface CommandeI {
   customer?: CustomerInformationI;
   stayOrGo?: StayOrGoType;
   cgv?: false
+  facturation?: {
+    sub_total: number,
+    tva: number,
+    total: number;
+  }
 }

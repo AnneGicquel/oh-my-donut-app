@@ -33,7 +33,7 @@ export const RecapCard = () => {
                 <h3><span>Total</span> <span>{getTotal().toFixed(2)} € TTC</span></h3>
             </div>
             <Button title="Commander" callback={() => {
-                addToCommand(products, customerInfo!, selectedChoice!);
+                addToCommand(products, customerInfo!, selectedChoice!, { sub_total: getTotalOfAllProducts(), tva: getProducstTva(), total: getTotal().toFixed(2)});
                 navigate('/payment');
             }}/>
         </section>

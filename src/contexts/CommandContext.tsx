@@ -5,7 +5,7 @@ import { uid } from 'uid'
 
 interface ICommandeProduct {
     command: CommandeI[] ;
-    addToCommand: (newCommand: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType ) => void;
+    addToCommand: (newCommand: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType , facturation?: any) => void;
     getCommand: () =>void;
     createCommand: () => void;
     saveCommand: (command: CommandeI) => void;
@@ -56,7 +56,7 @@ export const CommandeProvider = (props: CommandProviderProps) => {
         }
     }
 
-    const addToCommand = (newOrderedCart: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType) => {
+    const addToCommand = (newOrderedCart: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType, facturation?: any) => {
 
         console.log('HEHOOO => ', newOrderedCart)
         console.log('HEHOOO2 => ', customerInfo)
@@ -69,7 +69,8 @@ export const CommandeProvider = (props: CommandProviderProps) => {
         orderedProducts: newOrderedCart,
         customer: customerInfo,
         stayOrGo: stay,
-        cgv: false
+        cgv: false,
+        facturation: facturation
     }
 
     setCommandProducts(() => commandProducts);
