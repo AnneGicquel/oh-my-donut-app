@@ -13,23 +13,34 @@ const ContactForm: React.FC = () => {
     phone: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [error, setError] = useState({
+    lastName: false,
+    firstName: false,
+    email: false,
+    phone: false
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     updateCustomerInfo(formData);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({...prevData, [name]: value,}));
+    setFormData((prevData) => ({...prevData, [name]: value}));
+    setError((prevData) => ({...prevData, [name]: value.length === 0}))
   };
 
   return (
     <form onChange={handleSubmit} style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
       <input type="text" name="lastName" placeholder="Nom" onChange={handleInputChange} required />
+      { error.lastName ? <p>Ce champs est requis. </p> : null } 
       <input type="text" name="firstName" placeholder="Prénom" onChange={handleInputChange} required/>
+      { error.firstName ? <p>Ce champs est requis. </p> : null } 
       <input type="email" name="email" placeholder="Email" onChange={handleInputChange} required/>
+      { error.email ? <p>Ce champs est requis. </p> : null } 
       <input type="tel" name="phone" placeholder="Mobile" onChange={handleInputChange} required/>
-      {/* <button  onChange={(e) => handleSubmit(e)} type="submit">Envoyer</button> */}
+      { error.phone ? <p>Ce champs est requis. </p> : null } 
     </form>
   );
 };
