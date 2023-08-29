@@ -1,0 +1,28 @@
+.anim {
+    background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_test.png");
+    background-size: cover; 
+    background-position: center; 
+    width: 100vw; 
+    height: 100vh; 
+}
+
+
+
+/* Media query for larger screens */
+/* @media (max-width: 1025px) {
+    .anim {
+        background-image: url("");
+    }
+}
+
+@media (max-width: 625px) {
+    .anim {
+        background-image: url("");
+    }
+}
+
+@media (max-width: 425px) {
+    .anim {
+        background-image: url("");
+    }
+} */

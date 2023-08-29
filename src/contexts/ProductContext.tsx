@@ -5,17 +5,21 @@ import { getAllProducts, getProduct, getProductsByCategories } from "../services
 interface ProductDataI {
     products: ProductI[];
     product: ProductI | any, // productDetails
+    categoryTitle: string,
     getProducts: () => void;
     getByCategories: (categoryId?: number, subCategory?: number) => void;
     getOneProduct: (id:number) => void // productDetails
+    getCategoryTitle: (categoryTitle: string) => void
 }
 
 const defaultProduct: ProductDataI = {
     products: [],
     product: null, // productDetails
+    categoryTitle: '',
     getProducts: () => {},
     getByCategories: () => {},
-    getOneProduct:(id:number) => {} // productDetails
+    getOneProduct:(id:number) => {}, // productDetails
+    getCategoryTitle: () => {},
 
 }
 
@@ -29,6 +33,7 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
     
     const [products, setProducts] = useState<ProductI[]>([])
     const [product, setProduct] = useState<ProductI>() // productDetail
+    const [categoryTitle, setCategoryTitle] = useState<string>();
     
     const getProducts = async () => { 
         return await getAllProducts().then(product => setProducts([...product.data]))
@@ -43,12 +48,18 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
         return await getProduct(id).then(product => setProduct(product.data)); // productDetails
     }
 
+    const getCategoryTitle = (categoryTitle: string) => {
+        setCategoryTitle(categoryTitle);
+    }
+
     const allProducts: ProductDataI = {
         products: [...products],
-        product: product, // productDetails
+        product: product,// productDetails
+        categoryTitle: categoryTitle!, 
         getProducts,
         getByCategories,
         getOneProduct,// productDetails
+        getCategoryTitle,
     }
     
     return <ProductContext.Provider value={allProducts}>

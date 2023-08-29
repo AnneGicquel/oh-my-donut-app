@@ -3,21 +3,32 @@ import ChoiceOption from 'components/formMealChoice/FormMealChoice';
 import { StayOrGoProvider } from 'contexts/FormMealChoiceContext';
 import ContactForm from "components/formInfo/FormInfo";
 import ContactFormProvider from "contexts/FormInfoContext";
+import { RecapCard } from 'components/recapCard/RecapCard';
+import { CartProvider, useCartContext } from 'contexts/CartContext';
+import { useEffect, useLayoutEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Payment = () => {
-  return (
-<>
-        //<section>Payment</section>
-    <ContactFormProvider>
+
+  const { getProductsFromCart } = useCartContext();
+
+  useEffect(() => {
+    getProductsFromCart();
+  }, []);
+
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (<>
+  <section>Payment</section>
       
       <div>
         <h1>Mes Informations</h1>
         <ContactForm />
-        <p>* Ces champs sont requis</p>
       </div>
 
-    </ContactFormProvider>
-    <StayOrGoProvider>
       <div className="app">
         <ChoiceOption
           type="Emporter" //le radiobutton pour Emporter
@@ -32,7 +43,9 @@ const Payment = () => {
           description="En échange de votre ticket, vous recevrez un bipper à l'accueil. Vous pouvez ensuite aller vous asseoir confortablement. Nous nous occupons du reste. "
         />
       </div>
-    </StayOrGoProvider>
+    <div>
+        <RecapCard />
+    </div>
     </>
   );
 };

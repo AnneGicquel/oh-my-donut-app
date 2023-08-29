@@ -1,8 +1,18 @@
 import Button from "components/common/button/Button"
 import { useCartContext } from "contexts/CartContext"
+import { useCommandeContext } from "contexts/CommandContext";
+import { useContactForm } from "contexts/FormInfoContext";
+import { useStayOrGoContext } from "contexts/FormMealChoiceContext";
+import { useNavigate } from "react-router-dom";
 
 export const RecapCard = () => {
-    const { getTotalOfAllProducts, getProducstTva, getTotal } = useCartContext()
+    const { products, getTotalOfAllProducts, getProducstTva, getTotal } = useCartContext();
+    const { customerInfo } = useContactForm();
+    const { selectedChoice } = useStayOrGoContext();
+    const { addToCommand } = useCommandeContext();
+    const navigate = useNavigate();
+    const facturation = { sub_total: getTotalOfAllProducts(), tva: getProducstTva(), total: getTotal().toFixed(2) }
+
     return (
         <section>
             <div>
@@ -10,16 +20,19 @@ export const RecapCard = () => {
 
                 <div style={{ display: 'flex' }}>
                     <span>Sous Total : </span>
-                    <span>{ getTotalOfAllProducts() } €</span>
+                    <span>{getTotalOfAllProducts()} €</span>
                 </div>
                 <div style={{ display: 'flex' }}>
                     <span>Dont TVA</span>
-                    <span>{ getProducstTva() } €</span>
+                    <span>{getProducstTva()} €</span>
                 </div>
 
                 <h3><span>Total</span> <span>{getTotal().toFixed(2)} € TTC</span></h3>
             </div>
-            <Button title="Commander"/>
+            <Button title="Commander" callback={() => {
+                addToCommand(products, customerInfo!, selectedChoice!, facturation);
+                navigate('/payment');
+            }} />
         </section>
     )
 }

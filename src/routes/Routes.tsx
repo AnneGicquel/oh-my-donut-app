@@ -10,13 +10,17 @@ import Payment from "pages/payment/Payment";
 import MobileProvider from "contexts/MobileContext";
 import Cart from "pages/cart/Cart";
 import { CartProvider } from "contexts/CartContext";
+import ContactFormProvider from "contexts/FormInfoContext";
+import { StayOrGoProvider } from "contexts/FormMealChoiceContext";
 
 const ROUTES: RouteObject[] = [
   {
     path: "/",
     element: <ProductProvider>
       <CategoryProvider>
+      <ContactFormProvider><StayOrGoProvider>
         <Home />
+        </StayOrGoProvider></ContactFormProvider>
       </CategoryProvider>
     </ProductProvider>,
     errorElement: <NotFound />,
@@ -38,7 +42,8 @@ const ROUTES: RouteObject[] = [
       /////// PAYMENT ////////
       {
         path: "/payment",
-        element: <Payment />,
+    
+    element: <Payment />,
       },
       {
         path: "/command",

@@ -1,7 +1,15 @@
 import style from "pages/command/Command.module.css"
+import { useLayoutEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
 const Command = () => {
+
+    const location = useLocation();
+    useLayoutEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location.pathname]);
+  
 
     return(
         <main className={style.commandMain}>

@@ -5,12 +5,16 @@ import { getAllCategories } from "../services/category.services";
 
 interface CategoryDataI {
     categories: CategoryI[];
+    categoryImage: string;
     getCategories: () => void;
+    getCategoryImage: (img: string) => void
 }
 
 const defaultCategory: CategoryDataI = {
     categories: [],
+    categoryImage: '',
     getCategories: () => {},
+    getCategoryImage: () => {}
 }
 
 
@@ -25,6 +29,7 @@ const CategoryProvider = ({ children }: CategoryProviderProps): JSX.Element => {
     // const { children} = props;
 
     const [categories, setCategories] = useState<CategoryI[]>([]);
+    const [categoryImage, setCategoryImage] = useState<string>("/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg");
 
     const getCategories = async () => {
         return await getAllCategories()
@@ -33,9 +38,15 @@ const CategoryProvider = ({ children }: CategoryProviderProps): JSX.Element => {
         });
     }
 
+    const getCategoryImage = (img: string) => {
+        setCategoryImage(img);
+    }
+
     const allCategories: CategoryDataI = {
         categories: [...categories],
         getCategories,
+        getCategoryImage,
+        categoryImage: categoryImage!
     }
 
     return <CategoryContext.Provider value={allCategories}>{children}</CategoryContext.Provider>

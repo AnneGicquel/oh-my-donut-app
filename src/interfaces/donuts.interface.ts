@@ -3,11 +3,13 @@ export type StayOrGoType = "Emporter" | "Sur place";
 export interface SubMenu {
   id: number;
   title: string;
+  imageUrl: string;
 }
 
 export interface CategoryI {
   id: number;
   title: string;
+  imageUrl: string;
   subCategories?: SubMenu[];
   isVisible?: boolean;
   isDefault?: boolean;
@@ -67,7 +69,13 @@ export interface CustomerInformationI {
 
 export interface CommandeI {
   id: string;
-  cart: ProductCartI;
-  Customer: CustomerInformationI;
-  StayOrGo: StayOrGoType;
+  orderedProducts: ProductCartI[];
+  customer?: CustomerInformationI;
+  stayOrGo?: StayOrGoType;
+  cgv?: false
+  facturation?: {
+    sub_total: number,
+    tva: number,
+    total: number;
+  }
 }
