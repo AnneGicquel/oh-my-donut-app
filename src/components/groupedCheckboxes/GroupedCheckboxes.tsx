@@ -12,6 +12,7 @@ const GroupedCheckboxes = ({ label, callback }: GroupedCheckboxesProps) => {
     const handleGroupedCheckboxesChange = () => {
         setIsChecked(!isChecked); // Basculer l'état de la case à cocher
         callback(); // Appeler la fonction de rappel fournie
+        console.log('ici', isChecked)
     };
 
     const checkedOnClick = (el: HTMLInputElement) => {
@@ -25,7 +26,7 @@ const GroupedCheckboxes = ({ label, callback }: GroupedCheckboxesProps) => {
 
     return (
         <div className={style.checkbox}>
-            {/* Afficher l'étiquette */}
+            {/* Afficher le label */}
             <label htmlFor="idCheckbox" style={{
 
                 color: isChecked ? '#22C0DF' : 'black',

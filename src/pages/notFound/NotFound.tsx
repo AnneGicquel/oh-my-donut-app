@@ -1,16 +1,17 @@
 import Footer from "pages/partials/footer/Footer";
 import Header from "pages/partials/header/Header";
+import { Link } from "react-router-dom";
 import style from "./NotFound.module.css"
+
 
 const NotFound = () => {
     return (
         <>
-            {/* <Header /> */}
-            <section className={style.anim} >
-                {/* <img src="assets/images/oh-my-donut-images/404_test.png" alt="" /> */}
-                {/* background img to anim with mediaQueries */}
-            </section>
-            {/* <Footer /> */}
+            <Link to={"/"}>
+                <section className={style.anim}>
+                    {/* background img to anim with mediaQueries */}
+                </section>
+            </Link>
         </>
 
     )
