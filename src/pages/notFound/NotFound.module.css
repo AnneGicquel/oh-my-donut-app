@@ -1,5 +1,5 @@
 .anim {
-    background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_test.png");
+    background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_A.png");
     background-size: cover; 
     background-position: center; 
     width: 100vw; 
@@ -9,20 +9,50 @@
 
 
 /* Media query for larger screens */
-/* @media (max-width: 1025px) {
+@media (max-width: 1090px) {
     .anim {
-        background-image: url("");
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_B.png");
     }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 990px) {
     .anim {
-        background-image: url("");
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_C.png");
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 890px) {
     .anim {
-        background-image: url("");
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_D.png");
     }
-} */
+}
+
+@media (max-width: 790px) {
+    .anim {
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_E.png");
+    }
+}
+
+@media (max-width: 690px) {
+    .anim {
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_F.png");
+    }
+}
+
+@media (max-width: 590px) {
+    .anim {
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_G.png");
+    }
+}
+
+@media (max-width: 490px) {
+    .anim {
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_H.png");
+    }
+}
+
+@media (max-width: 390px) {
+    .anim {
+        background-image: url("../../../public/assets/images/oh-my-donut-images/NOTFOUND/404_I.png");
+    }
+}

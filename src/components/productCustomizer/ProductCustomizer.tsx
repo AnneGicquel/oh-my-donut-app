@@ -8,9 +8,19 @@ import Button from "components/common/button/Button";
 import { useEffect, useState } from "react";
 
 
+const firstF = [
+    {
+        id: 1,
+        title: "Parfum 1",
+        subCategories: [
+            { id: 6, title: 'Vanille', label: "Vanille", isSelected: false },
+            { id: 7, title: 'Caramel', label: "Caramel", isSelected: false },
+            { id: 8, title: 'Chocolat', label: "Chocolat", isSelected: false }
+        ]
+    }]
 // COMPONENT//
 const ProductCustomizer = () => {
-
+    const [flavour1, setFlavour1] = useState(firstF)
     // Fonction pour gérer le clic sur l'élément de menu (DropDown)
     const handleMenuItemClick = (itemId: number) => {
         console.log(`Menu item ${itemId} clicked`);
@@ -97,16 +107,6 @@ const ProductCustomizer = () => {
 
     //*SECOND PART*//
 
-    const flavour1 = [
-        {
-            id: 1,
-            title: "Parfum 1",
-            subCategories: [
-                { id: 6, title: 'Vanille', label: "Vanille" },
-                { id: 7, title: 'Caramel', label: "Caramel" },
-                { id: 8, title: 'Chocolat', label: "Chocolat" }
-            ]
-        }]
 
     const flavour2 = [
         {
