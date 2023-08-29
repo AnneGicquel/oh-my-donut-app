@@ -8,7 +8,7 @@ import Button from "components/common/button/Button";
 import { useEffect, useState } from "react";
 import { useProductContext } from "contexts/ProductContext";
 import { useCartContext } from "contexts/CartContext";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 // COMPONENT//
 const ProductCustomizer = () => {
@@ -16,6 +16,9 @@ const ProductCustomizer = () => {
     // FETCH LES DATAS
     const { product, getOneProduct, setProduct } = useProductContext();
     const { id } = useParams(); //fetch data
+    const { } = useCartContext();
+    const navigate = useNavigate();
+
     useEffect(() => {
         getOneProduct(Number(id));
     }, [id]);
@@ -46,32 +49,6 @@ const ProductCustomizer = () => {
         setProduct({...product})
     }
 
-<<<<<<< Updated upstream
-        // 🌫 ⬇️
-        // if élément de menu principal est "Personnaliser" (ID 2)
-        if (itemId === 2) { // Si l'élément cliqué est "Personnaliser"
-            // if option == à l'ID du sous-élément cliqué
-
-            // const customizationOption = menuCustomizationOrNot[||0].subCategories.find(subCategory => subCategory.id === subItemId);
-            const customizationOption = menuCustomizationOrNot[0].subCategories.find(subCategory => subCategory.id === subItemId);
-
-            // Vérifie si l'option de personnalisation a été trouvée
-            if (customizationOption) { // Si l'option de personnalisation existe
-                // Met à jour l'état 'customizationOption' avec le titre de l'option trouvée
-                setCustomizationOption(customizationOption.title);
-            }
-            console.log('LOGGG => ', customizationChecked);
-        }
-        // 🟨 ⬇️
-        if (itemId === 2 && subItemId === 4) { // Personnaliser -> oui
-            setCustomizationChecked(true);
-        } else {
-            setCustomizationChecked(false);
-        }
-
-    };
-=======
->>>>>>> Stashed changes
 
     // 🟨 ⬇️
     // Gérer si le bouton a été cliqué
@@ -85,6 +62,8 @@ const ProductCustomizer = () => {
         // (template literals) en JavaScript. Les littéraux de gabarit sont entourés de backticks (``) et permettent l'insertion de valeurs de variables dans une chaîne de caractères en utilisant la syntaxe ${variable}.
         console.log(`Button clicked is ${submitButtonClicked}`)
         // Button clicked is ${TRUE or FALSE}
+        addProductToCart(product);
+        navigate('/cart');
     };
 
 

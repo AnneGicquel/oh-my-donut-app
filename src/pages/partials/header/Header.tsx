@@ -48,15 +48,24 @@ const Header = () => { // Make this reusable component
                 <div className='header-icons-container'>
                     <img onClick={() => getToggle()} className='header-burger' src="/assets/images/oh-my-donut-images/ICONS/menu-burger-icon.png" alt="menu burger icon" />
                     <NavLink to={'/'}><img className='header-logo' src="/assets/images/oh-my-donut-images/GRAPHISM/oh-my-donut-long-with-halo.png" alt="oh my donuts logo" /></NavLink>
-                    <span className='CartCounter'>({getTotalProductQuantity()})<Link to={'/cart'}><img className='header-basket' src="/assets/images/oh-my-donut-images/ICONS/basket.png" alt="basket icon" /></Link></span>
+                    {
+                        location.pathname === '/command' ?
+                            null
+                            :
+                            <span className='CartCounter'>({getTotalProductQuantity()})
+                                <Link to={'/cart'}>
+                                    <img className='header-basket' src="/assets/images/oh-my-donut-images/ICONS/basket.png" alt="basket icon" />
+                                </Link>
+                            </span>
+                    }
                 </div>
                 {/* <div className='header-image'></div> */}
                 {/* J'ai commenté ⬇️ cette ligne pour mieux voir mon taff ⬇️ ;-) */}
                 {(location.pathname === '/') ?
-                    <img className='header-image' src={ categoryImage } alt="header background" /> 
-                    : null }
+                    <img className='header-image' src={categoryImage} alt="header background" />
+                    : null}
             </header>
-            { toggleMobileMenu && (screenSize.width < 768) ? <Navbar /> : null }
+            {toggleMobileMenu && (screenSize.width < 768) ? <Navbar /> : null}
         </>
     );
 }

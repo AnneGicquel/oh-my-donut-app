@@ -3421,14 +3421,17 @@
       "id": 1,
       "title": "Donut",
       "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
+      "categoryStyle": "rgba(253, 103, 151, 0.20)",
       "subCategories": [
         {
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
+          "categoryStyle": "rgba(253, 103, 151, 0.20)",
           "id": 1,
           "title": "Donut à l'unité"
         },
         {
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
+          "categoryStyle": "rgba(253, 103, 151, 0.20)",
           "id": 2,
           "title": "Coffret de Donuts"
         }
@@ -3439,14 +3442,17 @@
       "id": 2,
       "title": "Mochi",
       "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
+      "categoryStyle": "rgba(255, 232, 101, 0.50)",
       "subCategories": [
         {
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
+          "categoryStyle": "rgba(255, 232, 101, 0.50)",
           "id": 3,
           "title": "Mochi à l'unité"
         },
         {
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
+          "categoryStyle": "rgba(255, 232, 101, 0.50)",
           "id": 4,
           "title": "Coffret de Mochi"
         }
@@ -3457,20 +3463,24 @@
       "id": 3,
       "title": "Allergen Free",
       "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
+      "categoryStyle": "rgba(255, 232, 101, 0.80)",
       "subCategories": [
         {
           "id": 5,
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
+          "categoryStyle": "rgba(255, 232, 101, 0.80)",
           "title": "Sans gluten"
         },
         {
           "id": 6,
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
+          "categoryStyle": "rgba(255, 232, 101, 0.80)",
           "title": "Sans lait"
         },
         {
           "id": 7,
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
+          "categoryStyle": "rgba(255, 232, 101, 0.80)",
           "title": "Sans noix"
         }
       ],
@@ -3478,26 +3488,31 @@
     },
     {
       "id": 4,
+      "categoryStyle": "rgba(12, 192, 223, 0.40)",
       "title": "Boissons"
     },
     {
       "id": 5,
       "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+      "categoryStyle": "rgba(12, 192, 223, 0.20)",
       "title": "Tower",
       "subCategories": [
         {
           "id": 8,
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+          "categoryStyle": "rgba(12, 192, 223, 0.20)",
           "title": "Anniversaire"
         },
         {
           "id": 9,
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+          "categoryStyle": "rgba(12, 192, 223, 0.20)",
           "title": "Union"
         },
         {
           "id": 10,
           "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+          "categoryStyle": "rgba(12, 192, 223, 0.20)",
           "title": "Fête"
         }
       ],
@@ -3507,6 +3522,7 @@
       "id": 6,
       "title": "Nos Douceurs",
       "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg",
+      "categoryStyle": "rgba(12, 192, 223, 0.40)",
       "isDefault": true,
       "isVisible": false
     }
