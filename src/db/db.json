@@ -1084,12 +1084,15 @@
     {
       "id": 1,
       "title": "Donut",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
       "subCategories": [
         {
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
           "id": 1,
           "title": "Donut à l'unité"
         },
         {
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
           "id": 2,
           "title": "Coffret de Donuts"
         }
@@ -1099,12 +1102,15 @@
     {
       "id": 2,
       "title": "Mochi",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
       "subCategories": [
         {
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
           "id": 3,
           "title": "Mochi à l'unité"
         },
         {
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
           "id": 4,
           "title": "Coffret de Mochi"
         }
@@ -1114,17 +1120,21 @@
     {
       "id": 3,
       "title": "Allergen Free",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
       "subCategories": [
         {
           "id": 5,
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
           "title": "Sans gluten"
         },
         {
           "id": 6,
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
           "title": "Sans lait"
         },
         {
           "id": 7,
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-allergens-free.jpg",
           "title": "Sans noix"
         }
       ],
@@ -1136,18 +1146,22 @@
     },
     {
       "id": 5,
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
       "title": "Tower",
       "subCategories": [
         {
           "id": 8,
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
           "title": "Anniversaire"
         },
         {
           "id": 9,
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
           "title": "Union"
         },
         {
           "id": 10,
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
           "title": "Fête"
         }
       ],

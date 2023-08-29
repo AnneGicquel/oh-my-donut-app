@@ -9,7 +9,7 @@ import { useCartContext } from "contexts/CartContext";
 import { useLocation } from "react-router-dom";
 
 const Products = () => {
-  const { products, getProducts } = useProductContext();
+  const { categoryTitle, products, getProducts } = useProductContext();
   const { getProductsFromCart } = useCartContext();
 
   useEffect(() => {
@@ -23,31 +23,31 @@ const Products = () => {
   }, [location.pathname]);
 
 
-      // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
-      // will be refacto later
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-    
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
+  // ALLOW US TO GET INNERwIDTH ET HEIGHT OF SCREEN
+  // will be refacto later
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
-    useEffect(() => {
-        const updateDimension = () => {
-          setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-        
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-      }, [screenSize])
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+
+    return (() => {
+      window.removeEventListener('resize', updateDimension);
+    })
+  }, [screenSize])
 
   return (
     <main className="product-main">
-      <h1>Toutes Nos Douceurs</h1>
+      <h1>{!categoryTitle ? 'Toutes Nos Douceurs' : (categoryTitle === 'Nos Douceurs') ? `Toutes ${categoryTitle}` : categoryTitle}</h1>
       <div className="product-container d-flex">
         {screenSize.width > 768 ? <Navbar /> : null}
         <section className="section-container d-flex">
