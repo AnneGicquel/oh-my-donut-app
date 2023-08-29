@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 
 const firstF = [
-    {
+    { 
         id: 1,
         title: "Parfum 1",
         subCategories: [
