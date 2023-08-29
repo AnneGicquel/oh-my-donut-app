@@ -3,6 +3,7 @@ import { ProductI } from "../../interfaces/donuts.interface";
 import Button from "../common/button/Button";
 import './Card.css';
 import { useCartContext } from "contexts/CartContext";
+import { useCategoryContext } from "contexts/CategoryContext";
 
 interface CardPropsI {
   item: ProductI;
@@ -10,12 +11,13 @@ interface CardPropsI {
 const Card = (props: CardPropsI) => {
 
   const { addProductToCart, getProductsFromCart } = useCartContext();
+  const { categoryStyle } = useCategoryContext();
 
   const { item } = props;
   const { id, title, nbrPerson, price, description, imageUrl, allergenFree } = item;
 
   return (
-    <section className="card-container d-flex">
+    <section className="card-container d-flex" style={categoryStyle ? { backgroundColor : categoryStyle} : {} }>
       <img className="card-img" src={imageUrl.src} alt={imageUrl.alt} />
       <div className="card-text d-flex">
         <h4>

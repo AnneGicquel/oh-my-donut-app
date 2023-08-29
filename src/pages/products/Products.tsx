@@ -9,7 +9,7 @@ import { useCartContext } from "contexts/CartContext";
 import { useLocation } from "react-router-dom";
 
 const Products = () => {
-  const { categoryTitle, products, getProducts } = useProductContext();
+  const { categoryTitle, products, product, getProducts } = useProductContext();
   const { getProductsFromCart } = useCartContext();
 
   useEffect(() => {
@@ -55,8 +55,18 @@ const Products = () => {
             return <Card key={product.id} item={product} />;
           })}
         </section>
-
       </div>
+      <section className="allergens-main">
+        <div className="allergensContainer">
+                <img className="GLUTEN" alt="Gluten" src="/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png" />
+                <span>GLUTEN</span>
+                <img className="MILK" alt="Milk" src="/assets/images/oh-my-donut-images/ALLERGENS/MILK.png" />
+                <span>LAIT</span>
+                <img className="NUTS" alt="Nuts" src="/assets/images/oh-my-donut-images/ALLERGENS/NUT.png" />
+                <span>FRUITS A COQUES</span>
+        </div>
+      </section>
+        
     </main>
   );
 };

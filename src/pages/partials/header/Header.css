@@ -36,6 +36,18 @@
     z-index: -1;
 }
 
+.header-image_category {
+    border-radius: 20px;
+    position: relative;
+    width: 100vw;
+    height: 700px;
+    margin-right: 40px;
+    margin-left: 40px;
+    min-width: 350px;
+    min-height: 350px;
+    z-index: -1;
+}
+
 .header-icons-container {
     width: min(95vw, 100%);
     position: absolute;

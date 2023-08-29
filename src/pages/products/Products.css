@@ -23,6 +23,28 @@
     gap: 75px;
 }
 
+  .allergensContainer{
+    display: flex;
+    align-items: center;
+    font-family: var(--lilitaOne);
+    font-size: 20px;
+    width: 458px;
+    margin-top: 74px;
+  }
+  
+  .allergensContainer img {
+    width: 25px;
+    height: 25px;
+    margin: 0 8px 0 25px;
+  }
+
+  .allergens-main {
+    margin-right: 15vw;
+    margin-left: 15vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+
 
 @media screen and (min-width: 320px) and (max-width: 768px)  {
 

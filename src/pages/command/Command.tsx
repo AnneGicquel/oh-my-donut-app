@@ -3,14 +3,14 @@ import { useCommandeContext } from "contexts/CommandContext";
 import { CommandeI, ProductCartI } from "interfaces/donuts.interface";
 import style from "pages/command/Command.module.css"
 import { useEffect, useLayoutEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Command = () => {
 
     const { command, getCommand } = useCommandeContext();
     const { getProductTotalPrice, getTotal, getTotalOfAllProducts, getProducstTva } = useCartContext();
-
+    const navigate = useNavigate();
     const { id, customer, facturation, stayOrGo, orderedProducts } = command as unknown as CommandeI;
 
     // const {  } = orderedProducts as unknown as ProductCartI;

@@ -5,7 +5,7 @@ import { useProductContext } from "contexts/ProductContext";
 import { useMobileContext } from "contexts/MobileContext";
 
 const Navbar: FC = () => {
-  const { categories, getCategories, getCategoryImage } = useCategoryContext();
+  const { categories, getCategories, getCategoryImageAndColor } = useCategoryContext();
   const { getByCategories, getCategoryTitle } = useProductContext();
   const { toggleMobileMenu } = useMobileContext();
 
@@ -36,14 +36,14 @@ const Navbar: FC = () => {
           <li onClick={((e: any) => {
             toggleMenu(e, category)
             getCategoryTitle(category.title);
-            getCategoryImage(category.imageUrl);
+            getCategoryImageAndColor(category.imageUrl, category.categoryStyle);
             category.isDefault ? getByCategories() : getByCategories(category.id)
           })}>{category.title.toUpperCase()}</li>
           <ul className={"subMenu " + (category.isVisible ? 'isVisible' : '')} >{category.subCategories?.map((sub, index) =>
             <li onClick={() => { 
               getByCategories(category.id, sub.id);
               getCategoryTitle(sub.title);
-              getCategoryImage(category.imageUrl); 
+              getCategoryImageAndColor(category.imageUrl, category.categoryStyle); 
             }} className="subMenu-child" key={sub.id}>{sub.title.toUpperCase()}</li>
           )}</ul>
         </ Fragment>
