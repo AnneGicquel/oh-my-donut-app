@@ -50,6 +50,7 @@ const ProductCustomizer = () => {
                 // Met à jour l'état 'customizationOption' avec le titre de l'option trouvée
                 setCustomizationOption(customizationOption.title);
             }
+            console.log('LOGGG => ', customizationChecked);
         }
         // 🟨 ⬇️
         if (itemId === 2 && subItemId === 4) { // Personnaliser -> oui

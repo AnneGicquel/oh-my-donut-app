@@ -1170,6 +1170,7 @@
     {
       "id": 6,
       "title": "Nos Douceurs",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg",
       "isDefault": true,
       "isVisible": false
     }
