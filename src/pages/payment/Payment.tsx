@@ -5,8 +5,8 @@ import ContactForm from "components/formInfo/FormInfo";
 import ContactFormProvider from "contexts/FormInfoContext";
 
 const Payment = () => {
-
   return (
+<>
         //<section>Payment</section>
     <ContactFormProvider>
       
@@ -33,6 +33,7 @@ const Payment = () => {
         />
       </div>
     </StayOrGoProvider>
+    </>
   );
 };
 

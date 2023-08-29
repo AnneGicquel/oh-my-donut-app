@@ -20,21 +20,40 @@ export const ReusableCartCard = (props : CartPropsI) => { //props: CartPropsI
             <div>
                 {/* COFFRET DE 4 DONUTS */}
                 
-                <h4>{product.title }</h4> 
+                <h3>{product.title }</h3> 
                 <div>
-                    <div>
-                        <p>{product.description}</p>
-                        <p>Coffret:  Signature - Ássortiment Éte gourmand</p>
-                    </div>
-                    <div>
-                        <span onClick={() => changeQuantity(--product.quantity!, product)} style={{backgroundColor: "cyan", padding: '10px'}}>-</span>
-                        <span style={{backgroundColor: "lightgreen", padding: '10px'}}>{product.quantity}</span>
-                        <span onClick={() => changeQuantity(++product.quantity!, product)} style={{backgroundColor: "cyan", padding: '10px'}}>+</span>
 
-                        <span>{getProductTotalPrice(product.quantity!, product.price)} € TTC</span>
+                    <div>
+                        <p className={styles.p1}>{product.description}</p>
+                        <p className={styles.p2}>Coffret:  Signature - Assortiment Éte gourmand</p>
+                    </div>
+
+                    <div>
+
+                        <span onClick={() => changeQuantity(--product.quantity!, product)} 
+                        // style={{backgroundColor: "cyan", padding: '10px'}}
+                        className={styles.buttonQuantity}
+                        >-</span>
+
+                        <span 
+                        //style={{backgroundColor: "lightgreen", padding: '10px'}}
+                        className={styles.labelQuantity}
+                        >{product.quantity}</span>
+                        
+                        <span onClick={() => changeQuantity(++product.quantity!, product)} 
+                        // style={{backgroundColor: "cyan", padding: '10px'}}
+                        className={styles.buttonQuantity}
+                        >+</span>
+
+                        <span className={styles.ttcPrice} >{getProductTotalPrice(product.quantity!, product.price)} € TTC</span>
                     </div>
                 </div>
-                <p onClick={() => removeProductFromCart(product)} style={{backgroundColor: "tomato", cursor: "pointer"}}><img src="" alt="" /> supprimer</p>
+
+                <p onClick={() => removeProductFromCart(product)} 
+                //style={{backgroundColor: "tomato", cursor: "pointer"}}
+                className={styles.buttonDelete}
+                ><img src="" alt="" /> ❌Supprimer</p>
+
             </div>
         </section>
     )
