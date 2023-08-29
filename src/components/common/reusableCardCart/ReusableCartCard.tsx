@@ -15,46 +15,56 @@ export const ReusableCartCard = (props : CartPropsI) => { //props: CartPropsI
     const { product } = item;
     
     return (
-        <section className={`${styles.dflex} ${styles.recap_card_section}`}>
-            <img className={styles.cart_card_image} src="/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png" alt="image donuts" />
-            <div>
-                {/* COFFRET DE 4 DONUTS */}
-                
-                <h3>{product.title }</h3> 
-                <div>
+        <section className={` ${styles.recap_card_section}`}>
+
+            
+
+            <div className={styles.flexCard}>
+
+                <div className={styles.flexImgInfo}>
+
+
+                    <img className={styles.cart_card_image} src={product.imageUrl.src} alt={product.imageUrl.alt} />
+
 
                     <div>
+                        <h3>{product.title }</h3>
                         <p className={styles.p1}>{product.description}</p>
                         <p className={styles.p2}>Coffret:  Signature - Assortiment Éte gourmand</p>
                     </div>
 
+                </div>
+
+                <div className={styles.flexQuantityPrice}>
+
                     <div>
 
                         <span onClick={() => changeQuantity(--product.quantity!, product)} 
-                        // style={{backgroundColor: "cyan", padding: '10px'}}
-                        className={styles.buttonQuantity}
-                        >-</span>
+                        className={styles.buttonQuantityMinus}>-</span>
 
-                        <span 
-                        //style={{backgroundColor: "lightgreen", padding: '10px'}}
-                        className={styles.labelQuantity}
-                        >{product.quantity}</span>
+                        <span className={styles.labelQuantity}>{product.quantity}</span>
                         
                         <span onClick={() => changeQuantity(++product.quantity!, product)} 
-                        // style={{backgroundColor: "cyan", padding: '10px'}}
-                        className={styles.buttonQuantity}
-                        >+</span>
+                        className={styles.buttonQuantityPlus}>+</span>
+
+                    </div>
+
+                    <div>
 
                         <span className={styles.ttcPrice} >{getProductTotalPrice(product.quantity!, product.price)} € TTC</span>
+
                     </div>
+
                 </div>
 
-                <p onClick={() => removeProductFromCart(product)} 
-                //style={{backgroundColor: "tomato", cursor: "pointer"}}
-                className={styles.buttonDelete}
-                ><img src="" alt="" /> ❌Supprimer</p>
+            </div>
+
+            <div>
+
+                <p onClick={() => removeProductFromCart(product)} className={styles.buttonDelete}>❌Supprimer</p>
 
             </div>
+
         </section>
     )
 }
