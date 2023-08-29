@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler, useEffect, useRef, useState } from "react";
+import { FC, Fragment, MouseEventHandler, useEffect, useRef, useState } from "react";
 import { useCategoryContext } from "../../../contexts/CategoryContext";
 import './Navbar.css'
 import { useProductContext } from "contexts/ProductContext";
@@ -32,21 +32,21 @@ const Navbar: FC = () => {
   return (
     <ul className="navbar-container" ref={menuRef}>
       {categories.map(category =>
-        <>
+        <Fragment key={category.id}>
           <li onClick={((e: any) => {
             toggleMenu(e, category)
             getCategoryTitle(category.title);
             getCategoryImage(category.imageUrl);
             category.isDefault ? getByCategories() : getByCategories(category.id)
-          })} key={category.id}>{category.title.toUpperCase()}</li>
+          })}>{category.title.toUpperCase()}</li>
           <ul className={"subMenu " + (category.isVisible ? 'isVisible' : '')} >{category.subCategories?.map((sub, index) =>
             <li onClick={() => { 
               getByCategories(category.id, sub.id);
               getCategoryTitle(sub.title);
               getCategoryImage(category.imageUrl); 
-            }} className="subMenu-child">{sub.title.toUpperCase()}</li>
+            }} className="subMenu-child" key={sub.id}>{sub.title.toUpperCase()}</li>
           )}</ul>
-        </>
+        </ Fragment>
       )}
     </ul>
   );
