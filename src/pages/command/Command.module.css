@@ -1,9 +1,89 @@
 .commandMain{
     min-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.command_card_section {
+    display: flex;
+    flex-direction: column;
+    width: 868px;
+    border: 1px solid darkgray;
+    border-radius: 25px;
+}
+
+.command_card_container { 
+    display: flex; 
+    justify-content: space-around;
+    align-items: center; 
+    width: 868px;
+    height: 193px;
+    border-bottom: 1px solid darkgray;
+}
+
+.command_card_container:last-child {
+    border-bottom: none;
+}
+
+.command_card_img {
+    width: 170px;
+    height: 170px;
+}
+
+.card_text_container {
+
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+.command_product_price {
+    margin-bottom: 70px;
+}
 
 /* .dFlex {
     display: flex;
     flex-direction: row;
 } */
+
+.thx_section {
+    text-align: center;
+}
+.info_facturation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.command_total {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around; 
+}
+
+.command_total h4 {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--lilitaOne);
+    font-weight: bolder;
+}
+.command_total h4 span {
+    font-family: var(--varelaRound);
+    font-weight: initial;
+}
+
+.command_total h4 .total {
+    font-family: var(--lilitaOne);
+    font-weight: bolder;
+}
+
+.see_you {
+    width: 300px;
+}
+
+

@@ -53,11 +53,10 @@ const Header = () => { // Make this reusable component
                 {/* <div className='header-image'></div> */}
                 {/* J'ai commenté ⬇️ cette ligne pour mieux voir mon taff ⬇️ ;-) */}
                 {(location.pathname === '/') ?
-                    <img className='header-image' src={categoryImage} alt="header background" /> 
-                    : (location.pathname === `/productDetails/${id}`) ? <img className='header-image' src="/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg" alt="header background" /> 
-                    : <img className='header-image' src="/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg" alt="header background" /> }
+                    <img className='header-image' src={ categoryImage } alt="header background" /> 
+                    : null }
             </header>
-            {toggleMobileMenu && (screenSize.width < 768) ? <Navbar /> : null}
+            { toggleMobileMenu && (screenSize.width < 768) ? <Navbar /> : null }
         </>
     );
 }

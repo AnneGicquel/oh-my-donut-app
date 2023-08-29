@@ -42,8 +42,7 @@ const ROUTES: RouteObject[] = [
       /////// PAYMENT ////////
       {
         path: "/payment",
-    
-    element: <Payment />,
+        element: <Payment />,
       },
       {
         path: "/command",
