@@ -16,7 +16,6 @@ const ProductDetailsComponent = () => {
 
     useEffect(() => {
         getOneProduct(Number(id));
-        console.log(Number(id));
     }, [id]); 
     // , getOneProduct
 

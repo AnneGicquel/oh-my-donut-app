@@ -9,11 +9,11 @@ import GroupedCheckboxes from "components/groupedCheckboxes/GroupedCheckboxes";
 interface DropdownItem {
   id: number;
   title: React.ReactNode;
-  subCategories?: DropdownItem[];
+  subCategories?: any;
 }
 
 interface ReusableDropdownProps {
-  items: DropdownItem[];
+  items: DropdownItem;
   onMenuItemClick: (itemId: number) => void;
   onSubMenuItemClick: (itemId: number, subItemId: number) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void; // Ajout de la nouvelle prop !!!!!!!!
@@ -57,42 +57,40 @@ const ReusableDropdown = ({
 
   return (
     <div className={style.dropdown} ref={dropdownRef}>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            <div
-              className={style["menu-item"]}
+      <div
+        className={style["menu-item"]}
+        onClick={() => {
+          toggleSubMenu(items.id);
+          onMenuItemClick(items.id);
+        }}
+      >
+        <span className={style["menu-item-text"]}>{items.title}</span>
+        <span className={style.chevron}>
+          {openItems.includes(items.id) ? "⌃" : "⌄"}
+        </span>
+      </div>
+      {items.subCategories && openItems.includes(items.id) && (
+        <ul className={style.subMenu}>
+          {items.subCategories.map((subItem: any) => (
+            <li
+              key={subItem.id}
+              className={style["subMenu-child"]}
               onClick={() => {
-                toggleSubMenu(item.id);
-                onMenuItemClick(item.id);
+                onSubMenuItemClick(items.id, subItem.id)
+                console.log(items.id, subItem.id, subItem.isSelected)
               }}
             >
-              <span className={style["menu-item-text"]}>{item.title}</span>
-              <span className={style.chevron}>
-                {openItems.includes(item.id) ? "⌃" : "⌄"}
-              </span>
-            </div>
-            {item.subCategories && openItems.includes(item.id) && (
-              <ul className={style.subMenu}>
-                {item.subCategories.map((subItem) => (
-                  <li
-                    key={subItem.id}
-                    className={style["subMenu-child"]}
-                    onClick={() => onSubMenuItemClick(item.id, subItem.id)}
-                  >
-                    <div>
-                      <GroupedCheckboxes
-                        label={subItem.title} 
-                        callback={test}
-                         /> 
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
+              <div>
+                <GroupedCheckboxes
+                  label={subItem.title}
+                  callback={test}
+                  isChecked={subItem.isSelected}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

@@ -59,6 +59,13 @@ export interface ExtraIngredientI {
   additionalPrice: number;
 }
 
+export interface ExtraSubCategoriesI {
+  id: number;
+  title: string;
+  label: string;
+  isSelected: boolean;
+}
+
 export interface CustomerInformationI {
   id: number;
   lastName: string;

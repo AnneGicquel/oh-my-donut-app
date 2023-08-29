@@ -9,7 +9,8 @@ interface ProductDataI {
     getProducts: () => void;
     getByCategories: (categoryId?: number, subCategory?: number) => void;
     getOneProduct: (id:number) => void // productDetails
-    getCategoryTitle: (categoryTitle: string) => void
+    getCategoryTitle: (categoryTitle: string) => void;
+    setProduct: (product: ProductI) => void;
 }
 
 const defaultProduct: ProductDataI = {
@@ -20,7 +21,8 @@ const defaultProduct: ProductDataI = {
     getByCategories: () => {},
     getOneProduct:(id:number) => {}, // productDetails
     getCategoryTitle: () => {},
-
+    setProduct: (product: {}) => {}, 
+    // ⬆️
 }
 
 const ProductContext = createContext<ProductDataI>(defaultProduct);
@@ -46,10 +48,12 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
 
     const getOneProduct = async (id: number) => {
         return await getProduct(id).then(product => setProduct(product.data)); // productDetails
-    }
+    } 
+    // ⬆️
 
     const getCategoryTitle = (categoryTitle: string) => {
         setCategoryTitle(categoryTitle);
+        // ⬆️
     }
 
     const allProducts: ProductDataI = {
@@ -60,6 +64,8 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
         getByCategories,
         getOneProduct,// productDetails
         getCategoryTitle,
+        setProduct
+        // ⬆️
     }
     
     return <ProductContext.Provider value={allProducts}>

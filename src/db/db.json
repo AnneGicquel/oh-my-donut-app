@@ -28,7 +28,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -62,7 +135,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -96,7 +242,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -130,7 +349,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -164,7 +456,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -198,7 +563,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -232,7 +670,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -266,7 +777,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 1,
@@ -310,7 +894,80 @@
         "Fruits confits",
         "Pistaches"
       ],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -344,7 +1001,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -378,7 +1108,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -412,7 +1215,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -446,7 +1322,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -480,7 +1429,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -514,7 +1536,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -548,7 +1643,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 2,
@@ -582,7 +1750,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -616,7 +1857,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -650,7 +1964,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -684,7 +2071,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -718,7 +2178,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -752,7 +2285,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -786,7 +2392,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -820,7 +2499,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -854,7 +2606,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -888,7 +2713,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -922,7 +2820,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -956,7 +2927,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 5,
@@ -985,7 +3029,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 3,
@@ -1014,7 +3131,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 3,
@@ -1043,7 +3233,80 @@
         }
       ],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 3,
@@ -1061,7 +3324,80 @@
       },
       "allergenFree": [],
       "ingredients": [],
-      "extras": [],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
       "quantity": 1,
       "isCustomizable": true,
       "categoryId": 3,
@@ -1210,7 +3546,80 @@
           }
         ],
         "ingredients": [],
-        "extras": [],
+        "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
         "quantity": 1,
         "isCustomizable": true,
         "categoryId": 1,
