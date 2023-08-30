@@ -89,7 +89,7 @@ const ProductDetailsComponent = () => {
 
                 {/* PRODUCT IMAGE */}
                 <div className={style.colorBackground}>
-                    <img className="imgProduct" alt={product && product.imageUrl.alt} src={product && product.imageUrl.src} />
+                    <img className="imgProduct" alt={product && product?.imageUrl?.alt!} src={product && product?.imageUrl?.src!} />
                 </div>
             </div>
         </section>

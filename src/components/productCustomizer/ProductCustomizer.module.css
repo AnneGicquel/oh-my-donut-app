@@ -71,3 +71,22 @@ height: 60px;
   height: 25px;
   margin: 0 8px 0 25px;
 }
+
+.customize_quantity span:first-child, .customize_quantity span:last-child {
+  cursor: pointer;
+  border: .5px solid darkgray;
+  padding: 0 7px;
+  border-radius: 50px;
+}
+
+.customize_quantity span:last-child {
+  padding: 0 6px;
+}
+
+.customize_quantity span:first-child {
+}
+
+.customize_quantity .counter {
+  cursor: initial;
+  padding: 0 10px;
+}
