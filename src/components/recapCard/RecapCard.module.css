@@ -1,0 +1,37 @@
+.recapCardContainer {
+    background-color: var(--babyPink);
+    border-radius: 20px;
+    height: 350px;
+    width: 300px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.recapCardFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+h4 {
+    font-family: 'Lilita One', cursive; 
+}
+
+p {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+
+    button {
+        padding: 15px 20px;
+    }
+
+}
