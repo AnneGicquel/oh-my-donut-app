@@ -27,11 +27,13 @@ const Cart = () => {
     const panier = <>
         <h1>Mon Panier</h1>
         <section className={styles.cart_section}>
+            
             <div className={styles.cart_card_container}>
                 {products.map(product => {
                     return <ReusableCartCard key={product.id} item={product} />
                 })}
             </div>
+            
             <RecapCard />
 
         </section></>

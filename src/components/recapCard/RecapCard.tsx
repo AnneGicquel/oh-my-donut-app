@@ -4,6 +4,7 @@ import { useCommandeContext } from "contexts/CommandContext";
 import { useContactForm } from "contexts/FormInfoContext";
 import { useStayOrGoContext } from "contexts/FormMealChoiceContext";
 import { useLocation, useNavigate } from "react-router-dom";
+import styles from './RecapCard.module.css';
 
 export const RecapCard = () => {
     const { products, getTotalOfAllProducts, getProducstTva, getTotal } = useCartContext();
@@ -21,21 +22,25 @@ export const RecapCard = () => {
 
     return (
         <section>
-            <div>
+            <div className={styles.recapCardContainer}>
                 <h3>RÉCAPITULATIF</h3>
 
-                <div style={{ display: 'flex' }}>
-                    <span>Sous Total : </span>
-                    <span>{getTotalOfAllProducts()} €</span>
+                <div className={styles.recapCardFlex}>
+                    <p>Sous Total : </p>
+                    <p>{getTotalOfAllProducts()} €</p>
                 </div>
-                <div style={{ display: 'flex' }}>
-                    <span>Dont TVA</span>
-                    <span>{getProducstTva()} €</span>
+                <div className={styles.recapCardFlex}>
+                    <p>Dont TVA : </p>
+                    <p>{getProducstTva()} €</p>
                 </div>
 
-                <h3><span>Total</span> <span>{getTotal().toFixed(2)} € TTC</span></h3>
-            </div>
-            <Button title="Commander" callback={() => handleClick()} />
+                <div className={styles.recapCardFlex}>
+                    <h4>Total :</h4> 
+                    <h4>{getTotal().toFixed(2)} € TTC</h4>
+                </div>
+
+            </div>    
+            <Button title="Commander" callback={() => handleClick()}/>
         </section>
     )
 }

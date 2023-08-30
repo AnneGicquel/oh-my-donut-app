@@ -1,12 +1,27 @@
+h1 {
+    font-family: 'Varela Round', sans-serif;
+}
+
 .cart_section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.cart_card_container {
-}
-
 .empty_cart {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    .cart_section {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
 }
