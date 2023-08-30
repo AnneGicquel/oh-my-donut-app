@@ -38,9 +38,11 @@ export const RecapCard = () => {
                     <h4>Total :</h4> 
                     <h4>{getTotal().toFixed(2)} € TTC</h4>
                 </div>
+   
+                <Button title="Commander" callback={() => handleClick()}/>
 
-            </div>    
-            <Button title="Commander" callback={() => handleClick()}/>
+            </div> 
+            
         </section>
     )
 }
