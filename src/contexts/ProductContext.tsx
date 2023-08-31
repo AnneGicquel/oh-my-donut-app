@@ -11,7 +11,7 @@ interface ProductDataI {
     getOneProduct: (id:number) => void // productDetails
     getCategoryTitle: (categoryTitle: string) => void;
     setProduct: (product: ProductI) => void;
-    getOneProductTotal: () => void;
+    // getOneProductTotal: () => void;
 }
 
 const defaultProduct: ProductDataI = {
@@ -23,7 +23,7 @@ const defaultProduct: ProductDataI = {
     getOneProduct:(id:number) => {}, // productDetails
     getCategoryTitle: () => {},
     setProduct: (product: {}) => {}, 
-    getOneProductTotal: () => {}
+    // getOneProductTotal: () => {}
     // ⬆️
 }
 
@@ -58,15 +58,15 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
         // ⬆️
     }
 
-    const getOneProductTotal = () => {
-        const qty = product?.quantity;
-        const price = product?.price;
-        const extras = product?.customExtras;
-        console.log('QTY => ', qty);
-        console.log('PRICE =>', price);
-        console.log('EXTRAS =>', extras);
-        console.log('PROOOOOOOOOOOOOOOOOOOOOOOO', product)
-    }
+    // const getOneProductTotal = () => {
+    //     const qty = product?.quantity;
+    //     const price = product?.price;
+    //     const extras = product?.customExtras;
+    //     console.log('QTY => ', qty);
+    //     console.log('PRICE =>', price);
+    //     console.log('EXTRAS =>', extras);
+    //     console.log('PROOOOOOOOOOOOOOOOOOOOOOOO', product)
+    // }
 
     const allProducts: ProductDataI = {
         products: [...products],
@@ -77,7 +77,7 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
         getOneProduct,// productDetails
         getCategoryTitle,
         setProduct,
-        getOneProductTotal
+        // getOneProductTotal
         // ⬆️
     }
     

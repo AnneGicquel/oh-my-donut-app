@@ -51,7 +51,7 @@ export const ReusableCartCard = (props : CartPropsI) => { //props: CartPropsI
 
                     <div>
 
-                        <span className={styles.ttcPrice} >{getProductTotalPrice(product.quantity!, product.price)} € TTC</span>
+                        <span className={styles.ttcPrice} >{getProductTotalPrice(product.quantity!, product.price, product?.customExtras)} € TTC</span>
 
                     </div>
 

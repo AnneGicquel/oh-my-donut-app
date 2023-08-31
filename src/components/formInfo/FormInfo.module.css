@@ -25,6 +25,12 @@ p {
     margin-top: 50px;
 }
 
+.form_errors_payment {
+    color: tomato;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
 
     .formFlex {

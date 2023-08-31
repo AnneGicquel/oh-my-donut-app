@@ -5,7 +5,7 @@
       "title": "Donut framboise",
       "nbrPerson": 1,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
         "alt": "Mochi framboise image"
@@ -123,7 +123,7 @@
       "title": "Donut Fraise",
       "nbrPerson": 1,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-2.png",
         "alt": "Mochi framboise image"
@@ -240,7 +240,7 @@
       "title": "Donut Pistache",
       "nbrPerson": 1,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-3.png",
         "alt": "Mochi framboise image"
@@ -357,7 +357,7 @@
       "title": "Donut Oreo",
       "nbrPerson": 1,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-4.png",
         "alt": "Mochi framboise image"
@@ -474,7 +474,7 @@
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-1.png",
         "alt": "Mochi framboise image"
@@ -591,7 +591,7 @@
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-2.png",
         "alt": "Mochi framboise image"
@@ -708,7 +708,7 @@
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-3.png",
         "alt": "Mochi framboise image"
@@ -825,7 +825,7 @@
       "title": "Coffret de Donuts",
       "nbrPerson": 4,
       "description": "Description qui donne l’eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-coffret/donuts-coffret-4.png",
         "alt": "Mochi framboise image"
@@ -942,7 +942,7 @@
       "title": "Mochi Fruits",
       "nbrPerson": 1,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-1.png",
         "alt": "Mochi Fruits"
@@ -1059,7 +1059,7 @@
       "title": "Mochi Fraise",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-2.png",
         "alt": "Mochi framboise image"
@@ -1174,7 +1174,7 @@
       "title": "Mochi Myrtille",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-3.png",
         "alt": "Mochi framboise image"
@@ -1289,7 +1289,7 @@
       "title": "Mochi Chocolat",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-4.png",
         "alt": "Mochi framboise image"
@@ -1404,7 +1404,7 @@
       "title": "Coffret Mochi",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-1.png",
         "alt": "Mochi framboise image"
@@ -1521,7 +1521,7 @@
       "title": "Coffret Mochi",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-2.png",
         "alt": "Mochi framboise image"
@@ -1638,7 +1638,7 @@
       "title": "Coffret Mochi",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-3.png",
         "alt": "Mochi framboise image"
@@ -1755,7 +1755,7 @@
       "title": "Coffret Mochi",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 14,
+      "price": 1400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-4.png",
         "alt": "Mochi framboise image"
@@ -1872,7 +1872,7 @@
       "title": "tower Anniversaire",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-1.png",
         "alt": "Mochi framboise image"
@@ -1989,7 +1989,7 @@
       "title": "tower Anniversaire",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-2.png",
         "alt": "Mochi framboise image"
@@ -2106,7 +2106,7 @@
       "title": "tower Anniversaire",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-3.png",
         "alt": "Mochi framboise image"
@@ -2223,7 +2223,7 @@
       "title": "tower Anniversaire",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-4.png",
         "alt": "Mochi framboise image"
@@ -2340,7 +2340,7 @@
       "title": "tower Union",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-1.png",
         "alt": "Mochi framboise image"
@@ -2457,7 +2457,7 @@
       "title": "tower Union",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-2.png",
         "alt": "Mochi framboise image"
@@ -2574,7 +2574,7 @@
       "title": "tower Union",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-3.png",
         "alt": "Mochi framboise image"
@@ -2691,7 +2691,7 @@
       "title": "tower Union",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-4.png",
         "alt": "Mochi framboise image"
@@ -2808,7 +2808,7 @@
       "title": "tower Fêtes",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-1.png",
         "alt": "Mochi framboise image"
@@ -2925,7 +2925,7 @@
       "title": "tower Fêtes",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-2.png",
         "alt": "Mochi framboise image"
@@ -3042,7 +3042,7 @@
       "title": "tower Fêtes",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-3.png",
         "alt": "Mochi framboise image"
@@ -3159,7 +3159,7 @@
       "title": "tower Fêtes",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 44,
+      "price": 4400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-4.png",
         "alt": "Mochi framboise image"
@@ -3276,7 +3276,7 @@
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-1.png",
         "alt": "Mochi framboise image"
@@ -3388,7 +3388,7 @@
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-2.png",
         "alt": "Mochi framboise image"
@@ -3499,7 +3499,7 @@
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-3.jpeg",
         "alt": "Mochi framboise image"
@@ -3611,7 +3611,7 @@
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
-      "price": 4,
+      "price": 400,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-4.png",
         "alt": "Mochi framboise image"
@@ -3710,7 +3710,7 @@
       "id": 33,
       "title": "Bionade",
       "description": "Bionade aux plantes",
-      "price": 3,
+      "price": 300,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bionade.png",
         "alt": "Bionade aux plantes"
@@ -3722,7 +3722,7 @@
       "id": 34,
       "title": "Citronnade",
       "description": "Citronnade Bella Lula",
-      "price": 3,
+      "price": 300,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bellaLulaCitronnade.png",
         "alt": "Citronnade Bella Lula"
@@ -3734,7 +3734,7 @@
       "id": 35,
       "title": "Bionade",
       "description": "Bionade aux plantes",
-      "price": 3,
+      "price": 300,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bionade.png",
         "alt": "Bionade aux plantes"
@@ -3746,7 +3746,7 @@
       "id": 36,
       "title": "Citronnade",
       "description": "Citronnade Bella Lula",
-      "price": 3,
+      "price": 300,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bellaLulaCitronnade.png",
         "alt": "Citronnade Bella Lula"
@@ -3880,7 +3880,7 @@
         "title": "Donut framboise",
         "nbrPerson": 1,
         "description": "Description qui donne l'eau à la bouche",
-        "price": 4,
+        "price": 400,
         "imageUrl": {
           "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
           "alt": "Mochi framboise image"

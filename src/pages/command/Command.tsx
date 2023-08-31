@@ -45,7 +45,7 @@ const Command = () => {
                                             item.product.extras.map( extra => <span>{extra} sucre, farine, sel, blavbla, toctoc</span>)
                                         } */}
                                     </div>
-                                    <p className={style.command_product_price}>{getProductTotalPrice(item.product.quantity!, item.product.price)} € TTC</p>
+                                    <p className={style.command_product_price}>{getProductTotalPrice(item.product.quantity!, item.product.price, item.product.customExtras)} € TTC</p>
                                 </div>
                             )
                         })

@@ -9,12 +9,14 @@ import { useEffect, useState } from "react";
 import { useProductContext } from "contexts/ProductContext";
 import { useCartContext } from "contexts/CartContext";
 import { useNavigate, useParams } from "react-router-dom";
+import { CLIENT_RENEG_LIMIT } from "tls";
 
 // COMPONENT//
 const ProductCustomizer = () => {
 
     // FETCH LES DATAS
-    const { product, getOneProduct, setProduct,getOneProductTotal } = useProductContext();
+    const { product, getOneProduct, setProduct } = useProductContext();
+    const { getRound } = useCartContext()
     const { id } = useParams(); //fetch data
     const navigate = useNavigate();
 
@@ -29,7 +31,7 @@ const ProductCustomizer = () => {
 
     useEffect(() => {
         getOneProduct(Number(id));
-    }, [id]);
+    }, []);
 
     // AJOUT AU PANIER
     const { addProductToCart } = useCartContext(); 
@@ -77,8 +79,8 @@ const ProductCustomizer = () => {
         // (template literals) en JavaScript. Les littéraux de gabarit sont entourés de backticks (``) et permettent l'insertion de valeurs de variables dans une chaîne de caractères en utilisant la syntaxe ${variable}.
         console.log(`Button clicked is ${submitButtonClicked}`)
         // Button clicked is ${TRUE or FALSE}
-        product?.customExtras.push(moreExtras);
-        setProduct({...product.extras, moreExtras});
+        product?.customExtras?.push(moreExtras);
+        setProduct({...product, moreExtras});
         addProductToCart(product);
         navigate('/cart');
     };
@@ -113,19 +115,18 @@ const ProductCustomizer = () => {
         }));
     };
 
-
-    // nbrPersonnes: { nbr: 0, price: 0 },
-    // plaque: false,
-    // name: { title: '', price: 300 },
-    // candle: { isSelected: false, price: 100 },
-    // allergen: { gluten: false, lactose: false, fruits: false }
+    const [total, setTotal] = useState<number>(0);
 
     const getOneProductTotal2 = () => {
-        const pResult = product?.quantity * product?.price; 
-        console.log('PRODUCT RESULT =>', pResult);
+        let nbPersonnePrice =  moreExtras.nbrPersonnes?.price || 0;
+        let namePrice = moreExtras.name?.price || 0;
+        let candlePrice = moreExtras.candle?.price || 0;
+        let quantity = product?.quantity || 0;
+        let productPrice = product?.price || 0;
+        const extrasResult = nbPersonnePrice + namePrice + candlePrice;
+        const pResult = quantity * ( productPrice + extrasResult ); 
 
-        const extrasResult = moreExtras.nbrPersonnes.price + moreExtras.name.price + moreExtras.candle.price;
-        console.log('REEEEEEEEEEEEE => ', extrasResult);
+        setTotal(Number(pResult));
     }
 
 
@@ -144,8 +145,6 @@ const ProductCustomizer = () => {
 
     // COUNTER 🟩
     // +localStorage.getItem('quantity')||0 => L'objet a peut-être la valeur 'null'.ts(2531)
-    const initialQuantity = localStorage.getItem('quantity');
-    const [quantity, setQuantity] = useState(initialQuantity !== null ? +initialQuantity : 0);
 
     const incrementQuantity = () => {
         product.quantity += 1;
@@ -165,10 +164,9 @@ const ProductCustomizer = () => {
 
     // COUNTER
     useEffect(() => {
-        // localStorage.setItem("quantity", quantity.toString());
         getOneProductTotal2();
-        console.log('PRORPRORPOR', product);
-    }, [product]);
+        console.log('là', product);
+    }, [product, total, moreExtras]);
 
 
 
@@ -223,7 +221,7 @@ const ProductCustomizer = () => {
                     <span onClick={incrementQuantity}>+</span>
                 </div>
                 <span>à partir de </span>
-                <span>55.00€</span>
+                <span>{ total === 0 ? getRound(product?.price) : getRound(total) } €</span>
             </div>
 
 

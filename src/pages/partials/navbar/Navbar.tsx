@@ -29,6 +29,8 @@ const Navbar: FC = () => {
     setToggle(isToggle);
   }
 
+  const img = "<img style='width: 25px; padding-left: 25px' src='/assets/images/oh-my-donut-images/ICONS/clock.png' /> <span style='font-family: Varela Round; font-size: 22px'>48h</span>";
+
   return (
     <ul className="navbar-container" ref={menuRef}>
       {categories.map(category =>
@@ -38,7 +40,7 @@ const Navbar: FC = () => {
             getCategoryTitle(category.title);
             getCategoryImageAndColor(category.imageUrl, category.categoryStyle);
             category.isDefault ? getByCategories() : getByCategories(category.id)
-          })}>{category.title.toUpperCase()}</li>
+          })}>{category.title !== 'Tower' ? category.title.toUpperCase() : <div dangerouslySetInnerHTML={ { __html: category.title.toLocaleUpperCase() +  img} }></div>}</li>
           <ul className={"subMenu " + (category.isVisible ? 'isVisible' : '')} >{category.subCategories?.map((sub, index) =>
             <li onClick={() => { 
               getByCategories(category.id, sub.id);
