@@ -24,6 +24,9 @@ const Command = () => {
 
     useEffect(() => {
         getCommand();
+        if( command?.length <=0 ) {
+            navigate('/');
+        }
     }, []);
 
     return(

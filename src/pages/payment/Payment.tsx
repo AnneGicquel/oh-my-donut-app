@@ -6,15 +6,23 @@ import ContactFormProvider from "contexts/FormInfoContext";
 import { RecapCard } from 'components/recapCard/RecapCard';
 import { CartProvider, useCartContext } from 'contexts/CartContext';
 import { useEffect, useLayoutEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './Payment.module.css';
+import { useCommandeContext } from 'contexts/CommandContext';
 
 const Payment = () => {
 
   const { getProductsFromCart } = useCartContext();
+  const { command } = useCommandeContext();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getProductsFromCart();
+
+    if(command.length == 0) {
+      navigate('/cart')
+    }
   }, []);
 
   const location = useLocation();
