@@ -52,21 +52,21 @@ const Products = () => {
         {screenSize.width > 768 ? <Navbar /> : null}
         <section className="section-container d-flex">
           {products.map((product) => {
-            return <Card key={product.id} item={product} />;
+            return <Card item={product} key={product.id}/>
           })}
         </section>
       </div>
       <section className="allergens-main">
         <div className="allergensContainer">
-                <img className="GLUTEN" alt="Gluten" src="/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png" />
-                <span>GLUTEN</span>
-                <img className="MILK" alt="Milk" src="/assets/images/oh-my-donut-images/ALLERGENS/MILK.png" />
-                <span>LAIT</span>
-                <img className="NUTS" alt="Nuts" src="/assets/images/oh-my-donut-images/ALLERGENS/NUT.png" />
-                <span>FRUITS A COQUES</span>
+          <img className="GLUTEN" alt="Gluten" src="/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png" />
+          <span>GLUTEN</span>
+          <img className="MILK" alt="Milk" src="/assets/images/oh-my-donut-images/ALLERGENS/MILK.png" />
+          <span>LAIT</span>
+          <img className="NUTS" alt="Nuts" src="/assets/images/oh-my-donut-images/ALLERGENS/NUT.png" />
+          <span>FRUITS A COQUES</span>
         </div>
       </section>
-        
+
     </main>
   );
 };

@@ -1,26 +1,18 @@
 /* BUTTON CSS */
 
 .button-add-cart {
-    width: 180px;
-    height: 40px;
+    /* width: 180px; */
+    /* https://clamp-generator.netlify.app/ */
+    width: clamp(7.5rem, 5.714vw + 6.107rem, 11.25rem);
+    height: clamp(0.938rem, 2.381vw + 0.357rem, 2.5rem);
     font-family: var(--varelaRound);
     background: var(--black);
     color: var(--white);
-    font-size: 13px;
+    /* https://clamp.font-size.app/ */
+    font-size: clamp(0.5rem, 0.3839rem + 0.4762vw, 0.8125rem);;
     text-align: center;
     border: none;
     cursor: pointer;
 }
 
 
-/* MOBILE */
-
-@media screen and (min-width: 320px) and (max-width: 768px)  {
-
-    .button-add-cart {
-        width: 120px;
-        height: 15px;
-        
-    }
-    
-}

@@ -861,7 +861,7 @@
       "id": 9,
       "title": "Mochi Fruits",
       "nbrPerson": 1,
-      "description": "Mochi garni de fruits confits, posé sur un glaçage citronné.",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 5.99,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-1.png",
@@ -978,7 +978,7 @@
       "id": 10,
       "title": "Mochi Fraise",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-2.png",
@@ -1085,7 +1085,7 @@
       "id": 11,
       "title": "Mochi Myrtille",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-3.png",
@@ -1192,7 +1192,7 @@
       "id": 12,
       "title": "Mochi Chocolat",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-unite/mochi-4.png",
@@ -1299,7 +1299,7 @@
       "id": 13,
       "title": "Coffret Mochi",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-1.png",
@@ -1406,7 +1406,7 @@
       "id": 14,
       "title": "Coffret Mochi",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-2.png",
@@ -1513,7 +1513,7 @@
       "id": 15,
       "title": "Coffret Mochi",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-3.png",
@@ -1620,7 +1620,7 @@
       "id": 16,
       "title": "Coffret Mochi",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/MOCHI/mochi-coffret/mochi-coffret-4.png",
@@ -1725,9 +1725,9 @@
     },
     {
       "id": 17,
-      "title": "Pièce Monté Anniversaire",
+      "title": "tower Anniversaire",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-1.png",
@@ -1832,9 +1832,9 @@
     },
     {
       "id": 18,
-      "title": "Pièce Monté Anniversaire",
+      "title": "tower Anniversaire",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-2.png",
@@ -1939,9 +1939,9 @@
     },
     {
       "id": 19,
-      "title": "Pièce Monté Anniversaire",
+      "title": "tower Anniversaire",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-3.png",
@@ -2046,9 +2046,9 @@
     },
     {
       "id": 20,
-      "title": "Pièce Monté Anniversaire",
+      "title": "tower Anniversaire",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-anniversaire/tower-anni-4.png",
@@ -2153,9 +2153,9 @@
     },
     {
       "id": 21,
-      "title": "Pièce Monté Union",
+      "title": "tower Union",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-1.png",
@@ -2260,9 +2260,9 @@
     },
     {
       "id": 22,
-      "title": "Pièce Monté Union",
+      "title": "tower Union",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-2.png",
@@ -2367,9 +2367,9 @@
     },
     {
       "id": 23,
-      "title": "Pièce Monté Union",
+      "title": "tower Union",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-3.png",
@@ -2474,9 +2474,9 @@
     },
     {
       "id": 24,
-      "title": "Pièce Monté Union",
+      "title": "tower Union",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-union/tower-union-4.png",
@@ -2581,9 +2581,9 @@
     },
     {
       "id": 25,
-      "title": "Pièce Monté Fêtes",
+      "title": "tower Fêtes",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-1.png",
@@ -2688,9 +2688,9 @@
     },
     {
       "id": 26,
-      "title": "Pièce Monté Fêtes",
+      "title": "tower Fêtes",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-2.png",
@@ -2795,9 +2795,9 @@
     },
     {
       "id": 27,
-      "title": "Pièce Monté Fêtes",
+      "title": "tower Fêtes",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-3.png",
@@ -2902,9 +2902,9 @@
     },
     {
       "id": 28,
-      "title": "Pièce Monté Fêtes",
+      "title": "tower Fêtes",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/TOWER/tower-fete/tower-fete-4.png",
@@ -3011,7 +3011,7 @@
       "id": 29,
       "title": "Allergen Free",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-1.png",
@@ -3113,7 +3113,7 @@
       "id": 30,
       "title": "Allergen Free",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-2.png",
@@ -3215,7 +3215,7 @@
       "id": 31,
       "title": "Allergen Free",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-3.jpeg",
@@ -3317,7 +3317,7 @@
       "id": 32,
       "title": "Allergen Free",
       "nbrPerson": 4,
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 499,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-4.png",
@@ -3407,7 +3407,7 @@
     {
       "id": 33,
       "title": "Coca cola",
-      "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+      "description": "Description qui donne l'eau à la bouche",
       "price": 299,
       "imageUrl": {
         "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",
@@ -3421,17 +3421,17 @@
     {
       "id": 1,
       "title": "Donut",
-      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpg",
       "categoryStyle": "rgba(253, 103, 151, 0.20)",
       "subCategories": [
         {
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpg",
           "categoryStyle": "rgba(253, 103, 151, 0.20)",
           "id": 1,
           "title": "Donut à l'unité"
         },
         {
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-donuts.jpg",
           "categoryStyle": "rgba(253, 103, 151, 0.20)",
           "id": 2,
           "title": "Coffret de Donuts"
@@ -3442,17 +3442,17 @@
     {
       "id": 2,
       "title": "Mochi",
-      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpg",
       "categoryStyle": "rgba(255, 232, 101, 0.50)",
       "subCategories": [
         {
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpg",
           "categoryStyle": "rgba(255, 232, 101, 0.50)",
           "id": 3,
           "title": "Mochi à l'unité"
         },
         {
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-mochi.jpg",
           "categoryStyle": "rgba(255, 232, 101, 0.50)",
           "id": 4,
           "title": "Coffret de Mochi"
@@ -3494,25 +3494,25 @@
     },
     {
       "id": 5,
-      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+      "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpg",
       "categoryStyle": "rgba(12, 192, 223, 0.20)",
       "title": "Tower",
       "subCategories": [
         {
           "id": 8,
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpg",
           "categoryStyle": "rgba(12, 192, 223, 0.20)",
           "title": "Anniversaire"
         },
         {
           "id": 9,
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpg",
           "categoryStyle": "rgba(12, 192, 223, 0.20)",
           "title": "Union"
         },
         {
           "id": 10,
-          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpeg",
+          "imageUrl": "/assets/images/oh-my-donut-images/CATEGORY/category-tower.jpg",
           "categoryStyle": "rgba(12, 192, 223, 0.20)",
           "title": "Fête"
         }
@@ -3539,7 +3539,7 @@
         "id": 1,
         "title": "Donut framboise",
         "nbrPerson": 1,
-        "description": "Lorem ipsum lorem lorem lorem loremm ipsum ipsum",
+        "description": "Description qui donne l'eau à la bouche",
         "price": 499,
         "imageUrl": {
           "src": "/assets/images/oh-my-donut-images/PRODUCTS/DONUT/donut-unite/donut-1.png",

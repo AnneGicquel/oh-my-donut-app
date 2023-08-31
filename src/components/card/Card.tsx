@@ -17,23 +17,29 @@ const Card = (props: CardPropsI) => {
   const { id, title, nbrPerson, price, description, imageUrl, allergenFree } = item;
 
   return (
-    <section className="card-container d-flex" style={categoryStyle ? { backgroundColor : categoryStyle} : {} }>
-      <img className="card-img" src={imageUrl.src} alt={imageUrl.alt} />
+    <Link className="card-link" to={`/ProductDetails/${id}`}>
+    <section className="card-container d-flex" style={categoryStyle ? { backgroundColor: categoryStyle } : {}}>
+      <div>
+        {/* ⬆️ div pour que l'image ne déborde plus */}
+        <img className="card-img" src={imageUrl.src} alt={imageUrl.alt} />
+      </div>
       <div className="card-text d-flex">
         <h4>
-          <Link className="card-link" to={`/ProductDetails/${id}`}>{title.toUpperCase()} - {nbrPerson} PERSONNES</Link>
+          {/* {title.toUpperCase()} - {nbrPerson} PERSONNE(S) */}
+          {title.toUpperCase()}
         </h4>
-        <p>{ description }</p>
+        <p>{description}</p>
         <h4 className="price">{price} €</h4>
 
         <div className="allergen-container d-flex">
-            {allergenFree?.map((aller) => (
+          {allergenFree?.map((aller) => (
             <img key={aller.id} src={aller.icon} alt={aller.name} />
-            ))}
+          ))}
         </div>
       </div>
-      <Button title="Ajouter au panier" callback={() => addProductToCart(item)}/>
+      <Button title="Ajouter au panier >" callback={() => addProductToCart(item)} />
     </section>
+    </Link>
   );
 };
 

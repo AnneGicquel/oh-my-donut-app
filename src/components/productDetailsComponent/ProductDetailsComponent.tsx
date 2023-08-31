@@ -57,10 +57,11 @@ const ProductDetailsComponent = () => {
                 pour éviter l'erreur "Cannot read properties of undefined". */}
                 {product && subCategoriesToCheck.includes(product.subCategory) && (
                     <div className={style.productCustomizable}>
-                        <h3>
+                        {/* plus necessaire ⬇️  */}
+                        {/* <h3>
                             Produit personnalisable
                         </h3>
-                        Personnalisation possible en cochant “oui” dans “Personnaliser”.
+                        Personnalisation possible en cochant “oui” dans “Personnaliser”. */}
 
                         {/* ONLY FOR TOWER */}
                         {product.categoryId === 5 && (

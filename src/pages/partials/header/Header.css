@@ -3,8 +3,7 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-color: transparent;
-    height: 600px;
-    /* ⬆ mis en commentaire par Anne pour la page 404 */
+    height: 500px;
     z-index: 10000;
     display: flex;
     justify-content: center;
@@ -12,27 +11,16 @@
 }
 
 .header-image {
-    /* width: min(1444px, 90vw);
-    height: 460px; */
     border-radius: 20px;
-    /* background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg"); */
-    /* background-repeat: no-repeat;
-    background-size: 100%; */
-    /* z-index: -10000;  */
     position: relative;
-
+    height: 460px;
+    object-fit: cover;
     width: 100vw;
     margin-right: 40px;
     margin-left: 40px;
-
-    /* margin: auto; */
-
     min-width: 350px;
-
     min-height: 350px;
-
     /* pour que l'image passe sous le header */
-
     z-index: -1;
 }
 
@@ -62,10 +50,6 @@
     width: 50px;
 }
 
-/* .header-basket {
-} */
-/* ⬆️ commenté par Anne car "erreur" */
-
 .CartCounter {
     position: absolute;
     right: 0;
@@ -92,20 +76,18 @@
         background-size: contain;
         justify-content: center;
         align-items: center;
-        height: 197px;
+        /* height: 197px; */
+        height: 423px;
     }
 
     .header-image {
-        margin-top: 165px;
         width: 100%;
         height: auto;
         border-radius: 0;
-        /* background-image: url("/public/assets/images/oh-my-donut-images/CATEGORY/category-douceurs-hd.jpeg"); */
         background-repeat: no-repeat;
         background-size: 100%;
         margin-right: 0;
         margin-left: 0;
-
         z-index: -10000;
     }
 

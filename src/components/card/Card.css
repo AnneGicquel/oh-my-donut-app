@@ -1,33 +1,49 @@
-.d-flex {
+/* .d-flex {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .card-container {
-    width: min(380px, 100%);
-    height: 470px;
+    /* vw = (valeur en pixels / largeur totale du viewport) * 100 */
+    /* 380px en vw = (380 / 1440) * 100 
+                   = 26.39vw */
+    width: 26.39vw;
+    /* https://clamp-generator.netlify.app/ */
+    height: clamp(15.938rem, 20.476vw + 10.946rem, 29.375rem);
     border-radius: 25px;
     background: var(--lightCyan);
     flex-direction: column !important;
     align-items: center;
+    padding-top: 15px;
 }
 
 
 .card-img {
-    width: 255px;
-    height: 255px;
+    width: clamp(110px, 18.75vw, 255px);
+    height: clamp(110px, 18.75vw, 255px);
+    object-fit: cover;
 }
 
 /* CARD CSS */
 .card-text {
     flex-direction: column !important;
     align-items: center;
+    text-align: center;
 }
 
+/* 
++
+BANDE TOP HEADER
+PADDING BUTTON à 770px???
++ DECALLAGE QD PAS ALLERGENS */
+/* DECALLAGE DES NBR DE LIGNES QUI DERANGE TT !!! */
 .card-text h4 {
-    font-size: clamp(13px, 3vw, 16px);
+    font-size:16px;
     font-family: var(--lilitaOne);
     font-weight: bold;
+    line-height: 18px;
+    width: clamp(115px, 20vw, 280px);
+    margin:0;
     margin-bottom: 16px;
 }
 
@@ -36,12 +52,16 @@
 }
 
 .card-text .price {
+    font-size: 16px;
     margin: 0;
+    margin-top: 5px;
 }
 
 .card-text p {
-   font-size: clamp(8px, 3vw, 10px);
+   font-size: 10px;
    font-family: var(--varelaRound);
+   line-height: 14px;
+   margin: 0;
 }
 
 .allergen-container {
@@ -53,8 +73,9 @@
 }
 
 .allergen-container img {
-    width: 25px;
-    height: 25px;
+    /* https://clamp-generator.netlify.app/ */
+    width: clamp(0.938rem, 0.952vw + 0.705rem, 1.563rem);
+    height: clamp(0.938rem, 0.952vw + 0.705rem, 1.563rem);
     margin: 10px 0;
 }
 
@@ -62,30 +83,37 @@
 
 @media screen and (min-width: 320px) and (max-width: 768px)  {
 
-    .card-img {
+    /* .card-img {
         width: 112px;
         height: 105px;
-    }
+    } */
 
-    .card-text {
+    /* .card-text {
         width: 110px;
-    }
+    } */
 
-    .card-text h4 {
-        width: 90px;
-    }
+    /* .card-text h4 {
+        font-size: 13px;
+    }  */
 
-    .card-container {
+    /* .card-text p {
+        font-size: 8px;
+    } */
+
+    /* .card-text .price {
+        font-size: 13px;
+    } */
+
+    /* .card-container {
         width: 170px;
         height: 255px;
         border-radius: 15px;
-    }
+    } */
 
-    allergen-container img {
+    /* allergen-container img {
         width: 15px;
         height: 15px;
         margin: 10px 0;
     }
-    
-}
-  
+     */
+} 

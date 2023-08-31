@@ -60,7 +60,6 @@ const Header = () => { // Make this reusable component
                     }
                 </div>
                 {/* <div className='header-image'></div> */}
-                {/* J'ai commenté ⬇️ cette ligne pour mieux voir mon taff ⬇️ ;-) */}
                 {(location.pathname === '/') ?
                     <img className='header-image' src={categoryImage} alt="header background" />
                     : null}
