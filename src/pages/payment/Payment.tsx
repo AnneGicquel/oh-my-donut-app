@@ -7,6 +7,7 @@ import { RecapCard } from 'components/recapCard/RecapCard';
 import { CartProvider, useCartContext } from 'contexts/CartContext';
 import { useEffect, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import styles from './Payment.module.css';
 
 const Payment = () => {
 
@@ -22,30 +23,37 @@ const Payment = () => {
   }, [location.pathname]);
 
   return (<>
-  <section>Payment</section>
-      
-      <div>
+    <div className={styles.paymentContainer}>
+
+      <div className={styles.myInfoContainer}>
         <h1>Mes Informations</h1>
         <ContactForm />
       </div>
 
-      <div className="app">
-        <ChoiceOption
-          type="Emporter" //le radiobutton pour Emporter
-          imageSrc="oh-my-donut-app\public\assets\images\oh-my-donut-images\ICONS\velo.png"
-          title="A Emporter"
-          description="Après votre commande, veuillez vous rendre au comptoir 'A Emporter'. Bonne dégustation."
-        />
-        <ChoiceOption
-          type="Sur place" //le radiobutton pour Sur Place
-          imageSrc="oh-my-donut-app\public\assets\images\oh-my-donut-images\ICONS\sac-de-courses.png"
-          title="Sur place"
-          description="En échange de votre ticket, vous recevrez un bipper à l'accueil. Vous pouvez ensuite aller vous asseoir confortablement. Nous nous occupons du reste. "
-        />
+      <div className={styles.myMealContainer}>
+
+        <div className="app">
+          <h1>Ma Dégustation</h1>
+          <ChoiceOption
+            type="Emporter" //le radiobutton pour Emporter
+            imageSrc="assets/images/oh-my-donut-images/ICONS/velo.png"
+            title="A Emporter"
+            description="Après votre commande, veuillez vous rendre au comptoir 'A Emporter'. Bonne dégustation."
+          />
+          <ChoiceOption
+            type="Sur place" //le radiobutton pour Sur Place
+            imageSrc="assets/images/oh-my-donut-images/ICONS/sac-de-courses.png"
+            title="Sur place"
+            description="En échange de votre ticket, vous recevrez un bipper à l'accueil. Vous pouvez ensuite aller vous asseoir confortablement. Nous nous occupons du reste. "
+          />
+        </div>
+       
+        <div>
+            <RecapCard />
+        </div>
+
       </div>
-    <div>
-        <RecapCard />
-    </div>
+    </div>  
     </>
   );
 };

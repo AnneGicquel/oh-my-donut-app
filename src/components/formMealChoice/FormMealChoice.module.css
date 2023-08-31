@@ -1,0 +1,36 @@
+.formMealContainer{
+    border: solid 1px darkgrey;
+    border-radius: 20px;
+    padding: 30px;
+    width: 27vw;
+
+    display: flex;
+    align-items: center;
+    gap: 20px
+    
+}
+
+.formMealContainer img {
+    width: 100px;
+    height: 100px;
+}
+
+.formMealContainer p{
+    margin: 5px;
+}
+
+.formMealContainer input{
+    accent-color: black;
+    width: 30px;
+    height: 25px;
+    border: 2px solid;
+}
+
+@media (max-width: 768px) {
+
+    .formMealContainer{
+        margin-left: 5%;
+        width: 80%;
+    }
+
+}
