@@ -83,6 +83,7 @@ const ReusableDropdown = ({
               <div>
                 <GroupedCheckboxes
                   label={subItem.title}
+                  price={subItem.prix}
                   callback={test}
                   isChecked={subItem.isSelected}
                 />

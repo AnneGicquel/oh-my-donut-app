@@ -15,8 +15,6 @@ const Command = () => {
 
     // const {  } = orderedProducts as unknown as ProductCartI;
 
-    
-
     const location = useLocation();
     useLayoutEffect(() => {
       window.scrollTo(0, 0);
@@ -24,9 +22,6 @@ const Command = () => {
 
     useEffect(() => {
         getCommand();
-        if( command?.length <=0 ) {
-            navigate('/');
-        }
     }, []);
 
     return(

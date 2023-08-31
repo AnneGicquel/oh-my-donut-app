@@ -20,7 +20,7 @@ const Payment = () => {
   useEffect(() => {
     getProductsFromCart();
 
-    if(command.length == 0) {
+    if(command.length <= 0) {
       navigate('/cart')
     }
   }, []);

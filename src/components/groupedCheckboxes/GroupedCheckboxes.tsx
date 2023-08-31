@@ -5,9 +5,10 @@ interface GroupedCheckboxesProps {
     label: React.ReactNode; // Propriété pour afficher l'étiquette de la case à cocher
     isChecked: boolean;
     callback: () => void; // Fonction de rappel à exécuter lorsque la case à cocher est cliquée
+    price: any
 }
 
-const GroupedCheckboxes = ({ label, callback, isChecked }: GroupedCheckboxesProps) => {
+const GroupedCheckboxes = ({ label, callback, isChecked, price }: GroupedCheckboxesProps) => {
     // ⬇️ OnClick pour avoir un chgmnt de isSelected à TRUE
     const handleGroupedCheckboxesChange = () => {
         callback(); 
@@ -32,7 +33,7 @@ const GroupedCheckboxes = ({ label, callback, isChecked }: GroupedCheckboxesProp
                 WebkitTextStroke: isChecked ? '0.2px black' : 'none'
 
             }}>
-                {label}
+                {label} - ({price / 100} €)
             </label>
 
             {/* Élément d'entrée de type case à cocher */}

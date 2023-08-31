@@ -179,9 +179,9 @@ export const CartProvider = (props: CartProviderProps) => {
         let candlePrice = 0;
         console.log(candlePrice)
         const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI | any) => {
-            const extrasResult = currentValue.product.customExtras.reduce((acc: any,  current: any) => {
+            const extrasResult = currentValue.product.customExtras ? currentValue.product.customExtras.reduce((acc: any,  current: any) => {
                 return acc += (current.nbrPersonnes.price + current.name.price + current.candle.price);
-            }, 0);
+            }, 0) : 0;
             console.log(extrasResult)
             return accumulator += (currentValue.product.quantity * (currentValue.product.price! + extrasResult));
         }, 0);

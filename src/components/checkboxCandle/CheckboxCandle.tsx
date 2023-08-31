@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 // PROPS//
 interface CheckboxCandleProps {
-    callback: (e: any) => void;
+    callback: (e: any, isChecked?: boolean) => void;
 }
 
 
@@ -32,7 +32,7 @@ const CheckboxCandle = (props: CheckboxCandleProps) => {
                 <input
                     type="checkbox"
                     id="idCheckboxBougie"
-                    onClick={(e) => callback(e)}
+                    onClick={(e) => callback(e, isChecked)}
                     onChange={handleCheckboxChange} // handle chngmnt état checkbox 
                     // true or false ⬇️
                     checked={isChecked} />

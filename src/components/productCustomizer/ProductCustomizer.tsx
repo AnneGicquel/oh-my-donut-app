@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import { useProductContext } from "contexts/ProductContext";
 import { useCartContext } from "contexts/CartContext";
 import { useNavigate, useParams } from "react-router-dom";
-import { CLIENT_RENEG_LIMIT } from "tls";
 
 // COMPONENT//
 const ProductCustomizer = () => {
@@ -56,13 +55,12 @@ const ProductCustomizer = () => {
             sub.isSelected = sub.id === subItemId ? true : false;
         });
 
+        console.log('SUBMENU =>', nbrPerson);
         setMoreExtras({
             ...moreExtras,
             nbrPersonnes : { nbr: nbrPerson.nbrPerson, price: nbrPerson.prix },
-        })
-        console.log('YOPYOP => ', nbrPerson);
+        });
         setProduct({...product})
-        console.log(moreExtras)
         getOneProductTotal2()
     }
 
@@ -89,22 +87,23 @@ const ProductCustomizer = () => {
     // Fonction pour gérer le clic sur les checkboxes
     const callbackEnAttendantName = (e: any, checked?: any) => {
         const { value } = e.target
+        console.log('CHECKED => ', checked);
         setMoreExtras(() => ({ 
             ...moreExtras,
             plaque: !e.target.checked,
-            name: { title: value, price: 300 },
+            name: !checked ? { title: value, price: 300 } : { title: value, price: 0 },
         }))
 
     };
 
-    const callbackEnAttendantCandle = (e: any) => {
+    const callbackEnAttendantCandle = (e: any, isChecked: any) => {
         setMoreExtras(() =>({
             ...moreExtras,
-            candle: { isSelected: e.target.checked, price: 100 },
+            candle: !isChecked ? { isSelected: e.target.checked, price: 100 } : { isSelected: e.target.checked, price: 0 },
         }))
     };
 
-    const callbackEnAttendantAllegen= (e: any) => {
+    const callbackEnAttendantAllegen = (e: any) => {
         const value = e.target.alt
         setMoreExtras(() =>({
             ...moreExtras,
