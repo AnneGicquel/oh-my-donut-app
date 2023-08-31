@@ -24,13 +24,13 @@ p {
     font-weight: 400;
 }
 
-button {
+.recapCardContainer button {
     align-self: center;
 }
 
 @media (max-width: 768px) {
 
-    button {
+    .recapCardContainer button {
         padding: 15px 20px;
     }
 

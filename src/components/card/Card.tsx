@@ -25,11 +25,11 @@ const Card = (props: CardPropsI) => {
       </div>
       <div className="card-text d-flex">
         <h4>
-          {/* {title.toUpperCase()} - {nbrPerson} PERSONNE(S) */}
-          {title.toUpperCase()}
+          {/* {title.toUpperCase()} - {nbrPerson} PERSONNES */}
+          {title.toUpperCase()} {nbrPerson && nbrPerson > 1 && `\n - ${nbrPerson} PERSONNES`}
         </h4>
         <p>{description}</p>
-        <h4 className="price">{price} €</h4>
+        <h4 className="price">{price.toFixed(2)} €</h4>
 
         <div className="allergen-container d-flex">
           {allergenFree?.map((aller) => (
