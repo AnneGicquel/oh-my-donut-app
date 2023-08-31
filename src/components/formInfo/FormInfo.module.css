@@ -1,7 +1,7 @@
 .formFlex {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 42vw;
     padding: 30px;
     
 }
@@ -28,7 +28,7 @@ p {
 @media (max-width: 768px) {
 
     .formFlex {
-        width: 300px;       
+        width: 90%;       
     }
 
 }

@@ -1,0 +1,26 @@
+.paymentContainer {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.myInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.myMealContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .paymentContainer {
+        flex-direction: column;
+    }
+
+}
