@@ -36,16 +36,16 @@ const ContactForm: React.FC = () => {
     <form onChange={handleSubmit} className={styles.formFlex}>
       <h4>Nom <span className={styles.redAsterix}>*</span></h4>
       <input type="text" name="lastName" placeholder="Nom" onChange={handleInputChange} required />
-      { error.lastName ? <p>Ce champs est requis. </p> : null } 
+      { error.lastName ? <p className={styles.form_errors_payment}>Ce champs est requis. </p> : null } 
       <h4>Prénom <span className={styles.redAsterix}>*</span></h4>
       <input type="text" name="firstName" placeholder="Prénom" onChange={handleInputChange} required/>
-      { error.firstName ? <p>Ce champs est requis. </p> : null } 
+      { error.firstName ? <p className={styles.form_errors_payment}>Ce champs est requis. </p> : null } 
       <h4>Email <span className={styles.redAsterix}>*</span></h4>
       <input type="email" name="email" placeholder="Email" onChange={handleInputChange} required/>
-      { error.email ? <p>Ce champs est requis. </p> : null } 
+      { error.email ? <p className={styles.form_errors_payment}>Ce champs est requis. </p> : null } 
       <h4>Portable <span className={styles.redAsterix}>*</span></h4>
       <input type="tel" name="phone" placeholder="Mobile" onChange={handleInputChange} required/>
-      { error.phone ? <p>Ce champs est requis. </p> : null } 
+      { error.phone ? <p className={styles.form_errors_payment}>Ce champs est requis. </p> : null } 
       <p><span className={styles.redAsterix}>*</span> Ces champs sont requis</p>
     </form>
   );

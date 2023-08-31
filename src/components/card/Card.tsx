@@ -10,7 +10,7 @@ interface CardPropsI {
 }
 const Card = (props: CardPropsI) => {
 
-  const { addProductToCart, getProductsFromCart } = useCartContext();
+  const { addProductToCart, getProductsFromCart, getRound } = useCartContext();
   const { categoryStyle } = useCategoryContext();
 
   const { item } = props;
@@ -29,7 +29,7 @@ const Card = (props: CardPropsI) => {
           {title.toUpperCase()} {nbrPerson && nbrPerson > 1 && `\n - ${nbrPerson} PERSONNES`}
         </h4>
         <p>{description}</p>
-        <h4 className="price">{price.toFixed(2)} €</h4>
+        <h4 className="price">{getRound(price).toFixed(2)} €</h4>
 
         <div className="allergen-container d-flex">
           {allergenFree?.map((aller) => (

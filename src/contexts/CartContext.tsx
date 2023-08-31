@@ -10,7 +10,7 @@ interface ICart {
     changeQuantity: (quantity: number, product: ProductI) => void;
     removeProductFromCart: (product: ProductI) => void;
     getTotalProductQuantity: () => number;
-    getProductTotalPrice: (qty: number, price: number) => number;
+    getProductTotalPrice: (qty: number, price: number, extras?: any) => number;
     getTotalOfAllProducts: () => number
     resetCart: () => void;
     getRound: (val: number) => number;
@@ -141,23 +141,55 @@ export const CartProvider = (props: CartProviderProps) => {
         return totalProducts;
     }
 
+    // let nbPersonnePrice =  moreExtras.nbrPersonnes?.price || 0;
+    // let namePrice = moreExtras.name?.price || 0;
+    // let candlePrice = moreExtras.candle?.price || 0;
+    // let quantity = product?.quantity || 0;
+    // let productPrice = product?.price || 0;
+    // const extrasResult = nbPersonnePrice + namePrice + candlePrice;
+    // const pResult = quantity * ( productPrice + extrasResult ); 
+
     /* Function to get the total price of the cart */
-    const getProductTotalPrice = (qty: number, price: number) => {
-        console.log(qty, price)
-        let result = qty * price;
+    const getProductTotalPrice = (qty: number, price: number, extras?: any) => {
+
+        let nbPersonnePrice =  extras[0]?.nbrPersonnes?.price || 0;
+        let namePrice = extras[0]?.name?.price || 0;
+        let candlePrice = extras[0]?.candle?.price || 0;
+        const extrasResult = nbPersonnePrice + namePrice + candlePrice;
+
+        let result = qty * (price + extrasResult);
             return getRound(result);
     }
 
-    const getTotalOfAllProducts = () => {
-        const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
-            console.log(currentValue);
-            return accumulator += (currentValue.product.price * currentValue.product.quantity!);
+    // const getTotalOfAllProducts = () => {
+        
+    //     const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI) => {
+    //         console.log('Current',currentValue);
+    //         return accumulator += (currentValue.product.price * currentValue.product.quantity!);
+    //     }, 0);
+    //     const result = getRound(totalPrice);
+
+    //     return +result;
+    // }
+
+
+        const getTotalOfAllProducts = () => {
+        let nbPersonnePrice =  0;
+        let namePrice = 0;
+        let candlePrice = 0;
+        console.log(candlePrice)
+        const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI | any) => {
+            const extrasResult = currentValue.product.customExtras.reduce((acc: any,  current: any) => {
+                return acc += (current.nbrPersonnes.price + current.name.price + current.candle.price);
+            }, 0);
+            console.log(extrasResult)
+            return accumulator += (currentValue.product.quantity * (currentValue.product.price! + extrasResult));
         }, 0);
         const result = getRound(totalPrice);
 
         return +result;
     }
-
+    
 
     const getProducstTva = () => {
         const total = getTotalOfAllProducts();
