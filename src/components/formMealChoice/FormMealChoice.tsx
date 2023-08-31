@@ -1,6 +1,7 @@
 import React from 'react';
 import { StayOrGoType } from 'interfaces/donuts.interface';
 import { useStayOrGoContext } from 'contexts/FormMealChoiceContext';
+import styles from './FormMealChoice.module.css';
 
 interface ChoiceOptionProps {
   type: StayOrGoType;
@@ -18,11 +19,22 @@ const ChoiceOption: React.FC<ChoiceOptionProps> = ({ type, imageSrc, title, desc
   };
 
   return (
+    
+
     <div className={`choice-option ${isSelected ? 'selected' : ''}`} onClick={handleSelect}>
-      <input type="radio" name="stayOrGo" checked={isSelected} readOnly />
-      <img src={imageSrc} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
+        
+      <div className={styles.formContainer}>
+
+        <input type="radio" name="stayOrGo" checked={isSelected} readOnly />
+        <img src={imageSrc} alt={title} />
+        
+        <div>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        
+      </div>
+
     </div>
   );
 };

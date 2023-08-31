@@ -1,0 +1,28 @@
+.formContainer{
+    border: solid 1px darkgrey;
+    border-radius: 20px;
+    padding: 30px;
+    width: 500px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px
+    
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+p{
+    margin: 5px;
+}
+
+input{
+    accent-color: black;
+    width: 30px;
+    height: 25px;
+    border: 10px solid;
+}
+
