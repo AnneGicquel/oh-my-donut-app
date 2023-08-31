@@ -6,7 +6,7 @@ import { useStayOrGoContext } from "contexts/FormMealChoiceContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from './RecapCard.module.css';
 
-export const RecapCard = () => {
+export const RecapCard = (props: any) => {
     const { products, getTotalOfAllProducts, getProducstTva, getTotal } = useCartContext();
     const { customerInfo } = useContactForm();
     const { selectedChoice } = useStayOrGoContext();
