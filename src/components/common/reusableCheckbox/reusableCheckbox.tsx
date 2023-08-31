@@ -5,7 +5,7 @@ import { useState } from 'react';
 /****** PROPS ******/
 interface ReusableCheckboxProps {
     label: string;           
-    callback: () => void;    
+    callback: (e: any) => void;    
 }
 /**** COMPONENT ****/
 const ReusableCheckbox = (props: ReusableCheckboxProps) => {
@@ -30,7 +30,8 @@ const ReusableCheckbox = (props: ReusableCheckboxProps) => {
             <input
                 type="checkbox"
                 id="idCheckbox"
-                onClick={callback}
+                alt={label.split(' ')[1]}
+                onClick={(e) => callback(e)}
                 onChange={handleCheckboxChange} // onChange pour gérer changement état checkbox 
                 // true or false ⬇️
                 checked={isChecked} />  

@@ -15,7 +15,7 @@ interface DropdownItem {
 interface ReusableDropdownProps {
   items: DropdownItem;
   onMenuItemClick: (itemId: number) => void;
-  onSubMenuItemClick: (itemId: number, subItemId: number) => void;
+  onSubMenuItemClick: (itemId: number, subItemId: number, nbrPerson?: any) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void; // Ajout de la nouvelle prop !!!!!!!!
 }
 
@@ -76,7 +76,7 @@ const ReusableDropdown = ({
               key={subItem.id}
               className={style["subMenu-child"]}
               onClick={() => {
-                onSubMenuItemClick(items.id, subItem.id)
+                onSubMenuItemClick(items.id, subItem.id, subItem)
                 console.log(items.id, subItem.id, subItem.isSelected)
               }}
             >

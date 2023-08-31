@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 // PROPS//
 interface CheckboxNameProps {
-    callback: () => void;
+    callback: (e: any, value?: any) => void;
 }
 
 
@@ -41,7 +41,7 @@ const CheckboxName = (props: CheckboxNameProps) => {
                 <input
                     type="checkbox"
                     id="idCheckboxPlaque"
-                    onClick={callback}
+                    onClick={(e) => callback(e,isChecked)}
                     onChange={handleCheckboxChange} // handle chgmnt état checkbox 
                     // true or false ⬇️
                     checked={isChecked} />
@@ -52,8 +52,8 @@ const CheckboxName = (props: CheckboxNameProps) => {
                 <input
                     type="text" //champ de saisie 
                     id="idCheckboxPrenom"
-                    onClick={callback}
-                    onChange={handleNameChange} // handle chgmnt prénom
+                    onChange={(e) => {callback(e); setNameValue(e.target.value)}}
+                    // onChange={handleNameChange} // handle chgmnt prénom
                     value={nameValue} // value in useState
                 />
                     <p>3€</p>

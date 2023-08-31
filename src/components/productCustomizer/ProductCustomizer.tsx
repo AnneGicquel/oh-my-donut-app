@@ -14,10 +14,18 @@ import { useNavigate, useParams } from "react-router-dom";
 const ProductCustomizer = () => {
 
     // FETCH LES DATAS
-    const { product, getOneProduct, setProduct } = useProductContext();
+    const { product, getOneProduct, setProduct,getOneProductTotal } = useProductContext();
     const { id } = useParams(); //fetch data
-    const { } = useCartContext();
     const navigate = useNavigate();
+
+    const [moreExtras, setMoreExtras] = useState<any>({
+        nbrPersonnes: { nbr: 0, price: 0 },
+        plaque: false,
+        name: { title: '', price: 0 },
+        candle: { isSelected: false, price: 0 },
+        allergen: { gluten: false, lactose: false, fruits: false }
+    });
+
 
     useEffect(() => {
         getOneProduct(Number(id));
@@ -38,15 +46,22 @@ const ProductCustomizer = () => {
     };
 
     // Fonction pour gérer le clic sur le sous-élément du menu (DropDown)
-    const handleSubMenuItemClick = (itemId: number, subItemId: number) => {
+    const handleSubMenuItemClick = (itemId: number, subItemId: number, nbrPerson: any) => {
         // if sous-élément du menu a été cliqué
-        const currentCategoryOfExtra = product.extras.find((extra: any) => extra.id === itemId);
+        const currentCategoryOfExtra = product?.extras?.find((extra: any) => extra.id === itemId);
         const subCategory = currentCategoryOfExtra.subCategories.find((sub: any) => sub.id === subItemId);
         currentCategoryOfExtra.subCategories.forEach((sub: any) => {
             sub.isSelected = sub.id === subItemId ? true : false;
+        });
+
+        setMoreExtras({
+            ...moreExtras,
+            nbrPersonnes : { nbr: nbrPerson.nbrPerson, price: nbrPerson.prix },
         })
-        console.log("subCategory", subCategory, product);
+        console.log('YOPYOP => ', nbrPerson);
         setProduct({...product})
+        console.log(moreExtras)
+        getOneProductTotal2()
     }
 
 
@@ -62,15 +77,56 @@ const ProductCustomizer = () => {
         // (template literals) en JavaScript. Les littéraux de gabarit sont entourés de backticks (``) et permettent l'insertion de valeurs de variables dans une chaîne de caractères en utilisant la syntaxe ${variable}.
         console.log(`Button clicked is ${submitButtonClicked}`)
         // Button clicked is ${TRUE or FALSE}
+        product?.customExtras.push(moreExtras);
+        setProduct({...product.extras, moreExtras});
         addProductToCart(product);
         navigate('/cart');
     };
 
 
     // Fonction pour gérer le clic sur les checkboxes
-    const callbackEnAttendant = () => {
-        console.log("Checkbox-callbackEnAttendant => OK");
+    const callbackEnAttendantName = (e: any, checked?: any) => {
+        const { value } = e.target
+        setMoreExtras(() => ({ 
+            ...moreExtras,
+            plaque: !e.target.checked,
+            name: { title: value, price: 300 },
+        }))
+
     };
+
+    const callbackEnAttendantCandle = (e: any) => {
+        setMoreExtras(() =>({
+            ...moreExtras,
+            candle: { isSelected: e.target.checked, price: 100 },
+        }))
+    };
+
+    const callbackEnAttendantAllegen= (e: any) => {
+        const value = e.target.alt
+        setMoreExtras(() =>({
+            ...moreExtras,
+            allergen: { 
+                ...moreExtras.allergen,
+                [value]: e.target.checked
+            }
+        }));
+    };
+
+
+    // nbrPersonnes: { nbr: 0, price: 0 },
+    // plaque: false,
+    // name: { title: '', price: 300 },
+    // candle: { isSelected: false, price: 100 },
+    // allergen: { gluten: false, lactose: false, fruits: false }
+
+    const getOneProductTotal2 = () => {
+        const pResult = product?.quantity * product?.price; 
+        console.log('PRODUCT RESULT =>', pResult);
+
+        const extrasResult = moreExtras.nbrPersonnes.price + moreExtras.name.price + moreExtras.candle.price;
+        console.log('REEEEEEEEEEEEE => ', extrasResult);
+    }
 
 
     //DROPDOWN//
@@ -80,9 +136,9 @@ const ProductCustomizer = () => {
             id: 1,
             title: "Nombre de personnes",
             subCategories: [
-                { id: 1, title: '5 personnes', label: "5 personnes" },
-                { id: 2, title: '8 personnes', label: "8 personnes" },
-                { id: 3, title: '15 personnes', label: "15 personnes" }
+                { id: 1, title: '5 personnes', label: "5 personnes", nbrPerson: 5, prix: 500 },
+                { id: 2, title: '8 personnes', label: "8 personnes", nbrPerson: 8, prix: 800 },
+                { id: 3, title: '15 personnes', label: "15 personnes", nbrPerson: 15, prix: 1500 }
             ]
         }
 
@@ -92,21 +148,27 @@ const ProductCustomizer = () => {
     const [quantity, setQuantity] = useState(initialQuantity !== null ? +initialQuantity : 0);
 
     const incrementQuantity = () => {
-        setQuantity(quantity + 1);
+        product.quantity += 1;
+        setProduct({...product});
+        console.log('PRPRORPRORP => ', product);
     };
 
     const decrementQuantity = () => {
-        if (quantity > 0) {
-            setQuantity(quantity - 1);
+        if (product.quantity <= 0) {
+            return;
         }
+        product.quantity -= 1;
+        setProduct({...product});
     };
 
     // 🟫 ⬇️ STOCKAGE en L.S.
 
     // COUNTER
     useEffect(() => {
-        localStorage.setItem("quantity", quantity.toString())
-    }, [quantity]);
+        // localStorage.setItem("quantity", quantity.toString());
+        getOneProductTotal2();
+        console.log('PRORPRORPOR', product);
+    }, [product]);
 
 
 
@@ -125,8 +187,8 @@ const ProductCustomizer = () => {
 
             {/* ********************************************** */}
             {/* CHECKBOXES NON REUSABLES)*/}
-            <CheckboxName callback={callbackEnAttendant} />
-            <CheckboxCandle callback={callbackEnAttendant} />
+            <CheckboxName callback={callbackEnAttendantName} />
+            <CheckboxCandle callback={callbackEnAttendantCandle} />
 
             {/* Affiche le message si le bouton a été cliqué et aucune case n'a été cochée */}
 
@@ -147,17 +209,17 @@ const ProductCustomizer = () => {
                     />
                 ))}
 
-                <ReusableCheckbox label="Sans gluten" callback={callbackEnAttendant} />
-                <ReusableCheckbox label="Sans lactose" callback={callbackEnAttendant} />
-                <ReusableCheckbox label="Sans fruits à coque" callback={callbackEnAttendant} />
+                <ReusableCheckbox label="Sans gluten" callback={callbackEnAttendantAllegen} />
+                <ReusableCheckbox label="Sans lactose" callback={callbackEnAttendantAllegen} />
+                <ReusableCheckbox label="Sans fruits à coque" callback={callbackEnAttendantAllegen} />
             </div>
 
 
             <div className={style.quantityContainer}>
                 <span>QUANTITÉ</span>
-                <div>
+                <div className={style.customize_quantity}>
                     <span onClick={decrementQuantity}>-</span>
-                    <span>{quantity}</span>
+                    <span className={style.counter}>{ product?.quantity }</span>
                     <span onClick={incrementQuantity}>+</span>
                 </div>
                 <span>à partir de </span>
