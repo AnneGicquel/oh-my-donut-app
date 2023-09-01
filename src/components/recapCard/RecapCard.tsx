@@ -6,7 +6,7 @@ import { useStayOrGoContext } from "contexts/FormMealChoiceContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from './RecapCard.module.css';
 
-export const RecapCard = (props: any) => {
+export const RecapCard = () => {
     const { products, getTotalOfAllProducts, getProducstTva, getTotal } = useCartContext();
     const { customerInfo } = useContactForm();
     const { selectedChoice } = useStayOrGoContext();
@@ -17,7 +17,11 @@ export const RecapCard = (props: any) => {
 
     const handleClick = () => {
         addToCommand(products, customerInfo!, selectedChoice!, facturation);
-        navigate('/payment');
+        if(location.pathname === '/cart') {
+            navigate('/payment');
+        } else if(location.pathname === '/payment') {
+            navigate('/command');
+        }
     }
 
     return (
@@ -46,3 +50,11 @@ export const RecapCard = (props: any) => {
         </section>
     )
 }
+
+function useEffect(arg0: () => void, arg1: never[]) {
+    throw new Error("Function not implemented.");
+}
+function useLayoutEffect(arg0: () => void, arg1: import("react-router-dom").Location[]) {
+    throw new Error("Function not implemented.");
+}
+

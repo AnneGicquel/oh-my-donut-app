@@ -59,7 +59,7 @@ export const CartProvider = (props: CartProviderProps) => {
     const getProductsFromCart = () => {
 
         const cart = localStorage.getItem("cart");
-        console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', cartProducts)
+        // console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', cartProducts)
         if (cart) {
             setCartProducts(() => JSON.parse(cart));
             return JSON.parse(cart);
@@ -72,8 +72,6 @@ export const CartProvider = (props: CartProviderProps) => {
     const addProductToCart = (product: ProductI) => {
         const cart = getProductsFromCart();
 
-        console.log("CARRRRT", cart);
-
         const newProduct = {
             id: uid(),
             product,
@@ -83,7 +81,6 @@ export const CartProvider = (props: CartProviderProps) => {
         }
 
         const foundProduct = cart?.find((p: ProductCartI) => p.product.id === newProduct.product.id)!;
-        console.log('FOUNDED PRODUCT => ', foundProduct);
 
         if (!foundProduct) {
             setCartProducts([...cartProducts, newProduct]);
@@ -105,7 +102,6 @@ export const CartProvider = (props: CartProviderProps) => {
 
         if (foundProduct) {
             const index = cart.indexOf(foundProduct);
-            console.log('INDEXOF => ', index);
             cart.splice(index, 1);
             saveProduct(cart);
             getProductsFromCart()
@@ -141,22 +137,13 @@ export const CartProvider = (props: CartProviderProps) => {
         return totalProducts;
     }
 
-    // let nbPersonnePrice =  moreExtras.nbrPersonnes?.price || 0;
-    // let namePrice = moreExtras.name?.price || 0;
-    // let candlePrice = moreExtras.candle?.price || 0;
-    // let quantity = product?.quantity || 0;
-    // let productPrice = product?.price || 0;
-    // const extrasResult = nbPersonnePrice + namePrice + candlePrice;
-    // const pResult = quantity * ( productPrice + extrasResult ); 
-
     /* Function to get the total price of the cart */
     const getProductTotalPrice = (qty: number, price: number, extras?: any) => {
-
-        let nbPersonnePrice =  extras[0]?.nbrPersonnes?.price || 0;
-        let namePrice = extras[0]?.name?.price || 0;
-        let candlePrice = extras[0]?.candle?.price || 0;
+        let nbPersonnePrice =  extras?.nbrPersonnes?.price || 0;
+        let namePrice = extras?.name?.price || 0;
+        let candlePrice = extras?.candle?.price || 0;
         const extrasResult = nbPersonnePrice + namePrice + candlePrice;
-
+        
         let result = qty * (price + extrasResult);
             return getRound(result);
     }
@@ -177,13 +164,13 @@ export const CartProvider = (props: CartProviderProps) => {
         let nbPersonnePrice =  0;
         let namePrice = 0;
         let candlePrice = 0;
-        console.log(candlePrice)
+        // console.log(candlePrice)
         const totalPrice = cartProducts.reduce((accumulator: number, currentValue: ProductCartI | any) => {
-            const extrasResult = currentValue.product.customExtras ? currentValue.product.customExtras.reduce((acc: any,  current: any) => {
-                return acc += (current.nbrPersonnes.price + current.name.price + current.candle.price);
-            }, 0) : 0;
-            console.log(extrasResult)
-            return accumulator += (currentValue.product.quantity * (currentValue.product.price! + extrasResult));
+            // const extrasResult = currentValue.product.customExtras ? currentValue.product.customExtras.reduce((acc: any,  current: any) => {
+            //     return acc += (current.nbrPersonnes.price + current.name.price + current.candle.price);
+            // }, 0) : 0;
+            // console.log(extrasResult)
+            return accumulator += (currentValue.product.quantity * (currentValue.product.price! + currentValue.product.customExtras.nbrPersonnes.price + currentValue.product.customExtras.name.price + currentValue.product.customExtras.candle.price));
         }, 0);
         const result = getRound(totalPrice);
 

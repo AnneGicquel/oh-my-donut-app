@@ -22,6 +22,10 @@ const Command = () => {
 
     useEffect(() => {
         getCommand();
+        const obj = JSON.parse(localStorage.getItem('command')!);
+        if (Object.keys(obj).length == 0) {
+            navigate('/payment')
+        }
     }, []);
 
     return(
