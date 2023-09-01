@@ -9,7 +9,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Command = () => {
 
     const { command, getCommand } = useCommandeContext();
-    const { getProductTotalPrice, getTotal, getTotalOfAllProducts, getProducstTva } = useCartContext();
+    const { getProductTotalPrice, getTotal, getTotalOfAllProducts, getProducstTva, resetCart } = useCartContext();
+    const { resetCommande } = useCommandeContext();
     const navigate = useNavigate();
     const { id, customer, facturation, stayOrGo, orderedProducts } = command as unknown as CommandeI;
 
@@ -24,9 +25,15 @@ const Command = () => {
         getCommand();
         const obj = JSON.parse(localStorage.getItem('command')!);
         if (Object.keys(obj).length == 0) {
-            navigate('/payment')
+            navigate('/cart')
         }
     }, []);
+
+    const handleClick = () => {
+        resetCart();
+        resetCommande();
+        navigate('/');
+    }
 
     return(
         <main className={style.commandMain}>
@@ -71,6 +78,7 @@ const Command = () => {
                     <p>Merci {customer?.firstName} ! 😊</p>
                     <p>Tu recevras ce récapitulatif dans ta boîte mail.</p>
                     <img className={style.see_you} src="assets/images/oh-my-donut-images/GRAPHISM/see-u-soon-with-halo.png" alt="Graphic 'SEE YOU SOON' neon style with halo" />
+                    <p onClick={handleClick} className={style.return_home_command}>Retour à la page d'accueil</p>
                 </section>
             </div>
         </main>

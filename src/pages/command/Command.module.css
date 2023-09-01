@@ -84,6 +84,10 @@ h1, h4 {
     width: 300px;
 }
 
+.return_home_command {
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
 
     .command_card_section, .command_card_container{
