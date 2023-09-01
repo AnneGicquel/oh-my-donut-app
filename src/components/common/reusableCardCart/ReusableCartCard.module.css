@@ -29,6 +29,12 @@ h3{
     font-family: 'Varela Round', sans-serif;
 }
 
+/* .textClamp {
+    font-size: clamp(10px, 4vw, 16px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+} */
+
 .buttonQuantityPlus, .buttonQuantityMinus {
     border: 2px solid black;
     border-radius: 15px;
@@ -76,6 +82,16 @@ h3{
     gap: 30px;
 }
 
+@media (max-width: 990px) {
+    .flexQuantityPrice{
+        flex-direction: column;
+        align-items: center;
+    }
+    .labelQuantity{
+        padding: 5px 10px;
+    }
+}
+
 @media (max-width: 768px) {
 
     .flexCard {
@@ -84,6 +100,7 @@ h3{
 
     .p1, .p2, h3 {
         text-align: center;
+        /* font-size: 12px; */
     }
 
     .flexQuantityPrice{
@@ -98,4 +115,19 @@ h3{
         margin: 30px 0 30px 10px
     }
 
+    .flexQuantityPrice{
+        flex-direction: row;
+        justify-content: space-around ;
+        align-items: center;
+    }
+    .labelQuantity{
+        padding: 5px 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .flexImgInfo{
+        flex-direction: column;
+        align-items: center;
+    }
 }

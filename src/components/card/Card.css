@@ -35,7 +35,7 @@ BANDE TOP HEADER*/
     font-weight: bold;
     line-height: 18px;
     height: 40px;
-    width: clamp(115px, 20vw, 280px);
+    /* width: clamp(115px, 20vw, 280px); */
     margin: 0;
     white-space: pre;
     text-align: center;

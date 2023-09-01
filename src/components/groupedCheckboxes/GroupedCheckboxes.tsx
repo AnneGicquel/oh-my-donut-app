@@ -32,8 +32,8 @@ const GroupedCheckboxes = ({ label, callback, isChecked, price }: GroupedCheckbo
                 // fontWeight: isChecked ? 'bold' : 'normal',
                 WebkitTextStroke: isChecked ? '0.2px black' : 'none'
 
-            }}>
-                {label} - ({price / 100} €)
+            }}>{label}
+                {/* {label} - ({price / 100} €) */}
             </label>
 
             {/* Élément d'entrée de type case à cocher */}

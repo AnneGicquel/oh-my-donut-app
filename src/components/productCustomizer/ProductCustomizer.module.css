@@ -10,11 +10,6 @@
   width: 350px;
 }
 
-/* .errorMessage {
-  color: red;
-  font-size: 12px;
-} */
-
 .customButtonWrapper {
   width: 350px;
   height: 53px;
@@ -61,14 +56,17 @@
   display: flex;
   align-items: center;
   font-family: var(--lilitaOne);
-  font-size: 20px;
+  font-size: clamp(0.75rem, 0.762vw + 0.564rem, 1.25rem);
   width: 458px;
   margin-top: 74px;
+  justify-content: center;
+  /* ⬇️ pour centrer la div */
+  padding-right: 25px;
 }
 
 .allergensContainer img {
-  width: 25px;
-  height: 25px;
+  width: clamp(1.25rem, 0.476vw + 1.134rem, 1.563rem);
+  height: clamp(1.25rem, 0.476vw + 1.134rem, 1.563rem);
   margin: 0 8px 0 25px;
 }
 
