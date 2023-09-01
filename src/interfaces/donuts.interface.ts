@@ -30,7 +30,7 @@ export interface ProductI {
   imageUrl: ImageI;
   allergenFree: AllergenI[];
   ingredients: IngredientI[];
-  customExtras: [];
+  customExtras: {};
   extras: [];
   quantity?: number;
   isCustomizable: boolean;

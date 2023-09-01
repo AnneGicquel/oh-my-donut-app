@@ -43,7 +43,7 @@ const ProductCustomizer = () => {
 
     // Fonction pour gérer le clic sur l'élément de menu (DropDown)
     const handleMenuItemClick = (itemId: number) => {
-        console.log(`Menu item ${itemId} clicked`);
+        // console.log(`Menu item ${itemId} clicked`);
     };
 
     // Fonction pour gérer le clic sur le sous-élément du menu (DropDown)
@@ -55,7 +55,7 @@ const ProductCustomizer = () => {
             sub.isSelected = sub.id === subItemId ? true : false;
         });
 
-        console.log('SUBMENU =>', nbrPerson);
+        // console.log('SUBMENU =>', nbrPerson);
         setMoreExtras({
             ...moreExtras,
             nbrPersonnes : { nbr: nbrPerson.nbrPerson, price: nbrPerson.prix },
@@ -77,7 +77,7 @@ const ProductCustomizer = () => {
         // (template literals) en JavaScript. Les littéraux de gabarit sont entourés de backticks (``) et permettent l'insertion de valeurs de variables dans une chaîne de caractères en utilisant la syntaxe ${variable}.
         console.log(`Button clicked is ${submitButtonClicked}`)
         // Button clicked is ${TRUE or FALSE}
-        product?.customExtras?.push(moreExtras);
+        product['customExtras'] = moreExtras;
         setProduct({...product, moreExtras});
         addProductToCart(product);
         navigate('/cart');
@@ -87,7 +87,7 @@ const ProductCustomizer = () => {
     // Fonction pour gérer le clic sur les checkboxes
     const callbackEnAttendantName = (e: any, checked?: any) => {
         const { value } = e.target
-        console.log('CHECKED => ', checked);
+        // console.log('CHECKED => ', checked);
         setMoreExtras(() => ({ 
             ...moreExtras,
             plaque: !e.target.checked,
@@ -148,7 +148,7 @@ const ProductCustomizer = () => {
     const incrementQuantity = () => {
         product.quantity += 1;
         setProduct({...product});
-        console.log('PRPRORPRORP => ', product);
+        // console.log('PRPRORPRORP => ', product);
     };
 
     const decrementQuantity = () => {
@@ -164,7 +164,7 @@ const ProductCustomizer = () => {
     // COUNTER
     useEffect(() => {
         getOneProductTotal2();
-        console.log('là', product);
+        // console.log('là', product);
     }, [product, total, moreExtras]);
 
 

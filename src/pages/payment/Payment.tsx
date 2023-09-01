@@ -30,6 +30,7 @@ const Payment = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+
   return (<>
     <div className={styles.paymentContainer}>
 
@@ -57,7 +58,7 @@ const Payment = () => {
         </div>
        
         <div>
-            <RecapCard />
+            <RecapCard  />
         </div>
 
       </div>

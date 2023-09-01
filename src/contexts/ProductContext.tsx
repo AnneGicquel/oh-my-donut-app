@@ -44,7 +44,7 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
     }
 
     const getByCategories = async (categoryId?: number, subCategory?: number) => {
-        console.log(categoryId, subCategory);
+        // console.log(categoryId, subCategory);
         return await getProductsByCategories(categoryId, subCategory).then(pCategory => setProducts([...pCategory.data]));
     }
 
@@ -57,16 +57,6 @@ const ProductProvider = ({ children }: ProductProviderProps): JSX.Element => {
         setCategoryTitle(categoryTitle);
         // ⬆️
     }
-
-    // const getOneProductTotal = () => {
-    //     const qty = product?.quantity;
-    //     const price = product?.price;
-    //     const extras = product?.customExtras;
-    //     console.log('QTY => ', qty);
-    //     console.log('PRICE =>', price);
-    //     console.log('EXTRAS =>', extras);
-    //     console.log('PROOOOOOOOOOOOOOOOOOOOOOOO', product)
-    // }
 
     const allProducts: ProductDataI = {
         products: [...products],

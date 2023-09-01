@@ -46,7 +46,7 @@ export const CommandeProvider = (props: CommandProviderProps) => {
     const getCommand = () => {
 
         const command = localStorage.getItem("command");
-        console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', commandProducts)
+        // console.log('CART PRODUCT INSIDE GETPRODUCTSFROMCART =>', commandProducts)
         if (command) {
             setCommandProducts(() => JSON.parse(command));
             return JSON.parse(command);
@@ -57,10 +57,6 @@ export const CommandeProvider = (props: CommandProviderProps) => {
     }
 
     const addToCommand = (newOrderedCart: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType, facturation?: any) => {
-
-        console.log('HEHOOO => ', newOrderedCart)
-        console.log('HEHOOO2 => ', customerInfo)
-        console.log('HEHOOO3 => ', stay)
 
     const command = getCommand();
 
