@@ -27,18 +27,18 @@ const ProductDetails = () => {
             {/* ⬇️ NAVBAR */}
             {/* 🔴 mais ne conduit pas au pages.. */}
             <div className={style.dFlex}>
-                <CategoryProvider>
+                {/* <CategoryProvider>
                     <MobileProvider>
                         <Navbar />
                     </MobileProvider>
-                </CategoryProvider>
+                </CategoryProvider> */}
 
-                <section>
+                <section className={style.productDetail}>
                     <ProductDetailsComponent />
 
                 </section>
 
-                <section>
+                <section className={style.productCustomizer}>
                     <ProductCustomizer />
                 </section>
             </div>

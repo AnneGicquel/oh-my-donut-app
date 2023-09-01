@@ -10,15 +10,6 @@
     align-items: center;
 }
 
-/* .largerHeader {
-    background-color: red;
-    height: 0; 
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    transition: height 0.5s ease; /* transition fluide */
-/* }  */
-
 .header-image {
     border-radius: 20px;
     position: relative;
