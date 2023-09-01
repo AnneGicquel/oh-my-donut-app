@@ -73,6 +73,10 @@
     /* align-self: center; */
 }
 
+.header_less {
+    height: 300px !important;
+}
+
 @media (max-width: 768px) {
 
     .header {

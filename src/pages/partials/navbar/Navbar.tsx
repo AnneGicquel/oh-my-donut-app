@@ -3,6 +3,7 @@ import { useCategoryContext } from "../../../contexts/CategoryContext";
 import './Navbar.css'
 import { useProductContext } from "contexts/ProductContext";
 import { useMobileContext } from "contexts/MobileContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar: FC = () => {
   const { categories, getCategories, getCategoryImageAndColor } = useCategoryContext();
@@ -11,6 +12,8 @@ const Navbar: FC = () => {
 
   const [, setToggle] = useState(false);
   const menuRef = useRef<HTMLUListElement | any>();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getCategories();
@@ -39,6 +42,9 @@ const Navbar: FC = () => {
             toggleMenu(e, category)
             getCategoryTitle(category.title);
             getCategoryImageAndColor(category.imageUrl, category.categoryStyle);
+            if (pathname !== '/') {
+              navigate('/')
+            }
             category.isDefault ? getByCategories() : getByCategories(category.id)
           })}>{category.title !== 'Tower' ? category.title.toUpperCase() : <div dangerouslySetInnerHTML={ { __html: category.title.toLocaleUpperCase() +  img} }></div>}</li>
           <ul className={"subMenu " + (category.isVisible ? 'isVisible' : '')} >{category.subCategories?.map((sub, index) =>
