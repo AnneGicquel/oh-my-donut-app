@@ -38,7 +38,7 @@ export const CommandeProvider = (props: CommandProviderProps) => {
     }
 
     const createCommand = () => {
-        const newCommand: [] = [];
+        const newCommand = {};
         const stringifyCommand = JSON.stringify(newCommand);
         localStorage.setItem('command', stringifyCommand);
     }
@@ -57,8 +57,6 @@ export const CommandeProvider = (props: CommandProviderProps) => {
     }
 
     const addToCommand = (newOrderedCart: ProductCartI[], customerInfo?: CustomerInformationI, stay?: StayOrGoType, facturation?: any) => {
-
-    const command = getCommand();
 
     const newCommandProduct : CommandeI = {
         id: uid(),
