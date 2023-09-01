@@ -231,7 +231,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 1
     },
@@ -348,7 +348,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 1
     },
@@ -465,7 +465,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 1
     },
@@ -582,7 +582,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 2
     },
@@ -699,7 +699,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 2
     },
@@ -816,7 +816,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 2
     },
@@ -933,7 +933,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 2
     },
@@ -1050,7 +1050,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 3
     },
@@ -1165,7 +1165,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 3
     },
@@ -1280,7 +1280,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 3
     },
@@ -1395,7 +1395,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 3
     },
@@ -1512,7 +1512,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 4
     },
@@ -1629,7 +1629,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 4
     },
@@ -1746,7 +1746,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 2,
       "subCategory": 4
     },
@@ -3379,12 +3379,348 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 3,
       "subCategory": 6
     },
     {
       "id": 30,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-1.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 3,
+          "name": "lorem",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"
+        }
+      ],
+      "ingredients": [
+        "Margarine végétale",
+        "Noix",
+        "Chocolat pâtissier noir et sans lait",
+        "Farine",
+        "Levure chimique",
+        "Cassonade",
+        "Sucre vanillé",
+        "Sel",
+        "Sucre glace"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 6
+    },
+    {
+      "id": 31,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-1.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 3,
+          "name": "lorem",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"
+        }
+      ],
+      "ingredients": [
+        "Margarine végétale",
+        "Noix",
+        "Chocolat pâtissier noir et sans lait",
+        "Farine",
+        "Levure chimique",
+        "Cassonade",
+        "Sucre vanillé",
+        "Sel",
+        "Sucre glace"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 6
+    },
+    {
+      "id": 32,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-1.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 3,
+          "name": "lorem",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/NUT.png"
+        }
+      ],
+      "ingredients": [
+        "Margarine végétale",
+        "Noix",
+        "Chocolat pâtissier noir et sans lait",
+        "Farine",
+        "Levure chimique",
+        "Cassonade",
+        "Sucre vanillé",
+        "Sel",
+        "Sucre glace"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 6
+    },
+    {
+      "id": 33,
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
@@ -3490,18 +3826,240 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 3,
       "subCategory": 7
     },
     {
-      "id": 31,
+      "id": 34,
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
       "price": 400,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-3.jpeg",
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-2.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 2,
+          "name": "bloup",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"
+        }
+      ],
+      "ingredients": [
+        "Beurre",
+        "Chocolat pâtissier noir",
+        "Farine",
+        "Levure chimique",
+        "Cassonade",
+        "Sucre vanillé",
+        "Sel",
+        "Sucre glace"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 7
+    },
+    {
+      "id": 35,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-2.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [
+        {
+          "id": 1,
+          "name": "sans gluten",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/GLUTEN.png"
+        },
+        {
+          "id": 2,
+          "name": "bloup",
+          "icon": "/assets/images/oh-my-donut-images/ALLERGENS/MILK.png"
+        }
+      ],
+      "ingredients": [
+        "Beurre",
+        "Chocolat pâtissier noir",
+        "Farine",
+        "Levure chimique",
+        "Cassonade",
+        "Sucre vanillé",
+        "Sel",
+        "Sucre glace"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 7
+    },
+    {
+      "id": 36,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-1.jpeg",
         "alt": "Mochi framboise image"
       },
       "allergenFree": [
@@ -3602,12 +4160,12 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 3,
       "subCategory": 7
     },
     {
-      "id": 32,
+      "id": 37,
       "title": "Allergen Free",
       "nbrPerson": 4,
       "description": "Description qui donne l'eau à la bouche",
@@ -3702,54 +4260,254 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 3,
       "subCategory": 5
     },
     {
-      "id": 33,
-      "title": "Bionade ginger",
-      "description": "La boisson rafraîchissante sans alcool unique en son genre !",
-      "price": 3,
+      "id": 38,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-ginger-removebg.png",
-        "alt": "Bionade ginger"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-4.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [],
+      "ingredients": [
+        "margarine végétale",
+        "chocolat pâtissier noir sans gluten et sans lait",
+        "farine de châtaignes",
+        "levure chimique sans gluten",
+        "cassonade",
+        "sucre vanillé sans gluten",
+        "sel",
+        "sucre glace sans gluten"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 5
+    },
+    {
+      "id": 39,
+      "title": "Allergen Free",
+      "nbrPerson": 4,
+      "description": "Description qui donne l'eau à la bouche",
+      "price": 400,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/allergen-free/allergens_free-4.png",
+        "alt": "Mochi framboise image"
+      },
+      "allergenFree": [],
+      "ingredients": [
+        "margarine végétale",
+        "chocolat pâtissier noir sans gluten et sans lait",
+        "farine de châtaignes",
+        "levure chimique sans gluten",
+        "cassonade",
+        "sucre vanillé sans gluten",
+        "sel",
+        "sucre glace sans gluten"
+      ],
+      "extras": [
+          {
+            "id": 1,
+            "title": "Parfum 1",
+            "subCategories": [
+              {
+                "id": 6,
+                "title": "Vanille",
+                "label": "Vanille",
+                "isSelected": false
+              },
+              {
+                "id": 7,
+                "title": "Caramel",
+                "label": "Caramel",
+                "isSelected": false
+              },
+              {
+                "id": 8,
+                "title": "Chocolat",
+                "label": "Chocolat",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Parfum 2",
+            "subCategories": [
+              {
+                "id": 9,
+                "title": "Framboise",
+                "label": "Framboise",
+                "isSelected": false
+              },
+              {
+                "id": 10,
+                "title": "Banane",
+                "label": "Banane",
+                "isSelected": false
+              },
+              {
+                "id": 11,
+                "title": "Fraise",
+                "label": "Fraise",
+                "isSelected": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Parfum 3",
+            "subCategories": [
+              {
+                "id": 12,
+                "title": "Pistache",
+                "label": "Pistache",
+                "isSelected": false
+              },
+              {
+                "id": 13,
+                "title": "Dulce de leche",
+                "label": "Dulce de leche",
+                "isSelected": false
+              },
+              {
+                "id": 14,
+                "title": "Citron",
+                "label": "Citron",
+                "isSelected": false
+              }
+            ]
+          }
+        ],
+      "quantity": 1,
+      "isCustomizable": false,
+      "categoryId": 3,
+      "subCategory": 5
+    },
+    {
+      "id": 40,
+      "title": "Bionade",
+      "description": "Bionade aux plantes",
+      "price": 300,
+      "imageUrl": {
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bionade.png",
+        "alt": "Bionade aux plantes"
       },
       "quantity": 1,
       "categoryId": 4
     },
     {
-      "id": 34,
-      "title": "Bionade lemon",
-      "description": "La boisson rafraîchissante sans alcool unique en son genre !",
-      "price": 3,
+      "id": 41,
+      "title": "Citronnade",
+      "description": "Citronnade Bella Lula",
+      "price": 300,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-lemon-removebg.png",
-        "alt": "Bionade lemon"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bellaLulaCitronnade.png",
+        "alt": "Citronnade Bella Lula"
       },
       "quantity": 1,
       "categoryId": 4
     },
     {
-      "id": 35,
-      "title": "Bionade mate",
-      "description": "La boisson rafraîchissante sans alcool unique en son genre !e",
-      "price": 3,
+      "id": 42,
+      "title": "Bionade",
+      "description": "Bionade aux plantes",
+      "price": 300,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-mate-removebg.png",
-        "alt": "Bionade mate"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bionade.png",
+        "alt": "Bionade aux plantes"
       },
       "quantity": 1,
       "categoryId": 4
     },
     {
-      "id": 36,
-      "title": "Bionade sureau",
-      "description": "La boisson rafraîchissante sans alcool unique en son genre !",
-      "price": 3,
+      "id": 43,
+      "title": "Citronnade",
+      "description": "Citronnade Bella Lula",
+      "price": 300,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-sureau-removebg.png",
-        "alt": "Bionade sureau"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bellaLulaCitronnade.png",
+        "alt": "Citronnade Bella Lula"
       },
       "quantity": 1,
       "categoryId": 4
@@ -3988,7 +4746,7 @@
           }
         ],
         "quantity": 1,
-        "isCustomizable": true,
+        "isCustomizable": false,
         "categoryId": 1,
         "subCategory": 1
       }
