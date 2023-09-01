@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Navbar from '../navbar/Navbar';
 import './Header.css';
 import { useMobileContext } from 'contexts/MobileContext';
@@ -13,6 +13,7 @@ const Header = () => { // Make this reusable component
     const { categoryImage } = useCategoryContext();
     const location = useLocation();
     const { id } = useParams();
+    const myRef = useRef<HTMLUListElement | any>();
 
     useEffect(() => {
         console.log(location.pathname)
@@ -38,12 +39,20 @@ const Header = () => { // Make this reusable component
         return (() => {
             window.removeEventListener('resize', updateDimension);
         })
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        if(location.pathname != '/') {
+            myRef.current.classList.add('header_less')
+        } else {
+            myRef.current.classList.remove('header_less')
+        }
+    })
 
 
     return (
         <>
-            <header className='header'>
+            <header className='header' ref={myRef}>
                 {/* bande qui s'ajoute en format mobile pour élargir le header */}
                 <div className='largerHeader'></div>
                 {/* <img className='header' src="/assets/images/oh-my-donut-images/WAVES/header-wave svg.svg" alt="" /> */}
