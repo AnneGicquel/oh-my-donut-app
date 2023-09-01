@@ -6,7 +6,11 @@ import { useStayOrGoContext } from "contexts/FormMealChoiceContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from './RecapCard.module.css';
 
-export const RecapCard = () => {
+interface RecapCardProps {
+    callback: () => void;
+}
+export const RecapCard = (props: RecapCardProps) => {
+    const {callback} = props;
     const { products, getTotalOfAllProducts, getProducstTva, getTotal } = useCartContext();
     const { customerInfo } = useContactForm();
     const { selectedChoice } = useStayOrGoContext();
@@ -17,11 +21,8 @@ export const RecapCard = () => {
 
     const handleClick = () => {
         addToCommand(products, customerInfo!, selectedChoice!, facturation);
-        if(location.pathname === '/cart') {
-            navigate('/payment');
-        } else if(location.pathname === '/payment') {
-            navigate('/command');
-        }
+        callback();
+
     }
 
     return (

@@ -4,12 +4,14 @@ import styles from './Cart.module.css';
 import { useCartContext } from "contexts/CartContext";
 import { useEffect, useLayoutEffect } from "react";
 import { useCommandeContext } from "contexts/CommandContext";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const { products, getProductsFromCart } = useCartContext();
 
     const { getCommand } = useCommandeContext();
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         getProductsFromCart();
@@ -20,6 +22,10 @@ const Cart = () => {
     useLayoutEffect(() => {
       window.scrollTo(200, 300);
     }, [location.pathname]);
+
+    const handleClick = () => {
+        navigate('/payment');
+    }
   
 
     const emptyCart = <h1 className={styles.empty_cart}>Le panier est vide</h1>
@@ -34,7 +40,7 @@ const Cart = () => {
                 })}
             </div>
             
-            <RecapCard />
+            <RecapCard  callback={handleClick}/>
 
         </section></>
 
