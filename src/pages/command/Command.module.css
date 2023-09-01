@@ -9,17 +9,19 @@
 .command_card_section {
     display: flex;
     flex-direction: column;
-    width: 868px;
+    width: 56.5vw;
     border: 1px solid darkgray;
     border-radius: 25px;
+    padding: 20px ;
 }
 
 .command_card_container { 
     display: flex; 
     justify-content: space-around;
     align-items: center; 
-    width: 868px;
+    width: 56.5vw;;
     height: 193px;
+    padding: 20px 0;
     border-bottom: 1px solid darkgray;
 }
 
@@ -30,10 +32,6 @@
 .command_card_img {
     width: 170px;
     height: 170px;
-}
-
-.card_text_container {
-
 }
 
 h1, h4 {
@@ -86,4 +84,10 @@ h1, h4 {
     width: 300px;
 }
 
+@media (max-width: 768px) {
 
+    .command_card_section, .command_card_container{
+        width: 70vw;
+    }
+
+}

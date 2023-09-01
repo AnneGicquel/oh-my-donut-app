@@ -2,7 +2,7 @@
     background-color: var(--babyPink);
     border-radius: 20px;
     height: 350px;
-    width: 300px;
+    width: 22vw;
     padding: 40px;
 
     display: flex;
@@ -32,6 +32,11 @@ p {
 
     .recapCardContainer button {
         padding: 15px 20px;
+    }
+
+    .recapCardContainer {
+        width: 57vw;
+        padding: 40px;
     }
 
 }
