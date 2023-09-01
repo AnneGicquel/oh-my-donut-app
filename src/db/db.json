@@ -114,7 +114,7 @@
           }
         ],
       "quantity": 1,
-      "isCustomizable": true,
+      "isCustomizable": false,
       "categoryId": 1,
       "subCategory": 1
     },
@@ -3708,48 +3708,48 @@
     },
     {
       "id": 33,
-      "title": "Bionade",
-      "description": "Bionade aux plantes",
-      "price": 300,
+      "title": "Bionade ginger",
+      "description": "La boisson rafraîchissante sans alcool unique en son genre !",
+      "price": 3,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bionade.png",
-        "alt": "Bionade aux plantes"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-ginger-removebg.png",
+        "alt": "Bionade ginger"
       },
       "quantity": 1,
       "categoryId": 4
     },
     {
       "id": 34,
-      "title": "Citronnade",
-      "description": "Citronnade Bella Lula",
-      "price": 300,
+      "title": "Bionade lemon",
+      "description": "La boisson rafraîchissante sans alcool unique en son genre !",
+      "price": 3,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bellaLulaCitronnade.png",
-        "alt": "Citronnade Bella Lula"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-lemon-removebg.png",
+        "alt": "Bionade lemon"
       },
       "quantity": 1,
       "categoryId": 4
     },
     {
       "id": 35,
-      "title": "Bionade",
-      "description": "Bionade aux plantes",
-      "price": 300,
+      "title": "Bionade mate",
+      "description": "La boisson rafraîchissante sans alcool unique en son genre !e",
+      "price": 3,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bionade.png",
-        "alt": "Bionade aux plantes"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-mate-removebg.png",
+        "alt": "Bionade mate"
       },
       "quantity": 1,
       "categoryId": 4
     },
     {
       "id": 36,
-      "title": "Citronnade",
-      "description": "Citronnade Bella Lula",
-      "price": 300,
+      "title": "Bionade sureau",
+      "description": "La boisson rafraîchissante sans alcool unique en son genre !",
+      "price": 3,
       "imageUrl": {
-        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bellaLulaCitronnade.png",
-        "alt": "Citronnade Bella Lula"
+        "src": "/assets/images/oh-my-donut-images/PRODUCTS/BOISSONS/bio-sureau-removebg.png",
+        "alt": "Bionade sureau"
       },
       "quantity": 1,
       "categoryId": 4

@@ -44,6 +44,8 @@ const Header = () => { // Make this reusable component
     return (
         <>
             <header className='header'>
+                {/* bande qui s'ajoute en format mobile pour élargir le header */}
+                <div className='largerHeader'></div>
                 {/* <img className='header' src="/assets/images/oh-my-donut-images/WAVES/header-wave svg.svg" alt="" /> */}
                 <div className='header-icons-container'>
                     <img onClick={() => getToggle()} className='header-burger' src="/assets/images/oh-my-donut-images/ICONS/menu-burger-icon.png" alt="menu burger icon" />

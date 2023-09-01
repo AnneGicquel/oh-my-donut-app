@@ -6,7 +6,7 @@
   width: 458px;
 }
 
-.ifCustomize{
+.ifCustomize {
   width: 350px;
 }
 
@@ -16,12 +16,12 @@
 } */
 
 .customButtonWrapper {
-  width: 350px; 
+  width: 350px;
   height: 53px;
   background-color: black;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .customButtonWrapper button {
@@ -30,7 +30,7 @@
 }
 
 
-.clockContainer{
+.clockContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,26 +38,26 @@
   height: 70px;
 }
 
-.clockContainer img{
+.clockContainer img {
   width: 45px;
   height: 45px;
 }
 
-.clockContainer span{
+.clockContainer span {
   font-family: var(--varelaRound);
   font-size: 25px;
 }
 
-.quantityContainer{
+.quantityContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: var(--varelaRound);
-width: 350px;
-height: 60px;
+  width: 350px;
+  height: 60px;
 }
 
-.allergensContainer{
+.allergensContainer {
   display: flex;
   align-items: center;
   font-family: var(--lilitaOne);
@@ -72,7 +72,8 @@ height: 60px;
   margin: 0 8px 0 25px;
 }
 
-.customize_quantity span:first-child, .customize_quantity span:last-child {
+.customize_quantity span:first-child,
+.customize_quantity span:last-child {
   cursor: pointer;
   border: .5px solid darkgray;
   padding: 0 7px;
@@ -83,8 +84,7 @@ height: 60px;
   padding: 0 6px;
 }
 
-.customize_quantity span:first-child {
-}
+/* .customize_quantity span:first-child {} */
 
 .customize_quantity .counter {
   cursor: initial;
