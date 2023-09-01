@@ -80,6 +80,7 @@
     width: 100%; /* occupe toute la largeur de l écran */
   }
 
+
   .centeredContent {
     width: 80%; /* réduit largeur pour écran plus petit */
   }

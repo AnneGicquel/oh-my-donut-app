@@ -37,6 +37,9 @@ BANDE TOP HEADER*/
     height: 40px;
     width: clamp(115px, 20vw, 280px);
     margin: 0;
+    white-space: pre;
+    text-align: center;
+    
 }
 
 .card-link {
@@ -85,11 +88,7 @@ BANDE TOP HEADER*/
 
     margin-top: 5px;
 }
-@media (max-width: 768px) {
-.card-text h4 {
-    white-space: pre;
-}
-}
+
 @media (max-width: 430px) {
     .card-container button {
         margin-bottom: 7px;

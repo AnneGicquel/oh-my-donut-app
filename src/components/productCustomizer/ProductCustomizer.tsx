@@ -33,7 +33,7 @@ const ProductCustomizer = () => {
     }, []);
 
     // AJOUT AU PANIER
-    const { addProductToCart } = useCartContext(); 
+    const { addProductToCart } = useCartContext();
 
     // AFFICHE PRODUCT
     // useEffect(() => {
@@ -105,9 +105,9 @@ const ProductCustomizer = () => {
 
     const callbackEnAttendantAllegen = (e: any) => {
         const value = e.target.alt
-        setMoreExtras(() =>({
+        setMoreExtras(() => ({
             ...moreExtras,
-            allergen: { 
+            allergen: {
                 ...moreExtras.allergen,
                 [value]: e.target.checked
             }
@@ -131,24 +131,24 @@ const ProductCustomizer = () => {
 
     //DROPDOWN//
     //*FIRST PART*//
-    const menuHowManyPeople = 
-        {
-            id: 1,
-            title: "Nombre de personnes",
-            subCategories: [
-                { id: 1, title: '5 personnes', label: "5 personnes", nbrPerson: 5, prix: 500 },
-                { id: 2, title: '8 personnes', label: "8 personnes", nbrPerson: 8, prix: 800 },
-                { id: 3, title: '15 personnes', label: "15 personnes", nbrPerson: 15, prix: 1500 }
-            ]
-        }
+    const menuHowManyPeople =
+    {
+        id: 1,
+        title: "Nombre de personnes",
+        subCategories: [
+            { id: 1, title: '5 personnes', label: "5 personnes", nbrPerson: 5, prix: 500 },
+            { id: 2, title: '8 personnes', label: "8 personnes", nbrPerson: 8, prix: 800 },
+            { id: 3, title: '15 personnes', label: "15 personnes", nbrPerson: 15, prix: 1500 }
+        ]
+    }
 
     // COUNTER 🟩
     // +localStorage.getItem('quantity')||0 => L'objet a peut-être la valeur 'null'.ts(2531)
 
     const incrementQuantity = () => {
         product.quantity += 1;
-        setProduct({...product});
-        // console.log('PRPRORPRORP => ', product);
+        setProduct({ ...product });
+        console.log('PRPRORPRORP => ', product);
     };
 
     const decrementQuantity = () => {
@@ -156,7 +156,7 @@ const ProductCustomizer = () => {
             return;
         }
         product.quantity -= 1;
-        setProduct({...product});
+        setProduct({ ...product });
     };
 
     // 🟫 ⬇️ STOCKAGE en L.S.
@@ -172,43 +172,34 @@ const ProductCustomizer = () => {
     return (
         <section className={style.productCustomizerSection}>
 
-            {/* 🔴 IF : Customize n'apparaît que if 'produit personnalisable */}
-            {/*/////////////////////////// FIRST PART /////////////////////////////*/}
+            <div>
+                {product && product.isCustomizable && (
+                    <>
+                        <ReusableDropdown
+                            items={menuHowManyPeople}
+                            onMenuItemClick={handleMenuItemClick}
+                            onSubMenuItemClick={handleSubMenuItemClick}
+                        />
 
-            <ReusableDropdown
-                items={menuHowManyPeople}
-                onMenuItemClick={handleMenuItemClick}
-                onSubMenuItemClick={handleSubMenuItemClick}
-            />
+                        <CheckboxName callback={callbackEnAttendantName} />
+                        <CheckboxCandle callback={callbackEnAttendantCandle} />
 
 
-            {/* ********************************************** */}
-            {/* CHECKBOXES NON REUSABLES)*/}
-            <CheckboxName callback={callbackEnAttendantName} />
-            <CheckboxCandle callback={callbackEnAttendantCandle} />
+                        <div className={style.ifCustomize}>
+                            {(product && product.extras) && product.extras.map((extra: any) => (
+                                <ReusableDropdown key={extra.id}
+                                    items={extra}
+                                    onMenuItemClick={handleMenuItemClick}
+                                    onSubMenuItemClick={handleSubMenuItemClick}
+                                />
+                            ))}
 
-            {/* Affiche le message si le bouton a été cliqué et aucune case n'a été cochée */}
-
-            {/* {submitButtonClicked && menuCustomizationOrNot[||0].subCategories[||0].title === "oui" && !customizationChecked && (  */}
-            {/* {submitButtonClicked && menuCustomizationOrNot[0].subCategories[0].title === "oui" && !customizationChecked && (
-                <p className={style.errorMessage}>Veuillez choisir "oui" ou "non" dans le menu "Personnaliser"</p>
-            )} */}
-
-            {/* 🔴 DISPLAY IF : personnnaliser = 'oui' */}
-            {/*/////////////////////////// SECOND PART /////////////////////////////*/}
-
-            <div className={style.ifCustomize}>
-                {(product && product.extras) && product.extras.map((extra: any) => (
-                    <ReusableDropdown key={extra.id}
-                        items={extra}
-                        onMenuItemClick={handleMenuItemClick}
-                        onSubMenuItemClick={handleSubMenuItemClick}
-                    />
-                ))}
-
-                <ReusableCheckbox label="Sans gluten" callback={callbackEnAttendantAllegen} />
-                <ReusableCheckbox label="Sans lactose" callback={callbackEnAttendantAllegen} />
-                <ReusableCheckbox label="Sans fruits à coque" callback={callbackEnAttendantAllegen} />
+                            <ReusableCheckbox label="Sans gluten" callback={callbackEnAttendantAllegen} />
+                            <ReusableCheckbox label="Sans lactose" callback={callbackEnAttendantAllegen} />
+                            <ReusableCheckbox label="Sans fruits à coque" callback={callbackEnAttendantAllegen} />
+                        </div>
+                    </>
+                )}
             </div>
 
 
@@ -216,7 +207,7 @@ const ProductCustomizer = () => {
                 <span>QUANTITÉ</span>
                 <div className={style.customize_quantity}>
                     <span onClick={decrementQuantity}>-</span>
-                    <span className={style.counter}>{ product?.quantity }</span>
+                    <span className={style.counter}>{product?.quantity}</span>
                     <span onClick={incrementQuantity}>+</span>
                 </div>
                 <span>à partir de </span>
@@ -228,11 +219,14 @@ const ProductCustomizer = () => {
                 <Button title={"AJOUTER AU PANIER"} callback={handleButtonClick} />
             </div>
 
+            {product && product.isCustomizable && (
+                <div className={style.clockContainer}>
+                    <img src="/assets/images/oh-my-donut-images/ICONS/clock.png" alt="Icon you must order 48 hours before receiving it" />
+                    
 
-            <div className={style.clockContainer}>
-                <img src="/assets/images/oh-my-donut-images/ICONS/clock.png" alt="Icon you must order 48 hours before receiving it" />
-                <span>48h</span>
-            </div>
+                    <span>48h</span>
+
+                </div>)}
 
 
             <div className={style.allergensContainer}>
