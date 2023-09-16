@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Button from "components/common/button/Button"
 import { useCartContext } from "contexts/CartContext"
 import { useCommandeContext } from "contexts/CommandContext";
@@ -22,8 +23,10 @@ export const RecapCard = (props: RecapCardProps) => {
     const handleClick = () => {
         addToCommand(products, customerInfo!, selectedChoice!, facturation);
         callback();
-
     }
+
+    useEffect(() => {
+    }, [customerInfo, selectedChoice])
 
     return (
         <section>
@@ -43,8 +46,11 @@ export const RecapCard = (props: RecapCardProps) => {
                     <h4>Total :</h4> 
                     <h4>{getTotal().toFixed(2)} € TTC</h4>
                 </div>
-   
-                <Button title="Commander" callback={() => handleClick()}/>
+                {
+                    location.pathname == '/cart' ||
+                    ((customerInfo?.email && customerInfo?.firstName && customerInfo?.lastName && customerInfo?.phone) && (selectedChoice == 'Emporter' || selectedChoice == 'Sur place'))
+                    ? <Button title="Commander" callback={() => handleClick()}/> : null
+                }
 
             </div> 
             
@@ -52,9 +58,6 @@ export const RecapCard = (props: RecapCardProps) => {
     )
 }
 
-function useEffect(arg0: () => void, arg1: never[]) {
-    throw new Error("Function not implemented.");
-}
 function useLayoutEffect(arg0: () => void, arg1: import("react-router-dom").Location[]) {
     throw new Error("Function not implemented.");
 }

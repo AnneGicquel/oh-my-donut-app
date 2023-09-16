@@ -1,6 +1,6 @@
 import { useContactForm } from 'contexts/FormInfoContext';
 import { CustomerInformationI } from 'interfaces/donuts.interface';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './FormInfo.module.css';
 
 
@@ -23,7 +23,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    updateCustomerInfo(formData);
+    //updateCustomerInfo(formData);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +31,10 @@ const ContactForm: React.FC = () => {
     setFormData((prevData) => ({...prevData, [name]: value}));
     setError((prevData) => ({...prevData, [name]: value.length === 0}))
   };
+
+  useEffect(() => {
+    updateCustomerInfo(formData);
+  }, [formData])
 
   return (
     <form onChange={handleSubmit} className={styles.formFlex}>

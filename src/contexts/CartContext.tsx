@@ -79,6 +79,12 @@ export const CartProvider = (props: CartProviderProps) => {
             totalPrice: 0,
             tva: 10
         }
+        if(product.isCustomizable === true) {
+            newProduct.product.id = newProduct.id;
+        }
+
+        console.log('JUUUUUUUUUUUST TESEEEEEEEEEEEEEET => ', newProduct.product.id);
+        console.log('JUUUUUUUUUUUST TESEEEEEEEEEEEEEET => ', newProduct.product.productId);
 
         const foundProduct = cart?.find((p: ProductCartI) => p.product.id === newProduct.product.id)!;
 

@@ -78,6 +78,10 @@ const ProductCustomizer = () => {
         console.log(`Button clicked is ${submitButtonClicked}`)
         // Button clicked is ${TRUE or FALSE}
         product['customExtras'] = moreExtras;
+        if(moreExtras.nbrPersonnes.nbr == 0 && moreExtras.nbrPersonnes.price == 0 && moreExtras.plaque == false && moreExtras.candle.isSelected == false) {
+            product.isCustomizable = false;
+        }
+
         setProduct({...product, moreExtras});
         addProductToCart(product);
         navigate('/cart');
