@@ -26,8 +26,6 @@ export const RecapCard = (props: RecapCardProps) => {
     }
 
     useEffect(() => {
-        console.log('eeeeeeeeeeeeeee1 ======> ', customerInfo);
-        console.log('eeeeeeeeeeeeeee2 ======> ', selectedChoice);
     }, [customerInfo, selectedChoice])
 
     return (
