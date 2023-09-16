@@ -22,7 +22,8 @@ interface ImageI {
 }
 
 export interface ProductI {
-  id: number;
+  id: number | string;
+  productId?: string;
   title: string;
   nbrPerson?: number;
   description: string;
@@ -30,7 +31,14 @@ export interface ProductI {
   imageUrl: ImageI;
   allergenFree: AllergenI[];
   ingredients: IngredientI[];
-  customExtras: {};
+  moreExtras?: {
+    nbrPersonnes: { nbr: number, price: number },
+    plaque: boolean,
+    name: { title: string, price: number },
+    candle: { isSelected: boolean, price: number },
+    allergen: { gluten: boolean, lactose: boolean, fruits: boolean }
+  },
+  customExtras?: {};
   extras: [];
   quantity?: number;
   isCustomizable: boolean;

@@ -5,6 +5,7 @@ import './Card.css';
 import { useCartContext } from "contexts/CartContext";
 import { useCategoryContext } from "contexts/CategoryContext";
 import toast, { Toaster } from 'react-hot-toast';
+import { useEffect } from "react";
 
 interface CardPropsI {
   item: ProductI;
@@ -15,7 +16,7 @@ const Card = (props: CardPropsI) => {
     position: "top-center"
   });
 
-  const { addProductToCart, getProductsFromCart, getRound } = useCartContext();
+  const { products, addProductToCart, getProductsFromCart, getRound } = useCartContext();
   const { categoryStyle } = useCategoryContext();
 
   const { item } = props;
@@ -27,6 +28,11 @@ const Card = (props: CardPropsI) => {
     candle: { isSelected: false, price: 0 },
     allergen: { gluten: false, lactose: false, fruits: false }
   }
+  item.isCustomizable = false;
+  
+  useEffect(() => {
+  }, [])
+
   return (
     <section className="card-container d-flex" style={categoryStyle ? { backgroundColor: categoryStyle } : {}}>
       <div>
@@ -49,7 +55,11 @@ const Card = (props: CardPropsI) => {
           ))}
         </div>
       </div>
-      <Button title="Ajouter au panier >" callback={() =>{ addProductToCart(item); notify()}} />
+      <Button title="Ajouter au panier >" callback={() => { 
+        addProductToCart(item); 
+        notify();
+
+        }} />
       <Toaster />
     </section>
   );
